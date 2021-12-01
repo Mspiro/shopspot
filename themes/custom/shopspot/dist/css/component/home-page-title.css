@@ -1,0 +1,11 @@
+.page-title {
+  color: #007ecc;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}

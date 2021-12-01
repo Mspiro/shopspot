@@ -1,0 +1,8 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      dist/css/layout/layout.css: {}
+      dist/css/main.css: {}
+      dist/css/style.css: {}
+      dist/css/component/home-page-title.css: {}
