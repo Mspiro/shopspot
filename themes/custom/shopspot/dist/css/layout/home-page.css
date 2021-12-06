@@ -1,7 +1,8 @@
 .main {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-content: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: row;
 }

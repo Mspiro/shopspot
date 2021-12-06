@@ -5,6 +5,14 @@ core_version_requirement: ^8 | ^9
 base theme: classy
 screenshot: screenshot.png
 
+regions:
+  header: Header
+  content: Content
+  category: Category
+  
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
 libraries:
   - shopspot/global
   # - core/normalize

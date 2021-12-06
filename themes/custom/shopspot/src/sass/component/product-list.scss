@@ -1,0 +1,20 @@
+.product-list{
+  border: 5px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 100vh;
+  align-content: flex-start;
+  align-items: center;
+
+  .card{
+    border: yellow 4px solid;
+    height: 200px;
+    width: 290px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
