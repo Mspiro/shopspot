@@ -1,0 +1,58 @@
+.view-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+.view-content .views-row {
+  background-color: white;
+  display: inline-flex;
+  border-radius: 10px;
+  width: 280px;
+  height: 320px;
+  margin: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.view-content .views-row .views-field a {
+  text-decoration: none;
+  color: black;
+}
+.view-content .views-row .views-field-field-product-image {
+  display: flex;
+  height: 185px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+.view-content .views-row .views-field-field-price {
+  margin: 0px 0 10px 0;
+}
+.view-content .views-row .views-field-field-price .field-content {
+  color: red;
+}
+.view-content .views-row .views-field-field-rating .checked {
+  color: orange;
+}
+.view-content .views-row .views-field-field-discount {
+  position: relative;
+  top: 10px;
+  left: -105px;
+}
+.view-content .views-row .views-field-field-discount .field-content {
+  background-color: palegreen;
+}
+.view-content .views-row a {
+  text-decoration: none;
+  color: black;
+}
+.view-content .views-row a .views-field-field-discount .field-content {
+  position: relative;
+  left: 90px;
+  width: fit-content;
+}

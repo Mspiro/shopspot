@@ -2,9 +2,10 @@ global:
   version: 1.x
   css:
     theme:
-      dist/css/layout/home-page.css: {}
       dist/css/main.css: {}
       dist/css/style.css: {}
-      dist/css/component/header.css: {}
-      dist/css/component/product-list.css: {}
-      dist/css/component/category.css: {}
+      dist/css/region/region.css: {}
+      dist/css/layout/layout.css: {}
+      dist/css/view/view.css: {}
+      dist/css/component/card.css: {}
+      dist/css/component/filter.css: {}

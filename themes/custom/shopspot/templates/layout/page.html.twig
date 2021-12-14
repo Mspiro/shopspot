@@ -42,15 +42,14 @@
  * @see html.html.twig
  */
 #}
-
 <div class="layout-container">
 
-  <header role="banner" class="header">
+  <header role="banner">
     {{ page.header }}
   </header>
 
-  {# {{ page.primary_menu }}
-  {{ page.secondary_menu }} #}
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
 
   {{ page.breadcrumb }}
 
@@ -58,22 +57,31 @@
 
   {{ page.help }}
 
-  <main role="main" class="main">
-    <div class="product-list">
-    <h1 class="card">Product Here 1</h1>
-    <h1 class="card">Product Here 2</h1>
-    <h1 class="card">Product Here 3</h1>
-      
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
       {{ page.content }}
-      
-    </div>{# /.product-list #}
+    </div>{# /.layout-content #}
 
-    <div class="category">
-      {{ page.category }}
-    </div>
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
 
+    {# {% if page.category %} #}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.category }}
+      </aside>
+    {# {% endif %} #}
 
   </main>
 
-  
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
 </div>{# /.layout-container #}

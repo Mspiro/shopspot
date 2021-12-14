@@ -41,3 +41,4 @@ themes/custom/shopspot/node_modules
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
+/example.gitignore

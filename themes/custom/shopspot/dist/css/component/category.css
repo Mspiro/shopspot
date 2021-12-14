@@ -1,5 +1,4 @@
 .category {
-  border: 5px solid blue;
   display: flex;
   flex-wrap: wrap;
   align-content: center;

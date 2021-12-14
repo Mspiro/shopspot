@@ -1,6 +1,7 @@
 name: ShopSpot
 type: theme
 description: This is my first theme project with drupal 8
+core: 8.x
 core_version_requirement: ^8 | ^9
 base theme: classy
 screenshot: screenshot.png

@@ -1,0 +1,46 @@
+.region-header{
+  display: flex;
+  height: 80px;
+}
+
+main {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
+  .layout-content {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    .region-content {
+      width: 70vw;
+      display: inline-block;
+      
+      .view-filters{
+        display: flex;
+        float: right;
+
+        .form--inline{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          align-items: flex-start;
+          align-content: center;
+          position: absolute;
+        }
+      }
+    }
+
+  }
+  .region-category {
+    width: 30vw;
+    float: right;
+  }
+  .layout-sidebar-second {
+    display: inline-block;
+  }
+}

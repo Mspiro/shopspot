@@ -1,0 +1,68 @@
+.view-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  
+  .views-row {
+    background-color: white;
+    display: inline-flex;
+    border-radius: 10px;
+    width: 280px;
+    height: 320px;
+    margin: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+
+    .views-field {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .views-field-field-product-image {
+      display: flex;
+      height: 185px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start;
+    }
+
+    .views-field-field-price {
+      margin: 0px 0 10px 0;
+      .field-content {
+        color: red;
+      }
+    }
+    .views-field-field-rating {
+      .checked {
+        color: orange;
+      }
+    }
+    .views-field-field-discount {
+      position: relative;
+        top: 10px;
+        left: -105px;
+      .field-content {
+        background-color: palegreen;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      .views-field-field-discount {
+        .field-content {
+          position: relative;          
+          left: 90px;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
