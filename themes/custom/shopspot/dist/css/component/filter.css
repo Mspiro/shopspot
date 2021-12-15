@@ -1,0 +1,82 @@
+.form-item-keyword {
+  display: inline-flex;
+  background-color: white;
+  width: 320px;
+  height: 90px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.form-text {
+  width: 260px;
+  height: 32px;
+  border: 3px solid #eaedf6;
+  border-radius: 5px;
+}
+
+.form-item-categories .form-text {
+  display: none;
+}
+
+.form-type-select {
+  padding: 15px 0;
+}
+.form-type-select label {
+  color: #dde2f1;
+  display: block;
+  margin-bottom: 7px;
+}
+.form-type-select .form-select {
+  color: #dde2f1;
+  background-color: white;
+  width: 215px;
+  height: 32px;
+  border: 1px solid #eaedf6;
+  border-radius: 5px;
+}
+
+.form-wrapper {
+  border-radius: 0px 0px 10px 10px;
+  padding: 20px 0px;
+  border: none;
+}
+.form-wrapper .fieldset-legend {
+  position: relative;
+  top: 15px;
+  color: #dde2f1;
+  font-weight: 200;
+}
+
+.form-type-select,
+.form-item-categories,
+.form-wrapper {
+  background-color: white;
+  width: 290px;
+  margin: -10px 0 0 0;
+  padding-left: 30px;
+}
+
+.form-item-categories {
+  padding: 18px 15px;
+  border-radius: 10px 10px;
+}
+.form-item-categories label {
+  padding: 0px 15px;
+}
+
+#edit-specify-wrapper {
+  display: none;
+}
+
+.form-submit {
+  color: white;
+  background-color: #625bc5;
+  border: 1px solid #625bc5;
+  width: 255px;
+  height: 40px;
+  border-radius: 5px;
+}

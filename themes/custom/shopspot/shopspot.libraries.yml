@@ -9,3 +9,9 @@ global:
       dist/css/view/view.css: {}
       dist/css/component/card.css: {}
       dist/css/component/filter.css: {}
+
+  js:
+    dist/js/script.js: {}
+    
+  dependencies:
+    - core/jquery

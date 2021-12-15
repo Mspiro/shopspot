@@ -8,15 +8,17 @@ function style() {
     .on("error", sass.logError)
     .pipe(gulp.dest("./dist/css"));
 }
-function watch() {
-  gulp.watch("./src/sass/**/*.scss", style);
-}
 function hint() {
   return gulp
-    .src("./src/js/**/*.js")
-    .pipe(jshint())
-    .pipe(gulp.dest("./dist/js"))
-    .pipe(jshint.reporter("jshint-stylish"));
+  .src("./src/js/**/*.js")
+  .pipe(jshint())
+  .pipe(gulp.dest("./dist/js"))
+  .pipe(jshint.reporter("jshint-stylish"));
+}
+function watch() {
+  gulp.watch("./src/sass/**/*.scss", style);
+  gulp.watch("./src/js/**/*.js", hint);
+
 }
 exports.style = style;
 exports.watch = watch;
