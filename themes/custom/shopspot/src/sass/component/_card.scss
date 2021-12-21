@@ -6,7 +6,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .views-row {
   background-color: white;
   display: inline-flex;
@@ -18,17 +17,17 @@
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
-.views-row a {
-  text-decoration: none;
-  color: black;
+.views-field {
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
-
-.views-field a {
-  text-decoration: none;
-  color: black;
-}
-
 .views-field-field-product-image {
   display: flex;
   height: 60%;
@@ -40,28 +39,30 @@
 
 .views-field-field-price {
   margin: 0px 0 10px 0;
+  .field-content {
+    color: red;
+  }
 }
-.views-field-field-price .field-content {
-  color: red;
+.views-field-field-rating {
+  .checked {
+    color: orange;
+  }
 }
-
-.views-field-field-rating .checked {
-  color: orange;
-}
-
 .views-field-field-discount {
   position: relative;
   top: 10px;
   left: -125px;
-}
-.views-field-field-discount .field-content {
-  position: absolute;
-}
-.views-field-field-discount .field-content span {
-  display: inline-flex;
-  justify-content: center;
-  width: 50px;
-  padding: 2px;
-  background-color: palegreen;
-  box-shadow: inset 25px 0px 25px -32px rgba(0, 0, 0, 0.45), inset -25px 0px 25px -32px rgba(0, 0, 0, 0.45);
+  .field-content {
+    position: absolute;
+    
+    span{
+      display: inline-flex;
+      justify-content: center;
+      width: 50px;
+      padding: 2px;    
+      background-color: palegreen;
+      box-shadow: inset 25px 0px 25px -32px rgb(0 0 0 / 45%), inset -25px 0px 25px -32px rgb(0 0 0 / 45%);
+    }
+  }
+
 }

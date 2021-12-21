@@ -42,46 +42,44 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
+<div class="layout-container main-page">
 
   <header role="banner">
+  <div id="header" class="header"> 
     {{ page.header }}
+    <p>  Header </p>
+    </div>
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  <main role="main" class="main">
+    {# link is in html.html.twig #}
+    {# <a id="main-content" tabindex="-1"></a> #}
 
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
+    <div class="layout-content product-list" >
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
+    {% if page.category %}
+      <aside class="layout-sidebar-sidebar category" role="complementary">
+        {{ page.category }}
       </aside>
     {% endif %}
 
-    {# {% if page.category %} #}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.category }}
-      </aside>
-    {# {% endif %} #}
-
   </main>
 
-  {% if page.footer %}
     <footer role="contentinfo">
-      {{ page.footer }}
+    <div class="footer-first">
+      {{ page.footer_first }}
+      <p>  First Footer </p>
+    </div>
+    <div class="footer-second">
+      {{ page.footer_second }}
+      <p>  Second Footer </p>
+    </div>
+    <div class="footer-third">
+      {{ page.footer_third }}
+      <p>  Third Footer </p>
+    </div>
     </footer>
-  {% endif %}
 
 </div>{# /.layout-container #}

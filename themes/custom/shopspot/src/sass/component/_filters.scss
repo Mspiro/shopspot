@@ -14,7 +14,7 @@
 .form-text {
   width: 260px;
   height: 32px;
-  border: 3px solid #eaedf6;
+  border: 1px solid #eaedf6;
   border-radius: 5px;
 }
 .form-item-categories {
@@ -25,12 +25,12 @@
 .form-type-select {
   padding: 15px 0;
   label {
-    color: #dde2f1;
+    color: $filter-text-color;
     display: block;
     margin-bottom: 7px;
   }
   .form-select {
-    color: #dde2f1;
+    color: $filter-text-color;
     background-color: white;
     width: 215px;
     height: 32px;
@@ -39,15 +39,24 @@
   }
 }
 .form-wrapper {
-  border-radius: 0px 0px 10px 10px;
+  // border-radius: 0px 0px 10px 10px;
   padding: 20px 0px;
   border: none;
   .fieldset-legend {
     position: relative;
     top: 15px;
-    color: #dde2f1;
+    color: $filter-text-color;
     font-weight: 200;
-    
+  }
+  .fieldset-wrapper {
+    .form-radios {
+      display: inline-flex;
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -69,13 +78,26 @@
 }
 #edit-specify-wrapper {
   display: none;
-  
 }
-.form-submit{
+
+#edit-actions--3{
+  border-radius: 0 0 10px 10px ;
+  padding-bottom: 30px;
+}
+
+.form-submit {
   color: white;
   background-color: #625bc5;
   border: 1px solid #625bc5;
   width: 255px;
   height: 40px;
   border-radius: 5px;
+}
+
+#edit-field-price-value-all--2{
+  display: none;
+  label{
+    color: red;
+    // display: none;
+  }
 }

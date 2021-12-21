@@ -1,3 +1,294 @@
+.header {
+  height: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.product-list {
+  box-sizing: border-box;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.category {
+  width: 30%;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.views-row {
+  background-color: white;
+  display: inline-flex;
+  border-radius: 10px;
+  width: 280px;
+  height: 320px;
+  margin: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.views-row a {
+  text-decoration: none;
+  color: black;
+}
+
+.views-field a {
+  text-decoration: none;
+  color: black;
+}
+
+.views-field-field-product-image {
+  display: flex;
+  height: 60%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.views-field-field-price {
+  margin: 0px 0 10px 0;
+}
+.views-field-field-price .field-content {
+  color: red;
+}
+
+.views-field-field-rating .checked {
+  color: orange;
+}
+
+.views-field-field-discount {
+  position: relative;
+  top: 10px;
+  left: -125px;
+}
+.views-field-field-discount .field-content {
+  position: absolute;
+}
+.views-field-field-discount .field-content span {
+  display: inline-flex;
+  justify-content: center;
+  width: 50px;
+  padding: 2px;
+  background-color: palegreen;
+  box-shadow: inset 25px 0px 25px -32px rgba(0, 0, 0, 0.45), inset -25px 0px 25px -32px rgba(0, 0, 0, 0.45);
+}
+
+.form-item-keyword {
+  display: inline-flex;
+  background-color: white;
+  width: 320px;
+  height: 90px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.form-text {
+  width: 260px;
+  height: 32px;
+  border: 1px solid #eaedf6;
+  border-radius: 5px;
+}
+
+.form-item-categories .form-text {
+  display: none;
+}
+
+.form-type-select {
+  padding: 15px 0;
+}
+.form-type-select label {
+  color: #b2b4b5;
+  display: block;
+  margin-bottom: 7px;
+}
+.form-type-select .form-select {
+  color: #b2b4b5;
+  background-color: white;
+  width: 215px;
+  height: 32px;
+  border: 1px solid #eaedf6;
+  border-radius: 5px;
+}
+
+.form-wrapper {
+  padding: 20px 0px;
+  border: none;
+}
+.form-wrapper .fieldset-legend {
+  position: relative;
+  top: 15px;
+  color: #b2b4b5;
+  font-weight: 200;
+}
+.form-wrapper .fieldset-wrapper .form-radios {
+  display: inline-flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-type-select,
+.form-item-categories,
+.form-wrapper {
+  background-color: white;
+  width: 290px;
+  margin: -10px 0 0 0;
+  padding-left: 30px;
+}
+
+.form-item-categories {
+  padding: 18px 15px;
+  border-radius: 10px 10px;
+}
+.form-item-categories label {
+  padding: 0px 15px;
+}
+
+#edit-specify-wrapper {
+  display: none;
+}
+
+#edit-actions--3 {
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 30px;
+}
+
+.form-submit {
+  color: white;
+  background-color: #625bc5;
+  border: 1px solid #625bc5;
+  width: 255px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+#edit-field-price-value-all--2 {
+  display: none;
+}
+#edit-field-price-value-all--2 label {
+  color: red;
+}
+
+.detail-wrapper {
+  width: 95vw;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 45px;
+}
+.detail-wrapper .detail-image {
+  width: 50%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+.detail-wrapper .detail-image .main-image {
+  margin-right: 60px;
+}
+.detail-wrapper .detail-image .main-image img {
+  height: 300px;
+  width: 300px;
+}
+.detail-wrapper .detail-image .small-image-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 260px;
+}
+.detail-wrapper .detail-image .small-image-wrapper .small-image {
+  height: 50px;
+  width: 50px;
+}
+.detail-wrapper .detail-image .small-image-wrapper .small-image img {
+  height: 50px;
+  width: 50px;
+}
+.detail-wrapper .detail-all-fields {
+  width: 50%;
+  padding-right: 40px;
+}
+.detail-wrapper .detail-all-fields .price {
+  margin-top: 20px;
+}
+.detail-wrapper .detail-all-fields .price h2 {
+  display: inline-flex;
+  font-weight: 600;
+}
+.detail-wrapper .detail-all-fields .price h2 del {
+  color: #adaeb5;
+}
+.detail-wrapper .detail-all-fields .price p {
+  color: #adaeb5;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+.detail-wrapper .detail-all-fields .rating svg {
+  color: orange;
+}
+
 body {
   background-color: #EAEDF6;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.main-page .main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hidden {
+  display: none;
 }

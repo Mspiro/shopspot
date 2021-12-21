@@ -17,7 +17,7 @@ function hint() {
 }
 function watch() {
   gulp.watch("./src/sass/**/*.scss", style);
-  gulp.watch("./src/js/**/*.js", hint);
+  gulp.watch("./src/js/*.js", hint);
 
 }
 exports.style = style;

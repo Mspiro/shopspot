@@ -1,0 +1,9 @@
+<?php
+function shopspot_preprocess_select(&$variables) {
+  $variables['options'][0]['label'] = t('All Categories');
+}
+
+
+function shopspot_preprocess_node(&$variables) {
+  //dump($variables);
+}

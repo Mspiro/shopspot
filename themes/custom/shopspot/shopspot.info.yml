@@ -8,9 +8,13 @@ screenshot: screenshot.png
 
 regions:
   header: Header
+  logo: Logo
+  menu: Menu
   content: Content
   category: Category
-  
+  footer_first: Footer first
+  footer_second: Footer second
+  footer_third: Footer third
   page_top: 'Page top'
   page_bottom: 'Page bottom'
 

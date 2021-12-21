@@ -3,12 +3,13 @@ global:
   css:
     theme:
       dist/css/main.css: {}
-      dist/css/style.css: {}
-      dist/css/region/region.css: {}
-      dist/css/layout/layout.css: {}
-      dist/css/view/view.css: {}
-      dist/css/component/card.css: {}
-      dist/css/component/filter.css: {}
+      # dist/css/style.css: {}
+      # dist/css/region/region.css: {}
+      # # dist/css/layout/layout.css: {}
+      # # dist/css/view/view.css: {}
+      # dist/css/component/card.css: {}
+      # dist/css/component/filter.css: {}
+      # dist/css/component/detailimage.css: {}
 
   js:
     dist/js/script.js: {}
