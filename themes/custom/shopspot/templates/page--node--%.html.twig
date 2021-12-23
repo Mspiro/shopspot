@@ -47,7 +47,7 @@
   <header role="banner">
   <div id="header" class="header"> 
     {{ page.header }}
-    <p>  Header </p>
+    {# <p>  Header </p> #}
     </div>
   </header>
 
@@ -64,16 +64,21 @@
     <footer role="contentinfo">
     <div class="footer-first">
       {{ page.footer_first }}
-      <p>  First Footer </p>
+      {# <p>  First Footer </p> #}
     </div>
-    <div class="footer-second">
-      {{ page.footer_second }}
-      <p>  Second Footer </p>
+    {# {{ kint(page.footer_second|keys) }} #}
+    <div class="footer-second">  
+      <div class="custome-footer-hr-menus">   
+        {{ page.footer_second.footermenuvertical }}
+        <hr />    
+      </div>    
+      
+      <div class="follow-us">
+      {# {{ kint(page.footer_second) }} #}
+          {{ page.footer_second.followus }}
+      </div>
     </div>
-    <div class="footer-third">
-      {{ page.footer_third }}
-      <p>  Third Footer </p>
-    </div>
+    
     </footer>
 
 </div>{# /.layout-container #}

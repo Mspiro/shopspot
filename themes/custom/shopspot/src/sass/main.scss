@@ -1,31 +1,9 @@
 @import 'base';
-@import 'region_section/header';
-@import 'region_section/content';
-@import 'region_section/category';
+// @import 'region_section/footerFirst';
+@import 'region_section/footerSecond';
+
 @import 'component/card';
 @import 'component/filters';
 @import 'component/details-image';
 @import 'component/details-content';
 
-body{
-  background-color: #EAEDF6;
-}
-.main-page{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  .main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: flex-start;
-  }
-}
-.hidden{
-  display: none;
-}

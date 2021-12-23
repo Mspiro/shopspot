@@ -51,25 +51,54 @@
     width: 50%;
     padding-right: 40px;
 
-    .price{
+    .rating {
+      margin-top: 15px;
+      svg {
+        color: orange;
+      }
+    }
+    .discount {
+      display: flex;
+      color: green;
+      margin-top: 30px;
+      margin-bottom: -10px;
+    }
+    .price {
       margin-top: 20px;
-      h2{
+      h2 {
         display: inline-flex;
         font-weight: 600;
-        del{
+        del {
           color: #adaeb5;
         }
       }
-      p{
+      p {
         color: #adaeb5;
-        margin-top: -10px;
+        margin-top: 10px;
         margin-bottom: 30px;
       }
     }
 
-    .rating {
-      svg {
-        color: orange;
+    .description {
+      h3 {
+        margin: 0 0 10px 0px;
+      }
+      p {
+        margin: 10px 0px;
+      }
+    }
+
+    .quntity{
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: flex-start;
+
+      input{
+        height: 40px;
+        width: 100px;
+        border: 1px solid;
+        border-radius: 5px;
       }
     }
   }

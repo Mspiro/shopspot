@@ -71,11 +71,7 @@
  */
 #}
 <article{{ attributes }}>
-{{ kint(content.field_discount ) }}
-
-{% if content.field_discount %}
-  hello
-{% endif %}
+{# {{ kint(content) }} #}
 
 
   <div{{ attributes }}>
@@ -115,10 +111,10 @@
           {{ content.field_start }}
           <span>( 135 Customers Review)</span>
         </div>
-        
-        {% if content.field_discount %}   
+
+        {% if content.field_discount[0] %}   
           <div class="discount">
-            {{ content.field_discount}}
+            {{ content.field_discount}}&nbsp;%&nbsp; OFF
           </div>
         {% endif %}
         
@@ -138,16 +134,16 @@
         </div>
         
         <div class="quntity">          
-        <p>Quntity:</p>
+          <form action="#" method="post">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" value=1>         
+          </form>
         </div>
 
         <div class="color">          
         <p>Color:</p>
-        </div>
-
-        <div class="category-field">          
-        {{ content.field_category }}
-        </div>
+        </div>   
+        
       </div>
     </div>
   </div>
