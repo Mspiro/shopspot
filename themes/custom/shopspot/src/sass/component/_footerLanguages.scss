@@ -1,0 +1,31 @@
+.all-footer-menu {
+  width: 100%;
+  p{
+    margin-left: 5px;
+  }
+  .languages {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+    margin: -20px 0 0 0 ;
+    .languages-list {
+      .menu {
+        .menu-item {
+          width: auto;
+          margin: 0 2px;
+          padding-top: 0px;
+          a {
+            text-decoration: none;
+            color: white;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

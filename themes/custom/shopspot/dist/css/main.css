@@ -19,18 +19,19 @@ body {
 
 .connect-on {
   display: flex;
-  width: 100%;
+  width: 85%;
   height: 67px;
   align-content: center;
-  justify-content: center;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
 }
 .connect-on div {
   display: inline-flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
+  margin: 0 23px;
 }
 .connect-on .contextual-region {
   display: inline-flex;
@@ -50,11 +51,11 @@ body {
   margin-right: 7px;
 }
 .connect-on .download {
-  width: 396px;
+  width: auto;
   height: 32px;
 }
 .connect-on .our-app {
-  width: 360px;
+  width: auto;
   height: 32px;
 }
 .connect-on .our-app a img {
@@ -63,7 +64,7 @@ body {
   border-radius: 5px;
 }
 .connect-on .follow-us {
-  width: 192px;
+  width: auto;
   height: 32px;
 }
 .connect-on .follow-us p span svg {
@@ -125,6 +126,34 @@ nav > .menu > li .menu a {
   color: #ffffff;
 }
 nav > .menu > li .menu a:hover {
+  text-decoration: underline;
+}
+
+.all-footer-menu {
+  width: 100%;
+}
+.all-footer-menu p {
+  margin-left: 5px;
+}
+.all-footer-menu .languages {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  margin: -20px 0 0 0;
+}
+.all-footer-menu .languages .languages-list .menu .menu-item {
+  width: auto;
+  margin: 0 2px;
+  padding-top: 0px;
+}
+.all-footer-menu .languages .languages-list .menu .menu-item a {
+  text-decoration: none;
+  color: white;
+}
+.all-footer-menu .languages .languages-list .menu .menu-item a:hover {
   text-decoration: underline;
 }
 

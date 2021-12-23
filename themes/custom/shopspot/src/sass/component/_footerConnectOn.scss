@@ -1,16 +1,17 @@
 .connect-on {
   display: flex;
-  width: 100%;
+  width: 85%;
   height: 67px;
   align-content: center;
-  justify-content: center;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
   div {
     display: inline-flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     align-content: center;
+    margin: 0 23px;
   }
   .contextual-region {
     display: inline-flex;
@@ -34,12 +35,12 @@
     }
   }
   .download {
-    width: 396px;
+    width: auto;
     height: 32px;
   }
 
   .our-app {
-    width: 360px;
+    width: auto;
     height: 32px;
     a {
       img {
@@ -51,7 +52,7 @@
   }
 
   .follow-us {
-    width: 192px;
+    width: auto;
     height: 32px;
     p {
       span {
