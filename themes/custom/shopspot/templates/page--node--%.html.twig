@@ -68,16 +68,27 @@
     </div>
     {# {{ kint(page.footer_second|keys) }} #}
     <div class="footer-second">  
-      <div class="custome-footer-hr-menus">   
-        {{ page.footer_second.footermenuvertical }}
-        <hr />    
-      </div>    
-      
-      <div class="follow-us">
-      {# {{ kint(page.footer_second) }} #}
-          {{ page.footer_second.followus }}
-      </div>
-    </div>
+        <div class="custome-footer-hr-menus">   
+          {{ page.footer_second.footermenuvertical }}
+        </div>  
+        <hr/>    
+        {# {{ kint(page.footer_second) }} #}
+        <div class="connect-on">
+
+          <div class="download">
+            {{ page.footer_second.download }}
+          </div>
+
+          <div class="our-app">
+            {{ page.footer_second.alibabasupplierapp }}
+          </div>
+
+          <div class="follow-us">
+            {{ page.footer_second.followus }}            
+          </div>
+
+        </div>
+      </div>  
     
     </footer>
 

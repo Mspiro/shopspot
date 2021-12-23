@@ -47,13 +47,11 @@
   <header role="banner">
   <div id="header" class="header"> 
     {{ page.header }}
-    {# <p>  Header </p> #}
     </div>
   </header>
 
   <main role="main" class="main">
-    {# link is in html.html.twig #}
-    {# <a id="main-content" tabindex="-1"></a> #}
+
 
     <div class="layout-content product-list" >
       {{ page.content }}
@@ -68,24 +66,60 @@
   </main>
 
     <footer role="contentinfo">
-    <div class="footer-first">
-      {{ page.footer_first }}
-      {# <p>  First Footer </p> #}
-    </div>
-    <div class="footer-second">  
-      <div class="custome-footer-hr-menus">   
-        {{ page.footer_second.footermenuvertical }}
-        <hr />    
-      </div>  
-       <div class="follow-us">
-      {# {{ kint(page.footer_second) }} #}
-          {{ page.footer_second.followus }}
+      <div class="footer-first">
+        {{ page.footer_first }}
       </div>
-    </div>  
-    <div class="footer-third">
-      {{ page.footer_third }}
-      {# <p>  Third Footer </p> #}
-    </div>
+      <div class="footer-second">  
+        <div class="custome-footer-hr-menus">   
+          {{ page.footer_second.footermenuvertical }}
+        </div>  
+        <hr/>    
+        <div class="connect-on">
+
+          <div class="download">
+            {{ page.footer_second.download }}
+          </div>
+
+          <div class="our-app">
+            {{ page.footer_second.alibabasupplierapp }}
+          </div>
+
+          <div class="follow-us">
+            {{ page.footer_second.followus }}            
+          </div>
+
+        </div>
+        {# {{ kint(page.footer_second|keys) }} #}
+        <div class="all-footer-menu">
+        
+          <div class="languages">
+
+            <i class="fas fa-globe-americas"></i>
+            <p>Alibaba.com Site: </p>
+            
+            <div class ="languages-list">
+              {{ page.footer_second.alibabacomsite }}
+            </div> 
+          </div>
+{# 
+           <div>
+            {{ page.footer_second.alibaba.comsite }}
+          </div>
+
+           <div>
+            {{ page.footer_second.alibaba.comsite }}
+          </div>
+
+           <div>
+            {{ page.footer_second.alibaba.comsite }}
+          </div>
+
+           <div>
+            {{ page.footer_second.alibaba.comsite }}
+          </div> #}
+
+        </div>
+      </div>  
     </footer>
 
 </div>{# /.layout-container #}
