@@ -1,0 +1,27 @@
+.browse-alphabetically{
+  font-size: 12px;
+  margin-top: -40px;
+  nav{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    h2{
+      font-size: 12px;
+      font-weight: 100;
+    }
+    .menu{
+      li{
+        width: auto;
+        margin: 0 2px;
+        a{
+          text-decoration: none;
+          color: $footer-text-color;
+        }
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

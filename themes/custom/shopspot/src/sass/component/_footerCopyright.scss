@@ -1,0 +1,25 @@
+.copyright{
+  margin-top: -20px;
+  margin-bottom: 45px;
+  p{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    a{
+      text-decoration: none;
+      color: $footer-text-color;
+      img{
+        width: 26px;
+        height: 28px;
+      }
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    a:nth-child(4), a:nth-child(5) {
+      color: #86898c;
+    }
+  }
+}

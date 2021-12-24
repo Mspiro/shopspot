@@ -1,0 +1,17 @@
+.policy {
+  margin-top: -40px;
+  .menu {
+    font-size: 12px;
+    li {
+      width: auto;
+      margin: 0px 2px;
+      a{
+        text-decoration: none;
+        color: $footer-text-color;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

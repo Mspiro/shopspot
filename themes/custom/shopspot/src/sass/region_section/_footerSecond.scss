@@ -1,9 +1,14 @@
 @import "../component/footerConnectOn";
 @import "../component/footerVerticalMenu";
 @import "../component/footerLanguages";
+@import "../component/footerGroupMenu";
+@import "../component/footerAphabetticalMenu";
+@import "../component/footerPolicy";
+@import "../component/footerCopyright";
 
 .footer-second {
-  hr{
+  hr.hr{
     width: 95%;
+    border: 1px solid #313D51;
   }
 }
