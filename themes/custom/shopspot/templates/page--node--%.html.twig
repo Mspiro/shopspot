@@ -54,7 +54,6 @@
   <main role="main" class="main">
 
     <div class="layout-content details" >
-      {# {{ kint(page.content) }} #}
       {{ page.content }}
     </div>{# /.layout-content #}
 
@@ -62,17 +61,14 @@
   </main>
 
     <footer role="contentinfo">
-    <div class="footer-first">
-      {{ page.footer_first }}
-      {# <p>  First Footer </p> #}
-    </div>
-    {# {{ kint(page.footer_second|keys) }} #}
-    <div class="footer-second">  
+      <div class="footer-first">
+        {{ page.footer_first }}
+      </div>
+      <div class="footer-second">  
         <div class="custome-footer-hr-menus">   
           {{ page.footer_second.footermenuvertical }}
         </div>  
-        <hr/>    
-        {# {{ kint(page.footer_second) }} #}
+        <hr class="hr" />    
         <div class="connect-on">
 
           <div class="download">
@@ -88,8 +84,35 @@
           </div>
 
         </div>
-      </div>  
-    
+        <div class="all-footer-menu">
+        
+          <div class="languages">
+
+            <i class="fas fa-globe-americas"></i>
+            <p>Alibaba.com Site: </p>
+            
+            <div class ="languages-list">
+              {{ page.footer_second.alibabacomsite }}
+            </div> 
+          </div>
+          <div class="alibaba-group-menu">
+            {{ page.footer_second.alibabagroupmenus }}
+          </div>
+
+          <div class="browse-alphabetically">
+            {{ page.footer_second.browesalphabetically }}
+          </div>
+
+          <div class="policy">
+            {{ page.footer_second.policysmenu }}
+          </div>
+
+           <div class="copyright">
+            {{ page.footer_second.copyright }}
+          </div>
+
+        </div>
+      </div> 
     </footer>
 
 </div>{# /.layout-container #}
