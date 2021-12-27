@@ -1,0 +1,25 @@
+uuid: 9bda5b64-c0d9-464a-97ff-ff3695eb9e0f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a7dce34a-996a-47c8-bdf8-cf285e6efadf'
+  module:
+    - block_content
+  theme:
+    - shopspot
+id: followus
+theme: shopspot
+region: footer_second
+weight: -14
+provider: null
+plugin: 'block_content:a7dce34a-996a-47c8-bdf8-cf285e6efadf'
+settings:
+  id: 'block_content:a7dce34a-996a-47c8-bdf8-cf285e6efadf'
+  label: 'Follow Us:'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

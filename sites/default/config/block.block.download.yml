@@ -1,0 +1,25 @@
+uuid: 6a774157-cf2a-45fa-a6cb-4ea10146c15f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7a694043-4ea3-43e7-852d-321375e2c3d2'
+  module:
+    - block_content
+  theme:
+    - shopspot
+id: download
+theme: shopspot
+region: footer_second
+weight: -12
+provider: null
+plugin: 'block_content:7a694043-4ea3-43e7-852d-321375e2c3d2'
+settings:
+  id: 'block_content:7a694043-4ea3-43e7-852d-321375e2c3d2'
+  label: 'Download : '
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

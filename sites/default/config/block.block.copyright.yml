@@ -1,0 +1,25 @@
+uuid: 05cc370c-ae76-498a-b28b-7341f0106e81
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e86df330-c760-476b-b009-f8443d902268'
+  module:
+    - block_content
+  theme:
+    - shopspot
+id: copyright
+theme: shopspot
+region: footer_second
+weight: -7
+provider: null
+plugin: 'block_content:e86df330-c760-476b-b009-f8443d902268'
+settings:
+  id: 'block_content:e86df330-c760-476b-b009-f8443d902268'
+  label: 'Copyright '
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

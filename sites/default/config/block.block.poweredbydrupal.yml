@@ -1,0 +1,20 @@
+uuid: 2c3bb6d2-2191-481e-8873-4ffb05dcbfcb
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - shopspot
+id: poweredbydrupal
+theme: shopspot
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

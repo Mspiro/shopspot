@@ -1,0 +1,28 @@
+uuid: f290044c-d0c9-406e-bfa2-f03761cb4e87
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+    - user
+  theme:
+    - shopspot
+id: userlogin
+theme: shopspot
+region: header
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      products: products
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

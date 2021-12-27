@@ -1,0 +1,41 @@
+uuid: 7e7fbe41-c4ef-4ee8-b1d8-5866881f2367
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.products
+    - taxonomy.vocabulary.baby_kids
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.electronics
+    - taxonomy.vocabulary.sports_books_and_more
+    - taxonomy.vocabulary.women
+  content:
+    - 'taxonomy_term:sports_books_and_more:c9362b22-af08-4a77-b0b9-7876e9980b53'
+id: node.products.field_category
+field_name: field_category
+entity_type: node
+bundle: products
+label: Category
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: c9362b22-af08-4a77-b0b9-7876e9980b53
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      baby_kids: baby_kids
+      electronics: electronics
+      category: category
+      sports_books_and_more: sports_books_and_more
+      women: women
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: category
+field_type: entity_reference
