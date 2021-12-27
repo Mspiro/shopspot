@@ -1,17 +1,17 @@
 .connect-on {
   display: flex;
-  width: 85%;
+  width: 92%;
   height: 67px;
   align-content: center;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   div {
     display: inline-flex;
     justify-content:flex-start;
     align-items: center;
     align-content: center;
-    margin: 0 23px;
+    margin: 0 30px;
   }
   .contextual-region {
     display: inline-flex;

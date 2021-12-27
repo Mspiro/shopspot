@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+$filter-text-color:#b2b4b5;
+$footer-text-color: #ffffff;
 body{
   background-color: #EAEDF6;
   margin: 0;
@@ -15,5 +17,8 @@ body{
 .hidden{
   display: none;
 }
-$filter-text-color:#b2b4b5;
-$footer-text-color: #ffffff;
+
+.form-item{
+  margin: 0;
+  padding: 0;
+}

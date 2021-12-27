@@ -1,0 +1,50 @@
+.subscription {
+  margin: 45px 0 45px 0;
+  .text-formatted {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+    }
+    .input {
+      margin-top: 20px;
+      .search-text {
+        width: 300px;
+        height: 40px;
+        background-color: #313d51;
+        border-color: #c4c6cf;
+        border-style: solid;
+        border-width: 1px;
+        color: #ffffff;
+        display: inline-block;
+        line-height: 20.5714px;
+        margin: -3px 0px 0px;
+        padding: 10px;
+      }
+      .btn-search {
+        background-color: transparent;
+        border-color: #c6cad1;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1.11111px;
+        color: #ffffff;
+        display: inline-block;
+        line-height: 38px;
+        padding: 0px 20px;
+        text-align: center;
+        margin-left: 10px;
+      }
+    }
+    .email-privacy {
+      color: #999999;
+      font-size: 12px;
+      line-height: 15.4285px;
+      margin: 5px 0px 0px;
+      // text-align: left;
+    }
+  }
+}

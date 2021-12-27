@@ -17,63 +17,76 @@ body {
   display: none;
 }
 
-.connect-on {
-  display: flex;
-  width: 85%;
-  height: 67px;
-  align-content: center;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
+.form-item {
+  margin: 0;
+  padding: 0;
 }
-.connect-on div {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  margin: 0 23px;
+
+.branding a img {
+  width: 75px;
+  height: 20px;
 }
-.connect-on .contextual-region {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-around;
-  align-content: center;
-  flex-direction: row;
-}
-.connect-on .contextual-region h2 {
-  font-size: 14px;
-  font-weight: 100;
-}
-.connect-on .contextual-region span a img {
-  width: 130px;
-  height: 30px;
-  border-radius: 5px;
-  margin-right: 7px;
-}
-.connect-on .download {
-  width: auto;
-  height: 32px;
-}
-.connect-on .our-app {
-  width: auto;
-  height: 32px;
-}
-.connect-on .our-app a img {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-.connect-on .follow-us {
-  width: auto;
-  height: 32px;
-}
-.connect-on .follow-us p span svg {
-  width: 19px;
-  height: 19px;
-}
-.connect-on .follow-us p a {
+.branding .slogan a {
   text-decoration: none;
   color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+}
+.branding .slogan a span {
+  color: gold;
+}
+.branding .slogan img {
+  width: 10px;
+  height: 10px;
+}
+
+.subscription {
+  margin: 45px 0 45px 0;
+}
+.subscription .text-formatted {
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.subscription .text-formatted p {
+  font-size: 14px;
+}
+.subscription .text-formatted .input {
+  margin-top: 20px;
+}
+.subscription .text-formatted .input .search-text {
+  width: 300px;
+  height: 40px;
+  background-color: #313d51;
+  border-color: #c4c6cf;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 20.5714px;
+  margin: -3px 0px 0px;
+  padding: 10px;
+}
+.subscription .text-formatted .input .btn-search {
+  background-color: transparent;
+  border-color: #c6cad1;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.11111px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 38px;
+  padding: 0px 20px;
+  text-align: center;
+  margin-left: 10px;
+}
+.subscription .text-formatted .email-privacy {
+  color: #999999;
+  font-size: 12px;
+  line-height: 15.4285px;
+  margin: 5px 0px 0px;
 }
 
 .footer-second .region-footer-second {
@@ -127,6 +140,65 @@ nav > .menu > li .menu a {
 }
 nav > .menu > li .menu a:hover {
   text-decoration: underline;
+}
+
+.connect-on {
+  display: flex;
+  width: 92%;
+  height: 67px;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.connect-on div {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin: 0 30px;
+}
+.connect-on .contextual-region {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: row;
+}
+.connect-on .contextual-region h2 {
+  font-size: 14px;
+  font-weight: 100;
+}
+.connect-on .contextual-region span a img {
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 7px;
+}
+.connect-on .download {
+  width: auto;
+  height: 32px;
+}
+.connect-on .our-app {
+  width: auto;
+  height: 32px;
+}
+.connect-on .our-app a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+.connect-on .follow-us {
+  width: auto;
+  height: 32px;
+}
+.connect-on .follow-us p span svg {
+  width: 19px;
+  height: 19px;
+}
+.connect-on .follow-us p a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .all-footer-menu {
@@ -341,7 +413,7 @@ nav > .menu > li .menu a:hover {
   align-items: center;
   align-content: center;
   border-radius: 10px;
-  margin-top: 10px;
+  margin: 10px 0 30px 0;
 }
 
 .form-text {
@@ -434,14 +506,14 @@ nav > .menu > li .menu a:hover {
 }
 
 .detail-wrapper {
-  width: 95vw;
+  width: 1250px;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 10px;
   padding-top: 45px;
 }

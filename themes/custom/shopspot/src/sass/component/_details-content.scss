@@ -1,12 +1,12 @@
 .detail-wrapper {
-  width: 95vw;
+  width: 1250px;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: white;
+  background-color: $footer-text-color;
   border-radius: 10px;
   padding-top: 45px;
 
