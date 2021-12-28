@@ -22,9 +22,15 @@ body {
   padding: 0;
 }
 
+.branding {
+  margin: 0 12px;
+}
 .branding a img {
   width: 75px;
   height: 20px;
+}
+.branding .slogan {
+  line-height: 5px;
 }
 .branding .slogan a {
   text-decoration: none;
@@ -38,6 +44,91 @@ body {
 .branding .slogan img {
   width: 10px;
   height: 10px;
+}
+
+.header .region-header .form-item:not(:first-child),
+.header .region-header .form-actions {
+  display: none;
+}
+.header .region-header form .form-item-keyword {
+  background-color: yellow;
+  height: auto;
+  width: auto;
+  margin: 0;
+}
+.header .region-header form .form-item-keyword input {
+  width: 522px;
+  height: 36px;
+  border-radius: 0px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 2px 0px 0px 2px;
+  font-size: 14px;
+  padding: 0px 16px;
+}
+.header .region-header form .form-item-keyword input:focus-visible {
+  background-color: chartreuse;
+}
+.header .region-header #block-searchbtn {
+  background-color: white;
+  width: 42px;
+  height: 36px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-radius: 0px 2px 2px 0px;
+}
+.header .region-header #block-searchbtn svg {
+  color: #2874f0;
+}
+
+.header nav {
+  background-color: yellowgreen;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.header nav h2 {
+  background: white;
+  padding: 5px 40px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #2874f0;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+}
+.header nav .menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+}
+.header nav .menu .menu-item--expanded {
+  display: inline-flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.header nav .menu .menu-item--expanded:first-child {
+  background-color: blueviolet;
+}
+.header nav .menu .menu-item--expanded > .menu > .menu-item {
+  background-color: brown;
+}
+.header nav .menu .menu-item {
+  height: auto;
+  width: 400px;
 }
 
 .subscription {

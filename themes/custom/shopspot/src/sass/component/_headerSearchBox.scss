@@ -1,0 +1,45 @@
+.header {
+  .region-header {
+    .form-item:not(:first-child),
+    .form-actions {
+      display: none;
+    }
+    form {
+      .form-item-keyword {
+        background-color: yellow;
+        height: auto;
+        width: auto;
+        margin: 0;
+        input {
+          width: 522px;
+          height: 36px;
+          border-radius: 0px;
+          border: none;
+          background-color: #ffffff;
+          border-radius: 2px 0px 0px 2px;
+          font-size: 14px;
+          padding: 0px 16px;
+        }
+        input:focus-visible{
+          // border: 0px solid white;
+          background-color: chartreuse;
+        }
+      }
+    }
+    #block-searchbtn {      
+      background-color: white;
+      width: 42px;
+      height: 36px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      border-radius: 0px 2px 2px 0px;
+      svg {
+        color: #2874f0;
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@ function shopspot_preprocess_select(&$variables) {
 }
 
 
-function shopspot_preprocess_node(&$variables) {
-  //dump($variables);
+function shopspot_preprocess_region(&$variables) {
+  //$blocks = Drupal\block\Entity\Block::loadMultiple();
+    //ksm($blocks);
 }
+

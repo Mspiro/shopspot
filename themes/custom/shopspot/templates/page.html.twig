@@ -47,6 +47,9 @@
   <header role="banner">
   <div id="header" class="header"> 
     {{ page.header }}
+      {# <div class="search-box">
+        {{ drupal_block('views_exposed_filter_block:frontpage-page_1') }}
+      </div> #}
     </div>
   </header>
 
@@ -58,6 +61,7 @@
     </div>{# /.layout-content #}
 
     {% if page.category %}
+      {# {{ kint(page.category|keys) }} #}
       <aside class="layout-sidebar-sidebar category" role="complementary">
         {{ page.category }}
       </aside>
