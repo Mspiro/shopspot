@@ -1,0 +1,13 @@
+name: 'Menu Manipulator'
+type: module
+description: 'Improve Drupal 8 menu management and rendering.'
+# version: VERSION
+core_version_requirement: ^8 || ^9
+package: Menu
+dependencies:
+  - drupal:language
+
+# Information added by Drupal.org packaging script on 2021-10-26
+version: '3.0.2'
+project: 'menu_manipulator'
+datestamp: 1635251464

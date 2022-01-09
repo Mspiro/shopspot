@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains menu_manipulator.install.
+ */
+
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_install().
+ */
+function menu_manipulator_install() {
+  $message = t('Menu Manipulator enabled. Visit the configuration page under @config_url', [
+    '@config_url' => Link::fromTextAndUrl(
+      'Administer > Site configuration > User Interface',
+      // Need to hardcode URL to avoid "Route undefined" issue.
+      Url::fromUserInput('/admin/config/user-interface/menu-manipulator')
+    )->toString(),
+  ]);
+  \Drupal::messenger()->addStatus($message);
+}

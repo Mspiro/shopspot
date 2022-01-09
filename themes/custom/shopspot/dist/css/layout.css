@@ -25,7 +25,6 @@
   align-content: center;
   align-items: center;
   background-color: #2874f0;
-  margin-top: 300px;
 }
 
 .region-header {
@@ -90,4 +89,8 @@
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
+}
+
+.visible {
+  display: flex;
 }

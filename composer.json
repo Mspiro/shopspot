@@ -20,6 +20,9 @@
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/core-vendor-hardening": "^9.2",
+        "drupal/fontawesome_menu_icons": "^1.9",
+        "drupal/menu_link_attributes": "^1.2",
+        "drupal/menu_manipulator": "^3.0",
         "drupal/twig_tweak": "^3.1",
         "drush/drush": "^10.6"
     },

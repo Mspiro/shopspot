@@ -1,0 +1,49 @@
+{# #}
+<div class="menu-title">{{ menu_title }}</div>
+<div class="menu-description">{{ menu_description }}</div
+
+{# ... #}
+{% for item in items %}
+  {# If item.icon is empty, you can get icon as follow: #}
+  {% set icon = item['#icon'] ?: item.original_link.getOptions().icon %}
+
+  {# Set link_text to include icon within. #}
+  {% if icon %}
+    {% set link_text %}
+      {# Embed an SVG icon #}
+      {# Raised an exception if icon file does not exists #}
+      {# @see https://www.drupal.org/project/twig_tweak/issues/2989718 #}
+      {% include '@yourtheme/icons/icon--' ~ icon ~ '.svg' %}
+
+      {# Example of icon as CSS background image #}
+      <span class="icon icon--{{ icon }}"></span>
+
+      {# Hide the text #}
+      <span class="visually-hidden">{{ item.title }}</span>
+    {% else %}
+      {# No icon, display the text only #}
+      <span class="menu-item-label">{{ item.title|raw }}</span>
+    {% endset %}
+  {% endif %}
+
+  {%
+    set classes = [
+      'menu-item',
+      item.is_expanded ? 'menu-item--expanded',
+      item.is_collapsed ? 'menu-item--collapsed',
+      item.in_active_trail ? 'menu-item--active-trail',
+    ]
+  %}
+  <li{{item.attributes.addClass(classes)}}>
+    {# link_text was created above #}
+    {# @see {% set link_text %} #}
+    {{ link(link_text, item.url) }}
+
+    {% if item.below %}
+      {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+    {% endif %}
+
+  </li>
+{% endfor %}
+
+{# ... #}

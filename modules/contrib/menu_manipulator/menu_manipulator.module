@@ -1,0 +1,271 @@
+<?php
+
+/**
+ * @file
+ * Contains menu_manipulator.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Routing\CurrentRouteMatch;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function menu_manipulator_help($route_name, CurrentRouteMatch $route_match) {
+  if ($route_name == 'help.page.menu_manipulator') {
+    $text = file_get_contents(dirname(__FILE__) . '/README.md');
+    if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+      return '<pre>' . $text . '</pre>';
+    }
+    else {
+      // Use the Markdown filter to render the README.
+      $filter_manager = \Drupal::service('plugin.manager.filter');
+      $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+      $config = ['settings' => $settings];
+      $filter = $filter_manager->createInstance('markdown', $config);
+      return $filter->process($text, 'en');
+    }
+  }
+  return NULL;
+}
+
+/**
+ * Get a menu tree filtered by the current language.
+ *
+ * Based on our custom MenuTreeManipulators services.
+ * This is pretty useful as of now (8.4.x) as Drupal doesn't
+ * provide a way to filer MenuLinkContent entity by their language.
+ *
+ * @param string $menu_name
+ *   The menu machine name.
+ * @param \Drupal\Core\Menu\MenuTreeParameters $parameters
+ *   Extra parameters for the menu tree.
+ *
+ * @return array
+ *   The filtered MenuTree renderable array.
+ *
+ * @code
+ * // Implements theme_preprocess_menu().
+ * function yourtheme_preprocess_menu(&$variables, $hook) {
+ *   if (isset($variables['menu_name']) && $menu_name = $variables['menu_name']) {
+ *     $moduleHandler = \Drupal::service('module_handler');
+ *     if ($moduleHandler->moduleExists('menu_manipulator')) {
+ *       $menu_tree_translated = menu_manipulator_get_multilingual_menu($menu_name);
+ *       $variables['items'] = isset($menu_tree_translated['#items']) ? $menu_tree_translated['#items'] : [];
+ *     }
+ *   }
+ * }
+ * @endcode
+ */
+function menu_manipulator_get_multilingual_menu(string $menu_name, MenuTreeParameters $parameters = NULL) {
+  $menu_tree = \Drupal::menuTree();
+
+  $manipulators = [
+    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+    ['callable' => 'menu_manipulator.menu_tree_manipulators:filterTreeByCurrentLanguage'],
+  ];
+
+  if ($menu_name == 'admin') {
+    // Specific manipulation for the "Admin Toolbar" menu.
+    // See admin_toolbar_prerender_toolbar_administration_tray()
+    $parameters = $parameters ?: new MenuTreeParameters();
+    $parameters->setRoot('system.admin')->excludeRoot()->setMaxDepth(4)->onlyEnabledLinks();
+  }
+  else {
+    // Default method to retrieve menu items.
+    // See MenuLinkTreeInteface::getCurrentRouteMenuTreeParameters().
+    $parameters = $parameters ?: $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+  }
+
+  // Manipulate the menu tree to filter by current language.
+  $menu = $menu_tree->load($menu_name, $parameters);
+  $menu = $menu_tree->transform($menu, $manipulators);
+  return $menu_tree->build($menu);
+}
+
+/**
+ * Implements theme_preprocess_menu().
+ */
+function menu_manipulator_preprocess_menu(&$variables, $hook) {
+  if (!isset($variables['menu_name'])) {
+    return;
+  }
+
+  $config = \Drupal::config('menu_manipulator.settings');
+
+  $menu_name = $variables['menu_name'];
+
+  $menu_config = \Drupal::config('system.menu.' . $menu_name);
+
+  // Expose menu title and description for easier theming.
+  $variables['menu_title'] = ['#markup' => $menu_config->get('label')];
+  $variables['menu_description'] = ['#markup' => $menu_config->get('description')];
+
+  // Display icons.
+  $selected_menus = $config->get('preprocess_menus_icon_list') ?? [];
+  $selected_menus = array_filter($selected_menus, function ($v) {
+    return $v !== 0;
+  });
+
+  if (($selected_menus[$menu_name] ?? 0) !== 0) {
+    foreach ($variables['items'] ?? [] as $key => $item) {
+      $item_options = $item['original_link']->getOptions();
+      if (isset($item_options['icon']) && $icon = $item_options['icon']) {
+        $variables['items'][$key]['#icon'] = $icon;
+        $variables['items'][$key]['#attributes']['class'][] = 'menu-item-with-icon';
+        $variables['items'][$key]['#attributes']['class'][] = 'menu-item-with-icon--' . $icon;
+      }
+    }
+  }
+
+  // Filter links now, if possible.
+  if (menu_manipulator_menu_is_filterable_by_language($menu_name)) {
+    \Drupal::service('menu_manipulator.menu_tree_manipulators')
+      ->filterItemsByCurrentLanguage($variables['items']);
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for the Menu Link Content form.
+ */
+function menu_manipulator_form_menu_link_content_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $config = \Drupal::config('menu_manipulator.settings');
+
+  $menu_link = $form_state->getFormObject()->getEntity();
+
+  // Save/load custom options in entity builder.
+  $form['#entity_builders']['menu_manipulator'] = 'menu_manipulator_menu_link_content_form_entity_builder';
+
+  // Skip untranslatable custom link options.
+  $not_translatable = !$menu_link->isTranslatable() || !$menu_link->getEntityType()->isRevisionable();
+  $hide_untranslatable_fields = $menu_link->isDefaultTranslationAffectedOnly() && !$menu_link->isDefaultTranslation();
+  $hide_options = $not_translatable || $hide_untranslatable_fields;
+
+  $menu_link_options = $menu_link->link->first()->options ?: [];
+  $menu_name = $menu_link->getMenuName();
+
+  // Check if menu can have icons (all menu can by default).
+  $menus_with_icon = $config->get('preprocess_menus_icon_list') ?? [];
+  $selected_menus_with_icons = array_filter($menus_with_icon, function ($v) {
+    return $v !== 0;
+  });
+  $menus_with_icon = !empty($selected_menus_with_icons) ? $selected_menus_with_icons : array_keys($menus_with_icon);
+  $can_have_icon = in_array($menu_link->getMenuName(), $menus_with_icon);
+
+  // Custom options container.
+  $form['menu_manipulator'] = [
+    '#type' => 'container',
+    '#weight' => -2,
+  ];
+
+  // Icons
+  $icon_list_value = $config->get('menu_link_icon_list') ?: '';
+  $icon_list = menu_manipulator_prepare_associative_list($icon_list_value);
+  $form['menu_manipulator']['menu_link_icon'] = [
+    '#type' => 'select',
+    '#title' => t('Icon'),
+    '#description' => t('Select icon for this menu link.'),
+    '#tree' => TRUE,
+    '#empty_option' => t('- Select -'),
+    '#options' => $icon_list,
+    '#default_value' => $menu_link_options['icon'] ?? NULL,
+    '#access' => $can_have_icon && !$hide_options,
+  ];
+
+  $language_use_entity_default = $config->get('preprocess_menus_language_use_entity') ?? 1;
+  $form['menu_manipulator']['menu_link_language_use_entity'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Use referenced entity to filter by current language'),
+    '#description' => t("If menu item's route targets an entity, check if it has translation"),
+    '#tree' => TRUE,
+    '#default_value' => $menu_link_options['language_use_entity'] ?? $language_use_entity_default,
+    '#disabled' => !$language_use_entity_default,
+    '#access' => menu_manipulator_menu_is_filterable_by_language($menu_name) && !$hide_options,
+  ];
+}
+
+/**
+ * Entity builder for menu item entity form.
+ */
+function menu_manipulator_menu_link_content_form_entity_builder($entity_type, EntityInterface $menu_link, &$form, FormStateInterface $form_state) {
+  // Attach extra options to Menu Link Content entity.
+  $menu_link_options = $menu_link->link->first()->options ?: [];
+  $menu_link_options['icon'] = $form_state->getValue('menu_link_icon');
+  $menu_link_options['language_use_entity'] = $form_state->getValue('menu_link_language_use_entity');
+  $menu_link->link->first()->options = $menu_link_options;
+}
+
+/**
+ * Helper function to filter the associative key|label configuration.
+ *
+ * @param string $string
+ *   The original value.
+ *
+ * @return array
+ *   An associative array of values.
+ *
+ * @see Drupal\options\Plugin\Field\FieldType\ListItemBase::extractedAllowedValues();
+ */
+function menu_manipulator_prepare_associative_list($string) {
+  $values = [];
+
+  $list = explode("\n", $string);
+  $list = array_map('trim', $list);
+  $list = array_filter($list, 'strlen');
+
+  $generated_keys = $explicit_keys = FALSE;
+  foreach ($list as $text) {
+    // Check for an explicit key.
+    $matches = [];
+    if (preg_match('/(.*)\|(.*)/', $text, $matches)) {
+      // Trim key and value to avoid unwanted spaces issues.
+      $key = trim($matches[1]);
+      $value = trim($matches[2]);
+      $explicit_keys = TRUE;
+    }
+
+    $values[$key] = $value;
+  }
+
+  // We generate keys only if the list contains no explicit key at all.
+  if ($explicit_keys && $generated_keys) {
+    return [];
+  }
+
+  return $values;
+}
+
+/**
+ * Helper function to detect if a menu is to be filtered by language.
+ *
+ * @param string $string
+ *   The menu name.
+ *
+ * @return bool
+ *   Yes or no.
+ */
+function menu_manipulator_menu_is_filterable_by_language(string $menu_name) {
+  $config = \Drupal::config('menu_manipulator.settings');
+
+  if (!$config->get('preprocess_menus_language')) {
+    return FALSE;
+  }
+
+  $selected_menus = $config->get('preprocess_menus_language_list') ?? [];
+  $selected_menus = array_filter($selected_menus, function ($v) {
+    return $v !== 0;
+  });
+
+  // Filter this menu by default.
+  if (empty($selected_menus)) {
+    $selected_menus[$menu_name] = $menu_name;
+  }
+
+  // Filter links.
+  return ($selected_menus[$menu_name] ?? 0) !== 0;
+}

@@ -1,0 +1,21 @@
+Menu Manipulator 3.0.1, 2021-10-24
+---------------------------------
+* replace {{ item.icon }} by {{ item['#icon'] }}
+* filterByCurrentLanguage replaced by filterTreeByCurrentLanguage and filterItemsByCurrentLanguage
+* add option to disable default filter by referenced entity
+* add class on menu items with icons: "menu-item-with-icon" and"menu-item-with-icon--$icon";
+* always expose Menu title and Menu description to Twig.
+* simplify and improve settings form
+
+Menu Manipulator 8.x-2.1, 2021-01-15
+---------------------------------
+New release for D9 compatibility.
+
+Menu Manipulator 8.x-1.1, 2018-08-02
+---------------------------------
+New release ready for site builders.
+Automatic filtering in place and configurable from admin UI.
+
+Menu Manipulator 8.x-1.0, 2018-07-31
+---------------------------------
+Initial release by Matthieu Scarset.

@@ -1,0 +1,17 @@
+preprocess_menus_language: 1
+preprocess_menus_language_use_entity: 1
+preprocess_menus_language_list:
+  footer: footer
+  main: main
+  account: 0
+  admin: 0
+  links: 0
+  tools: 0
+preprocess_menus_icon: 1
+preprocess_menus_icon_list:
+  account: 0
+  admin: 0
+  devel: 0
+  footer: 0
+  main: 0
+  tools: 0

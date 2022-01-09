@@ -13,7 +13,7 @@ global:
       # dist/css/component/detailimage.css: {}
 
   js:
-    dist/js/script.js: {}
+    dist/js/loginMenu.js: {}
     
   dependencies:
     - core/jquery
