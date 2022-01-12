@@ -5,20 +5,25 @@
   padding: 0;
   box-sizing: border-box;
 }
-$filter-text-color:#b2b4b5;
+$filter-text-color: #b2b4b5;
 $footer-text-color: #ffffff;
-body{
-  background-color: #EAEDF6;
+body {
+  background-color: #eaedf6;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
+  a {
+    text-decoration: none;
+    color: #fafafafa;
+  }
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.form-item{
+.form-item {
   margin: 0;
   padding: 0;
 }

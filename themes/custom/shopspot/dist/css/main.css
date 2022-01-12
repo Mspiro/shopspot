@@ -7,10 +7,14 @@
 }
 
 body {
-  background-color: #EAEDF6;
+  background-color: #eaedf6;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+body a {
+  text-decoration: none;
+  color: #fafafafa;
 }
 
 .hidden {
@@ -273,6 +277,24 @@ body {
     transform: rotate(-180deg);
   }
 }
+.menu--mega-menu {
+  background: #fafafa;
+  width: 100%;
+}
+.menu--mega-menu .menu-level-0 .menu-item {
+  background-color: gray;
+  margin: 10px;
+  width: min-content;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.menu--mega-menu .menu-level-0 .menu-item a, .menu--mega-menu .menu-level-0 .menu-item .link-text {
+  color: black;
+}
+.menu--mega-menu .menu-level-0 .menu-level-1 {
+  display: none;
+}
+
 .subscription {
   margin: 45px 0 45px 0;
 }

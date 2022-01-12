@@ -1,0 +1,21 @@
+.menu--mega-menu {
+  // width:100vw;
+  background: #fafafa;
+  width: 100%;
+  .menu-level-0 {
+    
+    .menu-item {
+      background-color: gray;
+      margin: 10px;
+      width: min-content;
+      display: flex;
+      flex-direction: column-reverse;
+      a , .link-text{
+        color: black;
+      }
+    }
+    .menu-level-1{
+      display: none;
+    }
+  }
+}

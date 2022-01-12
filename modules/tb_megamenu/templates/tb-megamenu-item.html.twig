@@ -1,0 +1,31 @@
+{# {{ kint(_context|keys)}} #}
+
+{% set linkAttributes = link['attributes'] %}
+{% if ( link['url'] is defined and link['url'] is not empty ) %}
+  {% set tag = "a" %}
+{% else  %}
+  {% set tag = 'span' %}
+  {% set linkAttributes = linkAttributes.addClass('tb-megamenu-no-link').setAttribute('tabindex', '0') %}
+  {% if submenu is empty %}
+    {% set linkAttributes = linkAttributes.addClass('tb-megamenu-no-submenu') %}
+  {% endif %}
+{% endif %}
+<li {{ attributes }} >
+  {% if tag == 'a' %}
+    <{{ tag }} href="{{ link['url'] }}" {{ link['attributes'] }}>
+  {% else %}
+    <{{ tag }}{{ link['attributes'] }}>
+  {% endif %}
+    {% if item_config['xicon'] %}
+      <i class="{{ item_config['xicon'] }}"></i>
+    {% endif %}
+    {{ link.title_translate }}
+    {% if submenu and block_config['auto-arrow'] %}
+      <span class="caret"></span>
+    {% endif %}
+    {% if item_config['caption'] %}
+      <span class="mega-caption">{{ item_config['caption'] }}</span>
+    {% endif %}
+  </{{ tag }}>
+  {{ submenu }}
+</li>

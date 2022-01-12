@@ -26,13 +26,27 @@
   background-color: #2874f0;
   // margin-top: 300px;
 }
-.region-header{
+.region-header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+.mega-menu {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  .menu--mega-menu {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .main-page {
@@ -90,6 +104,6 @@
   line-height: 18px;
 }
 
-.visible{
+.visible {
   display: flex;
 }

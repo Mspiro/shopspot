@@ -36,6 +36,20 @@
   align-items: center;
 }
 
+.mega-menu {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.mega-menu .menu--mega-menu {
+  display: flex;
+  justify-content: center;
+}
+
 .main-page {
   display: flex;
   flex-direction: column;
