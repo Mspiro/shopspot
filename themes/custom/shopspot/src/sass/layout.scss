@@ -37,12 +37,14 @@
 
 .mega-menu {
   width: 100vw;
+  height: 110px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 9px grey;
   .menu--mega-menu {
     display: flex;
     justify-content: center;
