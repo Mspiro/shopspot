@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 .region {
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@
   }
 }
 .header {
+  font-family: 'roboto';
   width: 100vw;
   height: 56px;
   box-sizing: border-box;
