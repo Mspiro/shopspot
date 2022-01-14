@@ -379,10 +379,22 @@ body a {
   color: #2874f0;
   font-weight: 500;
 }
-.mega-menu .menu--mega-menu .menu-level-0 .menu-level-1 .menu-level-2 {
-  display: none;
-}
 .mega-menu .menu--mega-menu .menu-item--expanded:hover .menu-level-1 {
+  display: flex;
+}
+
+.menu-level-1 .menu-item .menu-level-2 {
+  display: none;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+  top: -56px;
+}
+
+.menu-level-1 > .menu-item--expanded:hover .menu-level-2 {
   display: flex;
 }
 

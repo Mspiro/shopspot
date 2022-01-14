@@ -15,7 +15,7 @@
       width: inherit;
       height: 110px;
       margin: auto;
-      .menu-item--expanded{
+      .menu-item--expanded {
         height: 130px;
       }
       .menu-item {
@@ -25,7 +25,7 @@
         justify-content: center;
         align-items: center;
         width: max-content;
-        margin: 0px 34px;        
+        margin: 0px 34px;
         a,
         .link-text {
           color: black;
@@ -40,7 +40,7 @@
       }
 
       .menu-level-1 {
-        // display: flex; 
+        // display: flex;
         display: none;
         position: absolute;
         flex-direction: column;
@@ -50,6 +50,7 @@
         font-size: 14px;
         font-weight: 200;
         background: #ffffff;
+        // top: 165px;
         top: 95px;
         height: max-content;
         width: 240px;
@@ -97,13 +98,9 @@
           color: #2874f0;
           font-weight: 500;
         }
-
-        .menu-level-2 {
-          display: none;
-        }
       }
     }
-    .menu-item--expanded:hover .menu-level-1{
+    .menu-item--expanded:hover .menu-level-1 {
       display: flex;
     }
   }

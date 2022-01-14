@@ -1,0 +1,18 @@
+.menu-level-1 {
+  .menu-item {
+    .menu-level-2 {
+      display: none;
+      // display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+      z-index: 0;
+      top: -56px;
+    }
+  }
+}
+.menu-level-1 > .menu-item--expanded:hover .menu-level-2{
+  display: flex;
+}
