@@ -70,81 +70,95 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
-{# {{ kint(content) }} #}
+<article{{attributes}}>
+	{# {{ kint(content) }} #}
 
 
-  <div{{ attributes }}>
-    <div class="detail-wrapper">
-      <div class="detail-image">
-        <div class="small-image-wrapper">
-          <div class="small-image">
-            {{ content.field_product_image }}
-          </div>
-          <div class="small-image">
-            {{ content.field_product_image }}
-          </div>
-          <div class="small-image">
-            {{ content.field_product_image }}
-          </div>
-          <div class="small-image">
-            {{ content.field_product_image }}
-          </div>
-        </div>
-        <div class="main-image">
-        {{ content.field_product_image }}
-        </div>
-      </div>
+	<div{{attributes}}>
+		<div class="detail-wrapper">
+			<div class="detail-image">
+				<div class="small-image-wrapper">
+					<div class="small-image">
+						{{ content.field_product_image }}
+					</div>
+					<div class="small-image">
+						{{ content.field_product_image }}
+					</div>
+					<div class="small-image">
+						{{ content.field_product_image }}
+					</div>
+					<div class="small-image">
+						{{ content.field_product_image }}
+					</div>
+				</div>
+				<div class="main-image">
+					{{ content.field_product_image }}
+				</div>
+			</div>
 
-      <div class="detail-all-fields">
+			<div class="detail-all-fields">
 
-        <div class="main-lable">
-          <h2>{{ node.label }}</h2>
-        </div>
+				<div class="main-lable">
+					<h2>{{ node.label }}</h2>
+				</div>
 
-        <div class="rating">
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="fa fa-star"></i>
-          {{ content.field_start }}
-          <span>( 135 Customers Review)</span>
-        </div>
+				<div class="rating">
+					<i class="far fa-star"></i>
+					<i class="far fa-star"></i>
+					<i class="far fa-star"></i>
+					<i class="far fa-star"></i>
+					<i class="fa fa-star"></i>
+					{{ content.field_start }}
+					<span>( 135 Customers Review)</span>
+				</div>
 
-        {% if content.field_discount[0] %}   
-          <div class="discount">
-            {{ content.field_discount}}&nbsp;%&nbsp; OFF
-          </div>
-        {% endif %}
-        
-
-        <div class="price">
-         <h2>
-            Price:&nbsp;<del>$499 USD</del>
-            &nbsp;&nbsp;{{ content.field_price }}&nbsp;<span>USD</span>
-          </h2> 
-          <p> FREE SHIPPING on above Purchase of <strong>$359</strong></p>        
-        </div>
+				{% if content.field_discount[0] %}
+					<div class="discount">
+						{{ content.field_discount}}&nbsp;%&nbsp; OFF
+					</div>
+				{% endif %}
 
 
-        <div class="description">
-        <h3>Description</h3>
-        {{ content.body }}
-        </div>
-        
-        <div class="quntity">          
-          <form action="#" method="post">
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1" max="100" value=1>         
-          </form>
-        </div>
+				<div class="price">
+					<h2>
+						{% if content.field_discount[0] %}
 
-        <div class="color">          
-        <p>Color:</p>
-        </div>   
-        
-      </div>
-    </div>
-  </div>
+							{% set price = content.field_price %}
+							{% set dicsount = content.field_discount|number_format %}
+
+							Price:&nbsp;<del>{{ content.field_price }}</del>
+							&nbsp;&nbsp;{{ price }}
+							&nbsp;<span>USD</span>
+
+						{% else %}
+							Price:&nbsp;&nbsp;{{ content.field_price }}
+							&nbsp;<span>USD</span>
+						{% endif %}
+					</h2>
+					<p>
+						FREE SHIPPING on above Purchase of
+						<strong>$359</strong>
+					</p>
+				</div>
+
+
+				<div class="description">
+					<h3>Description</h3>
+					{{ content.body }}
+				</div>
+
+				<div class="quntity">
+					<form action="#" method="post">
+						<label for="quantity">Quantity:</label>
+						<input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+					</form>
+				</div>
+
+				<div class="color">
+					<p>Color:</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </article>

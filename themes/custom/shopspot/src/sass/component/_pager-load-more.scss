@@ -1,0 +1,14 @@
+.pager {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  .pager__item {
+    color: white;
+    background-color: #625bc5;
+    border: 1px solid #625bc5;
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}

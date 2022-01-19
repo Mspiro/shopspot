@@ -12,6 +12,8 @@
   padding: 0;
   height: 70px;
   margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
   .more-title {
     display: flex;
     align-content: center;
@@ -23,6 +25,7 @@
       font-weight: 400;
       color: #ffffff;
       border: none;
+      font-size: 18px;
       cursor: pointer;
     }
     svg{

@@ -102,10 +102,10 @@ body a {
   position: relative;
   z-index: 1;
   font-size: 14px;
-  margin: 0 30px;
   padding: 0;
   height: 70px;
   margin-top: 40px;
+  margin-left: 50px;
 }
 .login-menu .login-title h2 {
   background: white;
@@ -115,6 +115,7 @@ body a {
   color: #2874f0;
   border: 1px solid #dbdbdb;
   border-radius: 2px;
+  font-size: 18px;
   cursor: pointer;
 }
 .login-menu .menu {
@@ -201,6 +202,8 @@ body a {
   padding: 0;
   height: 70px;
   margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .more-menu .more-title {
   display: flex;
@@ -214,6 +217,7 @@ body a {
   font-weight: 400;
   color: #ffffff;
   border: none;
+  font-size: 18px;
   cursor: pointer;
 }
 .more-menu .more-title svg {
@@ -706,7 +710,7 @@ nav > .menu > li .menu a:hover {
   background-color: white;
   display: inline-flex;
   border-radius: 10px;
-  width: 280px;
+  width: 275px;
   height: 320px;
   margin: 10px;
   flex-direction: column;
@@ -779,6 +783,11 @@ nav > .menu > li .menu a:hover {
   height: 32px;
   border: 1px solid #eaedf6;
   border-radius: 5px;
+  padding: 0 0 0 10px;
+}
+
+.form-text:focus {
+  outline: none;
 }
 
 .form-item-categories .form-text {
@@ -800,6 +809,9 @@ nav > .menu > li .menu a:hover {
   height: 32px;
   border: 1px solid #eaedf6;
   border-radius: 5px;
+}
+.form-type-select .form-select:focus {
+  outline: none;
 }
 
 .form-wrapper {
@@ -847,7 +859,8 @@ nav > .menu > li .menu a:hover {
   padding-bottom: 30px;
 }
 
-.form-submit {
+.form-submit,
+button {
   color: white;
   background-color: #625bc5;
   border: 1px solid #625bc5;
@@ -861,6 +874,26 @@ nav > .menu > li .menu a:hover {
 }
 #edit-field-price-value-all--2 label {
   color: red;
+}
+
+@media (max-width: 700px) {
+  .form-item-keyword {
+    display: none;
+  }
+}
+.pager {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+.pager .pager__item {
+  color: white;
+  background-color: #625bc5;
+  border: 1px solid #625bc5;
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .detail-wrapper {

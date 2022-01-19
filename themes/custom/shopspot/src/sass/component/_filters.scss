@@ -8,8 +8,7 @@
   align-items: center;
   align-content: center;
   border-radius: 10px;
-  margin: 10px 0 30px 0 ;
-
+  margin: 10px 0 30px 0;
 }
 
 .form-text {
@@ -17,6 +16,10 @@
   height: 32px;
   border: 1px solid #eaedf6;
   border-radius: 5px;
+  padding: 0 0 0 10px;
+}
+.form-text:focus{
+  outline: none;
 }
 .form-item-categories {
   .form-text {
@@ -37,6 +40,11 @@
     height: 32px;
     border: 1px solid #eaedf6;
     border-radius: 5px;
+
+   
+  }
+  .form-select:focus {
+    outline: none;
   }
 }
 .form-wrapper {
@@ -81,12 +89,13 @@
   display: none;
 }
 
-#edit-actions--3{
-  border-radius: 0 0 10px 10px ;
+#edit-actions--3 {
+  border-radius: 0 0 10px 10px;
   padding-bottom: 30px;
 }
 
-.form-submit {
+.form-submit,
+button {
   color: white;
   background-color: #625bc5;
   border: 1px solid #625bc5;
@@ -95,10 +104,16 @@
   border-radius: 5px;
 }
 
-#edit-field-price-value-all--2{
+#edit-field-price-value-all--2 {
   display: none;
-  label{
+  label {
     color: red;
     // display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .form-item-keyword {
+    display: none;
   }
 }

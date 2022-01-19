@@ -8,11 +8,11 @@
   position: relative;
   z-index: 1;
   font-size: 14px;
-  margin: 0 30px;
+  // margin: 0 30px;
   padding: 0;
   height: 70px;
   margin-top: 40px;
-  // margin-left: 20%;
+  margin-left: 50px;
   .login-title {
     h2 {
       background: white;
@@ -22,7 +22,9 @@
       color: #2874f0;
       border: 1px solid #dbdbdb;
       border-radius: 2px;
+      font-size: 18px;
       cursor: pointer;
+
     }
   }
 
