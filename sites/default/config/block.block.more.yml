@@ -1,0 +1,25 @@
+uuid: 875de9f7-c2d3-4965-995f-99d08df06fd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-more
+  module:
+    - system
+  theme:
+    - shopspot
+id: more
+theme: shopspot
+region: header
+weight: -15
+provider: null
+plugin: 'system_menu_block:header-more'
+settings:
+  id: 'system_menu_block:header-more'
+  label: More
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

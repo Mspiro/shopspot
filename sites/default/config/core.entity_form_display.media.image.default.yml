@@ -7,8 +7,8 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
-    - image
     - path
+    - svg_image
 _core:
   default_config_hash: WeM0d1VqhuyGELo4SRiDJfhDQSLqfKavISEbrnlcTaE
 id: media.image.default
@@ -30,6 +30,13 @@ content:
     type: image_image
     weight: 0
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

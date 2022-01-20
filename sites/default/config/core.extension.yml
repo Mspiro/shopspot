@@ -26,13 +26,19 @@ module:
   filter: 0
   fontawesome: 0
   fontawesome_iconpicker_widget: 0
+  fontawesome_media: 0
+  fontawesome_menu_icons: 0
   help: 0
   history: 0
   image: 0
+  language: 0
   link: 0
   media: 0
   media_library: 0
+  menu_item_extras: 0
+  menu_link_attributes: 0
   menu_link_content: 0
+  menu_manipulator: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -49,12 +55,14 @@ module:
   system: 0
   taxonomy: 0
   taxonomy_menu: 0
+  tb_megamenu: 0
   text: 0
   toolbar: 0
   tour: 0
   twig_tweak: 0
   update: 0
   user: 0
+  views_infinite_scroll: 0
   views_ui: 0
   views: 10
   standard: 1000

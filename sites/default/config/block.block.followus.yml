@@ -11,7 +11,7 @@ dependencies:
 id: followus
 theme: shopspot
 region: footer_second
-weight: -14
+weight: -18
 provider: null
 plugin: 'block_content:a7dce34a-996a-47c8-bdf8-cf285e6efadf'
 settings:

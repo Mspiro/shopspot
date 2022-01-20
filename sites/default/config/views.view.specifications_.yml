@@ -55,42 +55,16 @@ display:
           items_per_page: 5
           offset: 0
       style:
-        type: table
+        type: grid
         options:
           grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            field_category: field_category
-            field_discount: field_discount
-            field_price: field_price
-          info:
-            field_category:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_discount:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_price:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
+          columns: 1
+          automatic_width: true
+          alignment: vertical
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
       row:
         type: fields
       fields:

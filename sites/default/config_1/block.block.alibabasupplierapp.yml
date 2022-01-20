@@ -1,0 +1,25 @@
+uuid: 02ddfae6-b599-4576-a880-0fdd44f4b4c7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ac1d0afe-e27c-4987-8213-cfb2806a56c8'
+  module:
+    - block_content
+  theme:
+    - shopspot
+id: alibabasupplierapp
+theme: shopspot
+region: footer_second
+weight: -13
+provider: null
+plugin: 'block_content:ac1d0afe-e27c-4987-8213-cfb2806a56c8'
+settings:
+  id: 'block_content:ac1d0afe-e27c-4987-8213-cfb2806a56c8'
+  label: 'Alibaba Supplier App : '
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -11,7 +11,7 @@ dependencies:
 id: footermenuvertical
 theme: shopspot
 region: footer_second
-weight: -15
+weight: -19
 provider: null
 plugin: 'system_menu_block:footer-menu-vertical'
 settings:

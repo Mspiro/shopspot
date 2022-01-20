@@ -1,0 +1,25 @@
+uuid: 05d9aa98-4ec7-4572-9e75-ff1e8b86f263
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.browes-alphabetically-
+  module:
+    - system
+  theme:
+    - shopspot
+id: browesalphabetically
+theme: shopspot
+region: footer_second
+weight: -9
+provider: null
+plugin: 'system_menu_block:browes-alphabetically-'
+settings:
+  id: 'system_menu_block:browes-alphabetically-'
+  label: 'Browes Alphabetically: '
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

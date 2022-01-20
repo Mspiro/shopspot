@@ -1,0 +1,25 @@
+uuid: aea643b1-9a52-4ade-a0da-d0e30fc45875
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:468fca8f-c4f1-46cd-a66e-063c5397c29b'
+  module:
+    - block_content
+  theme:
+    - shopspot
+id: searchbtn
+theme: shopspot
+region: header
+weight: -17
+provider: null
+plugin: 'block_content:468fca8f-c4f1-46cd-a66e-063c5397c29b'
+settings:
+  id: 'block_content:468fca8f-c4f1-46cd-a66e-063c5397c29b'
+  label: 'Search Btn'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

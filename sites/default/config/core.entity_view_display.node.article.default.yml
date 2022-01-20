@@ -12,7 +12,7 @@ dependencies:
     - node.type.article
   module:
     - comment
-    - image
+    - svg_image
     - text
     - user
 _core:
@@ -60,4 +60,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true

@@ -28,13 +28,13 @@
   };
 })(Drupal);
 
-(function (Drupal) {
-  Drupal.behaviors.minmaxBox = {
-    attach: function (context, setting) {
-      let otherRadioBtn = document.getElementsByClassName(
-        "form-item-field-price-value"
-      )[9];
-      let minMaxBox = document.getElementsByClassName("form-wrapper")[4];
-    },
-  };
-})(Drupal);
+// (function (Drupal) {
+//   Drupal.behaviors.minmaxBox = {
+//     attach: function (context, setting) {
+//       let otherRadioBtn = document.getElementsByClassName(
+//         "form-item-field-price-value"
+//       )[9];
+//       let minMaxBox = document.getElementsByClassName("form-wrapper")[4];
+//     },
+//   };
+// })(Drupal);

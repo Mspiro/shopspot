@@ -1,0 +1,25 @@
+uuid: 801a594b-0ca1-48b4-a469-ca9167196d5a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b452885f-5950-4442-8b9f-8337ea74100c'
+  module:
+    - block_content
+  theme:
+    - shopspot
+id: cart
+theme: shopspot
+region: header
+weight: -14
+provider: null
+plugin: 'block_content:b452885f-5950-4442-8b9f-8337ea74100c'
+settings:
+  id: 'block_content:b452885f-5950-4442-8b9f-8337ea74100c'
+  label: cart
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -11,7 +11,7 @@ dependencies:
 id: alibabasupplierapp
 theme: shopspot
 region: footer_second
-weight: -13
+weight: -17
 provider: null
 plugin: 'block_content:ac1d0afe-e27c-4987-8213-cfb2806a56c8'
 settings:

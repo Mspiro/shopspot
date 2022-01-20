@@ -5,11 +5,6 @@ function shopspot_preprocess_select(&$variables)
 }
 
 
-//function shopspot_preprocess_block(&$variables) {
-//$blocks = Drupal\block\Entity\Block::loadMultiple();
-// kint($variables); 
-//}
-
 // function shopspot_preprocess_views_exposed_form(&$variables)
 // {
 //   // $form_id = 'form-FaBwQ0HrswATyea6LnuKAs2K8kUQOjRFh8F0wLBfZ6Y';
@@ -19,5 +14,5 @@ function shopspot_preprocess_select(&$variables)
 //     $variables['form'][0]['keyword']['#attributes']['placeholder'] = 'Hello';
 //     dump($variables['form']['keyword']['#attributes']['placeholder']);
 //   // }
-//   // dump($variables['form']);
+//   // dump($variables['form']['#build_id']);
 // }

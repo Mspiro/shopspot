@@ -11,7 +11,7 @@ dependencies:
 id: alibabagroupmenus
 theme: shopspot
 region: footer_second
-weight: -10
+weight: -14
 provider: null
 plugin: 'system_menu_block:alibaba-group-menus'
 settings:

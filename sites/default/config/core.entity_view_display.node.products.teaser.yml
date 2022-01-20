@@ -38,3 +38,4 @@ hidden:
   field_price: true
   field_product_image: true
   field_rating: true
+  langcode: true

@@ -293,5 +293,17 @@ definitions:
     weight: 2
     menu_name: testmenu
     enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__mega_menu__280':
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+    menu_name: mega-menu
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__mega_menu__226':
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.mega_menu.362'
+    weight: 0
+    expanded: false
+    enabled: true
+    menu_name: mega-menu
 _core:
   default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ

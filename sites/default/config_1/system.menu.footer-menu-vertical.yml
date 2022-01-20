@@ -1,0 +1,8 @@
+uuid: 51576a73-428a-4d3e-a060-27d5343657d9
+langcode: en
+status: true
+dependencies: {  }
+id: footer-menu-vertical
+label: 'Footer Menu vertical'
+description: ''
+locked: false

@@ -73,4 +73,5 @@ content:
     type: number_integer
     region: content
 hidden:
+  langcode: true
   links: true

@@ -1,0 +1,36 @@
+uuid: 4b39fef6-7fe8-4d47-8d0a-a4419daf1b83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.demo.body
+    - field.field.node.demo.field_email_here
+    - node.type.demo
+  module:
+    - text
+    - user
+id: node.demo.default
+targetEntityType: node
+bundle: demo
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_email_here:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

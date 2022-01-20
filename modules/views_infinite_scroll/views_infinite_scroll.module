@@ -12,7 +12,8 @@ use Drupal\views_infinite_scroll\Plugin\views\pager\InfiniteScroll;
 /**
  * Implements hook_preprocess_views_infinite_scroll_pager().
  */
-function views_infinite_scroll_preprocess_views_infinite_scroll_pager(&$vars) {
+function views_infinite_scroll_preprocess_views_infinite_scroll_pager(&$vars)
+{
   // The important parts we needed lifted wholesale from
   // template_preprocess_views_mini_pager().
   /** @var \Drupal\Core\Pager\PagerManagerInterface $pager_manager */
@@ -25,6 +26,10 @@ function views_infinite_scroll_preprocess_views_infinite_scroll_pager(&$vars) {
     $options = [
       'query' => $pager_manager->getUpdatedParameters($parameters, $element, $pager->getCurrentPage() + 1),
     ];
+    $query = &$options['query'];
+    if (isset($query['ajax_page_state'])) {
+      unset($query['ajax_page_state']);
+    }
     $vars['items']['next']['href'] = Url::fromRoute('<none>', [], $options);
   }
   $vars['#cache']['contexts'][] = 'url.query_args';
@@ -32,13 +37,13 @@ function views_infinite_scroll_preprocess_views_infinite_scroll_pager(&$vars) {
     'class' => ['js-pager__items', 'pager'],
     'data-drupal-views-infinite-scroll-pager' => $vars['options']['automatically_load_content'] ? 'automatic' : TRUE,
   ]);
-
 }
 
 /**
  * Implements hook_preprocess_views_view().
  */
-function views_infinite_scroll_preprocess_views_view(&$vars) {
+function views_infinite_scroll_preprocess_views_view(&$vars)
+{
   $view = $vars['view'];
   if ($view->getDisplay()->isPagerEnabled() && !empty($vars['rows'])) {
     $pager = $view->getPager();
@@ -56,7 +61,8 @@ function views_infinite_scroll_preprocess_views_view(&$vars) {
 /**
  * Implements hook_preprocess_eva_display_entity_view()
  */
-function views_infinite_scroll_preprocess_eva_display_entity_view(&$vars) {
+function views_infinite_scroll_preprocess_eva_display_entity_view(&$vars)
+{
   // When the contributed EVA module is used to display the View, apply the
   // preprocessing logic of this module.
   views_infinite_scroll_preprocess_views_view($vars);
