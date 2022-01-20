@@ -10,7 +10,7 @@ dependencies:
 id: userlogin
 theme: shopspot
 region: header
-weight: -1
+weight: -3
 provider: null
 plugin: user_login_block
 settings:

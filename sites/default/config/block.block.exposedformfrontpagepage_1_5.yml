@@ -1,28 +1,23 @@
-uuid: 78f502f7-d687-44f8-bab3-ab75dfaac898
+uuid: 2e564daa-a68d-460a-91c1-3e88d1f5591b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.frontpage
   module:
-    - system
     - views
   theme:
     - shopspot
-id: exposedformfrontpagepage_1
+id: exposedformfrontpagepage_1_5
 theme: shopspot
 region: header
-weight: -1
+weight: -18
 provider: null
 plugin: 'views_exposed_filter_block:frontpage-page_1'
 settings:
   id: 'views_exposed_filter_block:frontpage-page_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
-visibility:
-  request_path:
-    id: request_path
-    pages: '/node/*'
-    negate: true
+visibility: {  }
