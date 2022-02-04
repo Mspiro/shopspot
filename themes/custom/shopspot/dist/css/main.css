@@ -93,21 +93,24 @@ body a {
 }
 
 .login-menu {
+  font-family: "roboto";
+  display: inline-block;
+  position: relative;
+  top: 170px;
+  width: auto;
+}
+.login-menu .menu {
+  margin: 0;
+  padding: 0;
+  position: relative;
   display: flex;
-  align-content: center;
-  justify-content: flex-start;
+}
+.login-menu .menu .menu-item--expanded {
+  display: flex;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
-  font-size: 14px;
-  padding: 0;
-  height: 70px;
-  margin-top: 40px;
-  margin-left: 50px;
 }
-.login-menu .login-title h2 {
+.login-menu .menu .menu-item--expanded .login-account {
   background: white;
   padding: 5px 40px;
   line-height: 20px;
@@ -116,63 +119,46 @@ body a {
   border: 1px solid #dbdbdb;
   border-radius: 2px;
   font-size: 18px;
-  cursor: pointer;
 }
-.login-menu .menu {
-  display: none;
+.login-menu .menu .menu-item--expanded .my-account {
+  padding: 5px 40px;
+  line-height: 20px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 18px;
+}
+.login-menu .menu .menu-item--expanded .menu {
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  position: fixed;
   align-items: flex-start;
+  position: relative;
+  top: 0px;
   background-color: #fafafa;
   border-radius: 0px 0px 2px 2px;
   box-shadow: 0 0 15px -2px #a1a0a0;
-  margin-top: 43px;
+  margin-top: 10px;
 }
-.login-menu .menu .menu-item {
-  display: flex;
-  position: relative;
+.login-menu .menu .menu-item--expanded .menu .menu-item {
   padding: 15px 20px;
   border-top: 0.5px solid #e5e5e5;
+  width: 240px;
 }
-.login-menu .menu .menu-item a {
+.login-menu .menu .menu-item--expanded .menu .menu-item a {
   color: black;
   text-decoration: none;
 }
-.login-menu .menu .menu-item a svg {
+.login-menu .menu .menu-item--expanded .menu .menu-item a svg {
   color: #2874f0;
   margin-right: 15px;
 }
-.login-menu .menu .menu-item--expanded:first-child {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  border-top: none;
-}
-.login-menu .menu .menu-item--expanded:first-child > .menu {
-  margin: 0px;
-  position: relative;
-  border-radius: unset;
-  box-shadow: none;
-}
-.login-menu .menu .menu-item--expanded:first-child > .menu > .menu-item {
-  width: fit-content;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: -2px;
-  padding: 0px;
-  border-top: none;
-}
-.login-menu .menu .menu-item--expanded:first-child > .menu > .menu-item a {
-  color: #2874f0;
-}
-.login-menu .menu-item:first-child::before {
+.login-menu .menu .menu-item--expanded .menu::before {
   content: "";
   width: 40px;
   height: 45px;
@@ -183,9 +169,44 @@ body a {
   top: -2px;
   right: 43%;
 }
-
-.login-menu:hover .menu {
+.login-menu .menu .menu-item--expanded:nth-child(1) .menu-item:first-child {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-top: none;
+}
+.login-menu .menu .menu-item--expanded:nth-child(1) .menu-item:first-child .menu {
+  margin: 0px;
+  position: relative;
+  border-radius: unset;
+  box-shadow: none;
+}
+.login-menu .menu .menu-item--expanded:nth-child(1) .menu-item:first-child .menu .menu-item {
+  width: fit-content;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2px;
+  padding: 0px;
+  border-top: none;
+}
+.login-menu .menu .menu-item--expanded:nth-child(1) .menu-item:first-child .menu .menu-item a {
+  color: #2874f0;
+}
+.login-menu .menu .menu-item--expanded:nth-child(1) .menu-item:first-child .menu::before {
+  display: none;
+}
+.login-menu .menu .menu-item--expanded:nth-child(2) {
+  padding: 0;
+  position: relative;
+  top: 45px;
+}
+.login-menu .menu .menu-item::marker {
+  display: none;
 }
 
 .more-menu {
@@ -402,301 +423,6 @@ body a {
   display: flex;
 }
 
-.subscription {
-  margin: 45px 0 45px 0;
-}
-.subscription .text-formatted {
-  display: inline-flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-.subscription .text-formatted p {
-  font-size: 14px;
-}
-.subscription .text-formatted .input {
-  margin-top: 20px;
-}
-.subscription .text-formatted .input .search-text {
-  width: 300px;
-  height: 40px;
-  background-color: #313d51;
-  border-color: #c4c6cf;
-  border-style: solid;
-  border-width: 1px;
-  color: #ffffff;
-  display: inline-block;
-  line-height: 20.5714px;
-  margin: -3px 0px 0px;
-  padding: 10px;
-}
-.subscription .text-formatted .input .btn-search {
-  background-color: transparent;
-  border-color: #c6cad1;
-  border-radius: 3px;
-  border-style: solid;
-  border-width: 1.11111px;
-  color: #ffffff;
-  display: inline-block;
-  line-height: 38px;
-  padding: 0px 20px;
-  text-align: center;
-  margin-left: 10px;
-}
-.subscription .text-formatted .email-privacy {
-  color: #999999;
-  font-size: 12px;
-  line-height: 15.4285px;
-  margin: 5px 0px 0px;
-}
-
-.footer-second .region-footer-second {
-  display: flex;
-  flex-direction: row;
-}
-.footer-second .region-footer-second nav {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  height: 197px;
-}
-
-.menu-item--expanded {
-  list-style-type: none;
-  list-style-image: none;
-}
-
-nav > .menu {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 30px 0px 30px 0px;
-}
-
-nav > .menu li {
-  width: 235px;
-}
-
-nav > .menu > li > span {
-  font-size: 18px;
-  pointer-events: none;
-  cursor: default;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-nav > .menu > li .menu {
-  margin-left: 0px;
-  font-size: 12px;
-  margin-top: 20px;
-}
-nav > .menu > li .menu a {
-  text-decoration: none;
-  color: #ffffff;
-}
-nav > .menu > li .menu a:hover {
-  text-decoration: underline;
-}
-
-.connect-on {
-  display: flex;
-  width: 92%;
-  height: 67px;
-  align-content: center;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-}
-.connect-on div {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  margin: 0 30px;
-}
-.connect-on .contextual-region {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-around;
-  align-content: center;
-  flex-direction: row;
-}
-.connect-on .contextual-region h2 {
-  font-size: 14px;
-  font-weight: 100;
-}
-.connect-on .contextual-region span a img {
-  width: 130px;
-  height: 30px;
-  border-radius: 5px;
-  margin-right: 7px;
-}
-.connect-on .download {
-  width: auto;
-  height: 32px;
-}
-.connect-on .our-app {
-  width: auto;
-  height: 32px;
-}
-.connect-on .our-app a img {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-.connect-on .follow-us {
-  width: auto;
-  height: 32px;
-}
-.connect-on .follow-us p span svg {
-  width: 19px;
-  height: 19px;
-}
-.connect-on .follow-us p a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.all-footer-menu {
-  width: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.all-footer-menu p {
-  margin-left: 5px;
-}
-.all-footer-menu .languages {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: 12px;
-  margin: -20px 0 0 0;
-}
-.all-footer-menu .languages .languages-list .menu .menu-item {
-  width: auto;
-  margin: 0 2px;
-  padding-top: 0px;
-}
-.all-footer-menu .languages .languages-list .menu .menu-item a {
-  text-decoration: none;
-  color: white;
-}
-.all-footer-menu .languages .languages-list .menu .menu-item a:hover {
-  text-decoration: underline;
-}
-
-.alibaba-group-menu {
-  width: 65%;
-  margin-top: -40px;
-  font-size: 12px;
-}
-.alibaba-group-menu .menu {
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.alibaba-group-menu .menu li {
-  width: auto;
-  margin-left: 10px;
-}
-.alibaba-group-menu .menu li a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.alibaba-group-menu .menu li a:hover {
-  text-decoration: underline;
-}
-
-.browse-alphabetically {
-  font-size: 12px;
-  margin-top: -40px;
-}
-.browse-alphabetically nav {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-.browse-alphabetically nav h2 {
-  font-size: 12px;
-  font-weight: 100;
-}
-.browse-alphabetically nav .menu li {
-  width: auto;
-  margin: 0 2px;
-}
-.browse-alphabetically nav .menu li a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.browse-alphabetically nav .menu li a:hover {
-  text-decoration: underline;
-}
-
-.policy {
-  margin-top: -40px;
-}
-.policy .menu {
-  font-size: 12px;
-}
-.policy .menu li {
-  width: auto;
-  margin: 0px 2px;
-}
-.policy .menu li a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.policy .menu li a:hover {
-  text-decoration: underline;
-}
-
-.copyright {
-  margin-top: -20px;
-  margin-bottom: 45px;
-}
-.copyright p {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-}
-.copyright p a {
-  text-decoration: none;
-  color: #ffffff;
-}
-.copyright p a img {
-  width: 26px;
-  height: 28px;
-}
-.copyright p a:hover {
-  text-decoration: underline;
-}
-.copyright p a:nth-child(4), .copyright p a:nth-child(5) {
-  color: #86898c;
-}
-
-.footer-second hr.hr {
-  width: 92%;
-  border: 1px solid #313D51;
-}
-
 .view-content {
   display: flex;
   flex-direction: row;
@@ -881,12 +607,12 @@ button {
     display: none;
   }
 }
-.pager {
+.pager__items {
   display: flex;
   justify-content: center;
   margin-top: 45px;
 }
-.pager .pager__item {
+.pager__items .pager__item {
   color: white;
   background-color: #625bc5;
   border: 1px solid #625bc5;

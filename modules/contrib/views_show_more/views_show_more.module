@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Views Show More module.
+ */
+
+use Drupal\Core\Template\Attribute;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Theme function for pager link generation.
+ */
+function views_show_more_preprocess_views_show_more_pager(&$vars) {
+  /* @var $pager_manager \Drupal\Core\Pager\PagerManagerInterface */
+  $pager_manager = \Drupal::service('pager.manager');
+
+  $element = $vars['element'];
+  $parameters = $vars['parameters'];
+  $pager = $pager_manager->getPager($element);
+  if (!$pager) {
+    return;
+  }
+  $current = $pager->getCurrentPage();
+  $total = $pager->getTotalPages();
+  $pager_classes = ['js-pager__items', 'pager__items', 'pager-show-more'];
+
+  if ($current < ($total - 1)) {
+    $options = [
+      'query' => $pager_manager->getUpdatedParameters($parameters, $element, $current + 1),
+    ];
+
+    $vars['item'] = [
+      'href' => Url::fromRoute('<current>', [], $options)->toString(),
+      'text' => $vars['options']['show_more_text'],
+    ];
+  }
+  else {
+    $pager_classes[] = 'pager-show-more-empty';
+    $vars['item'] = [
+      'text' => !empty($vars['options']['show_more_empty_text']) ? Html::escape($vars['options']['show_more_empty_text']) : '',
+    ];
+  }
+
+  $vars['attributes'] = new Attribute([
+    'class' => $pager_classes,
+  ]);
+
+  // This is based on the entire current query string. We need to ensure
+  // cacheability is affected accordingly.
+  $vars['#cache']['contexts'][] = 'url.query_args';
+
+  $vars['heading_id'] = Html::getUniqueId('pagination-heading');
+}
+
+/**
+ * Implements hook_help().
+ */
+function views_show_more_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.views_show_more':
+      $text = file_get_contents(dirname(__FILE__) . '/README.md');
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
