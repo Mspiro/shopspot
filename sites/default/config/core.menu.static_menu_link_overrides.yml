@@ -186,13 +186,13 @@ definitions:
     menu_name: category
     enabled: true
   user__page:
-    weight: -45
     menu_name: account
     parent: ''
-    enabled: true
+    weight: -49
     expanded: false
+    enabled: true
   user__logout:
-    weight: -44
+    weight: -43
     menu_name: account
     parent: ''
     expanded: false

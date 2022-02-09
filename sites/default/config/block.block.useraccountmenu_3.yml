@@ -1,18 +1,17 @@
-uuid: 82af97fa-95f1-4ddb-9106-3b8dadbd87f1
+uuid: 2d567515-d606-4c02-8f4c-b5aa456c6c5a
 langcode: en
 status: false
 dependencies:
   config:
     - system.menu.account
   module:
-    - node
     - system
   theme:
     - shopspot
-id: useraccountmenu_2
+id: useraccountmenu_3
 theme: shopspot
 region: header
-weight: -4
+weight: 2
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -21,13 +20,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
   expand_all_items: false
-visibility:
-  node_type:
-    id: node_type
-    bundles:
-      article: article
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+visibility: {  }

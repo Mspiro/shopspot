@@ -1,0 +1,25 @@
+uuid: 37624042-c83c-446d-9c0a-2fa403279bb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.lite-cart-login-menu
+  module:
+    - system
+  theme:
+    - shopspot
+id: litecartloginmenu
+theme: shopspot
+region: header
+weight: -18
+provider: null
+plugin: 'system_menu_block:lite-cart-login-menu'
+settings:
+  id: 'system_menu_block:lite-cart-login-menu'
+  label: 'Lite, Cart & Login Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

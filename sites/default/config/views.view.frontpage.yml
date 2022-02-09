@@ -20,6 +20,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_show_more
 _core:
   default_config_hash: HAnuLuk87TQ6QDwuJNjLTJYoBftdp6XtJh8RdBx3-TY
 id: frontpage
@@ -1056,7 +1057,7 @@ display:
           field_api_classes: false
           plugin_id: field
       pager:
-        type: full
+        type: show_more
         options:
           items_per_page: 9
           offset: 0
@@ -1065,8 +1066,6 @@ display:
           tags:
             previous: ‹‹
             next: ››
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -1075,7 +1074,19 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 5
+          result_display_method: append
+          show_more_text: 'Load more'
+          show_more_empty_text: ''
+          initial: '9'
+          effects:
+            type: scroll_fade
+            speed_type: slow
+            speed_value: ''
+            scroll_offset: '50'
+            speed: slow
+          advance:
+            content_selector: ''
+            pager_selector: ''
       exposed_block: true
       use_ajax: true
       display_description: ''
@@ -2012,7 +2023,7 @@ display:
           field_api_classes: false
           plugin_id: field
       pager:
-        type: full
+        type: show_more
         options:
           items_per_page: 9
           offset: 0
@@ -2021,8 +2032,6 @@ display:
           tags:
             previous: ‹‹
             next: ››
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -2031,7 +2040,19 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 5
+          result_display_method: append
+          show_more_text: 'Load more'
+          show_more_empty_text: ''
+          initial: '9'
+          effects:
+            type: scroll_fade
+            speed_type: slow
+            speed_value: ''
+            scroll_offset: '50'
+            speed: slow
+          advance:
+            content_selector: ''
+            pager_selector: ''
       exposed_block: true
       use_ajax: true
     display_plugin: page

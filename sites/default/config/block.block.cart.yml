@@ -11,7 +11,7 @@ dependencies:
 id: cart
 theme: shopspot
 region: header
-weight: -14
+weight: -13
 provider: null
 plugin: 'block_content:b452885f-5950-4442-8b9f-8337ea74100c'
 settings:

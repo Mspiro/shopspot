@@ -11,7 +11,7 @@ dependencies:
 id: more
 theme: shopspot
 region: header
-weight: -15
+weight: -14
 provider: null
 plugin: 'system_menu_block:header-more'
 settings:

@@ -1,0 +1,8 @@
+uuid: 246666bb-6713-49b0-8da3-5b1dce396f47
+langcode: en
+status: true
+dependencies: {  }
+id: mobilenavmenu
+label: MobileNavMenu
+description: 'Mobile Navigation Menu'
+locked: false

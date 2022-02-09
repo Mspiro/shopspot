@@ -11,7 +11,7 @@ _core:
 id: shopspot_search
 theme: shopspot
 region: header
-weight: -13
+weight: -12
 provider: null
 plugin: search_form_block
 settings:
