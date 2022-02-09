@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 .region {
   display: flex;
   flex-direction: column;
@@ -27,7 +27,6 @@
   align-content: center;
   align-items: center;
   background-color: #2874f0;
-  margin-top: 200px;
 }
 
 .region-header {

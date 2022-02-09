@@ -29,6 +29,14 @@ body a {
   padding: 0;
 }
 
+.menu--mobilenavmenu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: cadetblue;
+  z-index: 1;
+}
+
 .branding {
   margin: 0 12px;
 }
@@ -51,6 +59,15 @@ body a {
 .branding .slogan img {
   width: 10px;
   height: 10px;
+}
+
+.menu--lite-cart-login-menu {
+  display: none;
+}
+.menu--lite-cart-login-menu .menu {
+  display: flex;
+  position: relative;
+  right: 0px;
 }
 
 .header .region-header .form-item:not(:first-child),
@@ -96,7 +113,7 @@ body a {
   font-family: "roboto";
   display: inline-block;
   position: relative;
-  top: 170px;
+  margin-left: 60px;
   width: auto;
 }
 .login-menu .menu {
@@ -109,24 +126,38 @@ body a {
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 50px;
+  margin-top: 10px;
 }
 .login-menu .menu .menu-item--expanded .login-account {
   background: white;
   padding: 5px 40px;
   line-height: 20px;
-  font-weight: 400;
   color: #2874f0;
   border: 1px solid #dbdbdb;
   border-radius: 2px;
   font-size: 18px;
 }
 .login-menu .menu .menu-item--expanded .my-account {
-  padding: 5px 40px;
+  margin: 0;
+  padding: 0;
   line-height: 20px;
-  font-weight: 400;
   border: 1px solid transparent;
   border-radius: 2px;
-  font-size: 18px;
+  font-size: 16px;
+  margin-top: 10px;
+  height: 40px;
+}
+.login-menu .menu .menu-item--expanded .my-account .link-text {
+  font-family: "Roboto";
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.login-menu .menu .menu-item--expanded .my-account svg {
+  font-size: 10px;
+  height: 13px;
+  width: 9px;
+  margin: 3px 0px 0px 6px;
 }
 .login-menu .menu .menu-item--expanded .menu {
   z-index: 1;
@@ -202,13 +233,34 @@ body a {
 }
 .login-menu .menu .menu-item--expanded:nth-child(2) {
   padding: 0;
-  position: relative;
-  top: 45px;
 }
 .login-menu .menu .menu-item::marker {
   display: none;
 }
 
+.login-menu > .menu > .menu-item > .menu {
+  position: absolute;
+  top: 48px;
+  display: none;
+}
+
+.login-menu > .menu > .menu-item:hover .menu {
+  display: flex;
+}
+
+.my-account:hover svg {
+  animation: spin 1s;
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
 .more-menu {
   display: flex;
   justify-content: flex-start;
@@ -303,6 +355,21 @@ body a {
   }
   to {
     transform: rotate(-180deg);
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    height: 104px;
+  }
+
+  .login-menu,
+.menu--header-more,
+.cart, #block-searchbtn {
+    display: none;
+  }
+
+  .menu--lite-cart-login-menu {
+    display: flex;
   }
 }
 .mega-menu {
@@ -423,6 +490,11 @@ body a {
   display: flex;
 }
 
+@media only screen and (max-width: 576px) {
+  .mega-menu {
+    display: none;
+  }
+}
 .view-content {
   display: flex;
   flex-direction: row;
@@ -602,8 +674,8 @@ button {
   color: red;
 }
 
-@media (max-width: 700px) {
-  .form-item-keyword {
+@media only screen and (max-width: 576px) {
+  .region-category {
     display: none;
   }
 }

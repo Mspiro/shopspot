@@ -1,5 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+@import "../component/headerMobileNavMenu";
 @import "../component/headerBranding";
+@import "../component/headerMobileLoginMenu";
 @import "../component/headerSearchBox";
 @import "../component/headerLoginMenu";
 @import "../component/headerMoreMenu";
+
+@media only screen and (max-width: 576px) {
+  .header {
+    height: 104px;
+  }
+  .login-menu,
+  .menu--header-more,
+  .cart, #block-searchbtn {
+    display: none;
+  }
+  .menu--lite-cart-login-menu {
+    display: flex;
+  }
+}
