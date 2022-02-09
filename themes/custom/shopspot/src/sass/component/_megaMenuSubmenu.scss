@@ -7,12 +7,13 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      position: absolute;
+      position: fixed;
       z-index: 0;
       top: -56px;
     }
   }
 }
 .menu-level-1 > .menu-item--expanded:hover .menu-level-2{
-  display: flex;
+  display: inline-block;
+  position: absolute;
 }

@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+::marker{
+  display: none;
+}
 $filter-text-color: #b2b4b5;
 $footer-text-color: #ffffff;
 body {

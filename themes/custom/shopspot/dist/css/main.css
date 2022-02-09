@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+::marker {
+  display: none;
+}
+
 body {
   background-color: #eaedf6;
   margin: 0;
@@ -30,13 +34,97 @@ body a {
 }
 
 .menu--mobilenavmenu {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: cadetblue;
+  display: none;
   z-index: 1;
 }
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 {
+  /* display: none; */
+  position: fixed;
+  background: #ffffff;
+  width: 75%;
+  top: 0;
+  left: 0;
+  margin-left: 0px;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child {
+  display: flex;
+  align-items: center;
+  background: #2874f0;
+  padding: 2px 0;
+  height: 50px;
+  justify-content: space-between;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child a span {
+  width: 75%;
+  margin-left: 20px;
+  font-size: 16px;
+  align-self: flex-end;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child a svg {
+  margin-left: 12px;
+  width: 15px;
+  height: 15px;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:not(:first-child) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: #212121;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:not(:first-child) a {
+  margin-left: 12px;
+  font-size: 15px;
+  color: black;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:not(:first-child) img {
+  width: 14px;
+  height: 14px;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:not(:first-child) span {
+  margin-left: 12px;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:not(:first-child) .mobile-menu-after::after {
+  display: block;
+  content: "";
+  background-color: #E0E0E0;
+  text-decoration: underline;
+  width: 450px;
+  height: 1px;
+  margin-top: 9px;
+  margin-left: -50px;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--collapsed .hamburger {
+  color: #ffffff;
+  width: 10px;
+}
+.menu--mobilenavmenu .menu-item--collapsed::marker {
+  content: "";
+}
 
+@media only screen and (max-width: 576px) {
+  .menu--mobilenavmenu {
+    display: inline;
+  }
+}
 .branding {
   margin: 0 12px;
 }
@@ -75,7 +163,6 @@ body a {
   display: none;
 }
 .header .region-header form .form-item-keyword {
-  background-color: yellow;
   height: auto;
   width: auto;
   margin: 0;
@@ -90,6 +177,11 @@ body a {
   font-size: 14px;
   padding: 0px 16px;
 }
+@media only screen and (max-width: 576px) {
+  .header .region-header form .form-item-keyword input {
+    width: 100%;
+  }
+}
 .header .region-header form .form-item-keyword input:focus {
   outline: none;
 }
@@ -97,18 +189,24 @@ body a {
   background-color: white;
   width: 42px;
   height: 36px;
-  display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   border-radius: 0px 2px 2px 0px;
+  text-align: center;
 }
 .header .region-header #block-searchbtn svg {
   color: #2874f0;
+  margin-top: 25%;
 }
 
+@media only screen and (max-width: 576px) {
+  #block-searchbtn {
+    display: none;
+  }
+}
 .login-menu {
   font-family: "roboto";
   display: inline-block;
@@ -481,13 +579,14 @@ body a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 0;
   top: -56px;
 }
 
 .menu-level-1 > .menu-item--expanded:hover .menu-level-2 {
-  display: flex;
+  display: inline-block;
+  position: absolute;
 }
 
 @media only screen and (max-width: 576px) {

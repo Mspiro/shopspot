@@ -6,7 +6,7 @@
     }
     form {
       .form-item-keyword {
-        background-color: yellow;
+        // background-color: yellow;
         height: auto;
         width: auto;
         margin: 0;
@@ -19,7 +19,11 @@
           border-radius: 2px 0px 0px 2px;
           font-size: 14px;
           padding: 0px 16px;
+          @media only screen and (max-width: 576px){
+            width: 100%;
+          }
         }
+
         input:focus{
           outline: none;
         }
@@ -29,16 +33,24 @@
       background-color: white;
       width: 42px;
       height: 36px;
-      display: flex;
+      // display: flex;
       align-content: center;
       justify-content: center;
       align-items: center;
       flex-direction: row;
       flex-wrap: nowrap;
       border-radius: 0px 2px 2px 0px;
+      text-align: center;
       svg {
         color: #2874f0;
+        margin-top: 25%;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 576px){
+  #block-searchbtn{
+    display: none;
   }
 }
