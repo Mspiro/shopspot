@@ -48,6 +48,8 @@ body a {
   left: -450px;
   margin-left: 0px;
   width: 78%;
+  height: 100%;
+  overflow: scroll;
   transition: 0.2s;
 }
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child {
@@ -132,6 +134,10 @@ body a {
   left: -15px !important;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 576px) {
   .menu--mobilenavmenu {
     display: inline;
@@ -140,9 +146,9 @@ body a {
   }
   .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .overlay {
     background-color: rgba(0, 0, 0, 0.6);
-    width: 50%;
     position: fixed;
     z-index: -1;
+    left: 0;
     right: 0;
     top: 0;
     bottom: 0;

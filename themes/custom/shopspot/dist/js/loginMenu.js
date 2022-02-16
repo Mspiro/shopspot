@@ -32,7 +32,7 @@
   Drupal.behaviors.hamburger = {
     attach: function (context, setting) {
       var hamburger = document.querySelector(".hamburger");
-      // console.log(hamburger);
+      var allBackground = document.body;
       var hamMenu = document.getElementsByClassName(
         "menu-link-contentmobilenavmenu"
         )[0];
@@ -40,10 +40,12 @@
       overlay.style.display = "none";
       hamburger.addEventListener("click", function () {
         hamMenu.children[0].classList.toggle("active");
+        allBackground.classList.toggle('no-scroll');
         overlay.style.display = "block";
       });
       overlay.addEventListener("click", function () {
         hamMenu.children[0].classList.toggle("active");
+        allBackground.classList.toggle('no-scroll');
         overlay.style.display = "none";
       });
     },
