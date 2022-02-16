@@ -11,7 +11,7 @@ dependencies:
 id: policysmenu
 theme: shopspot
 region: footer_second
-weight: -12
+weight: -13
 provider: null
 plugin: 'system_menu_block:policys-menu'
 settings:

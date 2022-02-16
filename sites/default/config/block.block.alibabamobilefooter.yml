@@ -1,0 +1,25 @@
+uuid: bed2d3e8-7ca1-4a19-8756-a558ce70bcfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.alibabamobilefooter
+  module:
+    - system
+  theme:
+    - shopspot
+id: alibabamobilefooter
+theme: shopspot
+region: footer_second
+weight: -21
+provider: null
+plugin: 'system_menu_block:alibabamobilefooter'
+settings:
+  id: 'system_menu_block:alibabamobilefooter'
+  label: AlibabaMobileFooter
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

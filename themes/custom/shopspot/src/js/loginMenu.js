@@ -35,20 +35,17 @@
       console.log(hamburger);
       var hamMenu = document.getElementsByClassName(
         "menu-link-contentmobilenavmenu"
-      )[0];
+        )[0];
+      var overlay = hamMenu.children[1];
+        console.log(overlay);
       var list = hamMenu.classList.add("hidden");
       hamburger.addEventListener("click", function () {
         hamMenu.classList.toggle("hidden");
         hamMenu.children[0].setAttribute('id','hello');
-        console.log(hamMenu.children[0]);
       });
-
-      hamMenu.onclick = function (e){
-        if(e.target.id !== 'hello'){
-          hamMenu.classList.toggle("hidden");
-        }
-      };
-
+      overlay.addEventListener("click", function () {
+        hamMenu.classList.toggle("hidden");
+      });
     },
   };
 })(Drupal);
