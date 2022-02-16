@@ -12,6 +12,8 @@
         left: -450px;
         margin-left: 0px;
         width: 78%;
+        height: 100%;
+        overflow: scroll;
         transition: .2s;
         .menu-item:first-child {
           display: flex;
@@ -86,15 +88,6 @@
           }
         }
       }
-      // > .menu-link-contentmobilenavmenu {
-      //   background-color: rgba(0, 0, 0, 0.6);
-      //   position:fixed;
-      //   top: 0;
-      //   left:0 ;
-      //   right: 0;
-      //   bottom: 0;
-
-      // }
     }
     .menu-item--expanded {
       .hamburger {
@@ -110,6 +103,9 @@
 .active{
   left: -15px !important;
 }
+.no-scroll{
+  overflow: hidden;
+}
 
 @media only screen and (max-width: 576px) {
   .menu--mobilenavmenu {
@@ -120,12 +116,13 @@
       .menu-item--expanded {
         .overlay {
           background-color: rgba(0, 0, 0, 0.6);
-          width: 50%;
           position: fixed;
           z-index: -1;
+          left: 0;
           right: 0;
           top: 0;
           bottom: 0;
+
         }
       }
     }
