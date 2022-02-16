@@ -1,9 +1,25 @@
 .menu--lite-cart-login-menu{
   display: none;
-  // flex-direction: row;
+  flex-direction: row;
+  // display: flex;
+  position: absolute;
+  right: 2%;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  // display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 140px;
   .menu{
     display: flex;
     position: relative;
     right: 0px;
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
   }
 }

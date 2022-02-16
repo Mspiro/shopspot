@@ -6,11 +6,18 @@
 @import "../component/footerAphabetticalMenu";
 @import "../component/footerPolicy";
 @import "../component/footerCopyright";
-
+@import "../component/footerAlibabaMobile";
 
 .footer-second {
-  hr.hr{
+  hr.hr {
     width: 92%;
-    border: 1px solid #313D51;
+    border: 1px solid #313d51;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .alibaba-mobile {
+    display: flex;
+    background-color: red;
   }
 }

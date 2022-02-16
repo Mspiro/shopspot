@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/cheeseburger_menu": "^5.0@RC",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
@@ -24,6 +25,7 @@
         "drupal/menu_link_attributes": "^1.2",
         "drupal/menu_manipulator": "^3.0",
         "drupal/scrollup": "^3.0",
+        "drupal/simple_popup_blocks": "^2.8",
         "drupal/twig_tweak": "^3.1",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/views_show_more": "^1.0",

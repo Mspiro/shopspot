@@ -44,76 +44,82 @@
 #}
 <div class="layout-container main-page">
 
-  <header role="banner">
-  <div id="header" class="header"> 
-    {{ page.header }}
-    {# <p>  Header </p> #}
-    </div>
-  </header>
+	<header role="banner">
+		<div id="header" class="header">
+			{{ page.header }}
+			{# <p>  Header </p> #}
+		</div>
+	</header>
 
-  <main role="main" class="main">
+	<main role="main" class="main">
 
-    <div class="layout-content details" >
-      {{ page.content }}
-    </div>{# /.layout-content #}
+		<div class="layout-content details">
+			{{ page.content }}
+		</div>
+		{# /.layout-content #}
 
 
-  </main>
+	</main>
 
-    <footer role="contentinfo">
-      <div class="footer-second">  
-        <div class="subscription">        
-          {{ page.footer_second.subscription }}
-        </div>
+	<footer role="contentinfo">
+		<div class="alibaba-mobile">
+			{{ page.footer_second.alibabamobilefooter }}
+		</div>
+		<div class="footer-second">
+			<div class="subscription">
+				{{ page.footer_second.subscription }}
+			</div>
 
-        <div class="custome-footer-hr-menus">   
-          {{ page.footer_second.footermenuvertical }}
-        </div>  
-        <hr class="hr" />    
-        <div class="connect-on">
+			<div class="custome-footer-hr-menus">
+				{{ page.footer_second.footermenuvertical }}
+			</div>
+			<hr class="hr"/>
+			<div class="connect-on">
 
-          <div class="download">
-            {{ page.footer_second.download }}
-          </div>
+				<div class="download">
+					{{ page.footer_second.download }}
+				</div>
 
-          <div class="our-app">
-            {{ page.footer_second.alibabasupplierapp }}
-          </div>
+				<div class="our-app">
+					{{ page.footer_second.alibabasupplierapp }}
+				</div>
 
-          <div class="follow-us">
-            {{ page.footer_second.followus }}            
-          </div>
+				<div class="follow-us">
+					{{ page.footer_second.followus }}
+				</div>
 
-        </div>
-        <div class="all-footer-menu">
-        
-          <div class="languages">
+			</div>
+			<div class="all-footer-menu">
 
-            <i class="fas fa-globe-americas"></i>
-            <p>Alibaba.com Site: </p>
-            
-            <div class ="languages-list">
-              {{ page.footer_second.alibabacomsite }}
-            </div> 
-          </div>
-          <div class="alibaba-group-menu">
-            {{ page.footer_second.alibabagroupmenus }}
-          </div>
+				<div class="languages">
 
-          <div class="browse-alphabetically">
-            {{ page.footer_second.browesalphabetically }}
-          </div>
+					<i class="fas fa-globe-americas"></i>
+					<p>Alibaba.com Site:
+					</p>
 
-          <div class="policy">
-            {{ page.footer_second.policysmenu }}
-          </div>
+					<div class="languages-list">
+						{{ page.footer_second.alibabacomsite }}
+					</div>
+				</div>
+				<div class="alibaba-group-menu">
+					{{ page.footer_second.alibabagroupmenus }}
+				</div>
 
-           <div class="copyright">
-            {{ page.footer_second.copyright }}
-          </div>
+				<div class="browse-alphabetically">
+					{{ page.footer_second.browesalphabetically }}
+				</div>
 
-        </div>
-      </div> 
-    </footer>
+				<div class="policy">
+					{{ page.footer_second.policysmenu }}
+				</div>
 
-</div>{# /.layout-container #}
+				<div class="copyright">
+					{{ page.footer_second.copyright }}
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+</div>
+{# /.layout-container #}

@@ -21,6 +21,7 @@ function shopspot_preprocess_select(&$variables)
 //Hide login button after login
 function shopspot_preprocess_menu__login(&$variables)
 {
+  // dump($variables);
   if($variables['logged_in']){
     $variables['items']['menu_link_content:70b843bc-08e8-4bdf-aa28-7aa845152a0b']['is_expanded'] = false;
     $variables['items']['menu_link_content:70b843bc-08e8-4bdf-aa28-7aa845152a0b']['below'] = false;
@@ -34,5 +35,15 @@ function shopspot_preprocess_menu__login(&$variables)
     $variables['items']['menu_link_content:a481fb29-4738-4807-abc2-53612935820e']['is_expanded'] = false;
     $variables['items']['menu_link_content:a481fb29-4738-4807-abc2-53612935820e']['below'] = false;
     $variables['items']['menu_link_content:a481fb29-4738-4807-abc2-53612935820e']['title'] = false;
+  }
+}
+
+function shopspot_preprocess_menu__lite_cart_login_menu(&$variables)
+{
+  if($variables['logged_in']==true){
+    $variables['items']['menu_link_content:9a27f44b-dc93-4bc4-816e-45aa425fbd5d']['title'] = t('<i class="fa fa-user" aria-hidden="true"></i>');
+  }
+  else{
+    $variables['items']['menu_link_content:9a27f44b-dc93-4bc4-816e-45aa425fbd5d']['title'] = t('<span class="link-text">Login</span>');
   }
 }

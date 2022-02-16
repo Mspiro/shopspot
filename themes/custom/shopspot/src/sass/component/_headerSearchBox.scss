@@ -8,7 +8,7 @@
       .form-item-keyword {
         // background-color: yellow;
         height: auto;
-        width: auto;
+        width: 522px;
         margin: 0;
         input {
           width: 522px;
@@ -21,7 +21,14 @@
           padding: 0px 16px;
           @media only screen and (max-width: 576px){
             width: 100%;
+            border-radius: 2px;
+            height: 38px;
           }
+        }
+        @media only screen and (max-width: 576px){
+          width: 100%;
+          margin-top: 10px;
+          // position:absolute;
         }
 
         input:focus{
@@ -52,5 +59,9 @@
 @media only screen and (max-width: 576px){
   #block-searchbtn{
     display: none;
+  }
+  #block-exposedformfrontpagepage-1-5{
+    width: 100%;
+    margin: 11px 0px 0px 0px;
   }
 }

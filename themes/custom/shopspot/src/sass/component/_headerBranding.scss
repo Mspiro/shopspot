@@ -23,3 +23,39 @@
     }
   }
 }
+@media only screen and (max-width: 576px) {
+  .branding{
+    // margin-top: 10px;
+    height: 30px;
+    padding-top: 6px;
+    a{
+      img{
+        width: 65px;
+        height: 18px;
+      }
+      
+    }
+    
+    .slogan{
+      line-height: 0px;
+      margin: -4px 0 0 2px;
+      a{
+        font-size: 9px;
+        font-weight: 600;
+      }
+      img{
+        margin-left: 4px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  .branding > a::after{
+    content: "Lite";
+    font-size: 10px;
+    font-style: italic;
+    position: absolute;
+    top: 10px;
+    margin-left: 3px;
+  }
+}

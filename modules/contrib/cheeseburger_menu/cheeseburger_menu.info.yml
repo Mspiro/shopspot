@@ -1,0 +1,13 @@
+name: 'Cheeseburger Menu'
+type: module
+description: 'This block is displaying the main menu and its child items in an ordered list'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'
+dependencies:
+  - drupal:block
+
+# Information added by Drupal.org packaging script on 2021-12-08
+version: '5.0.0-rc1'
+project: 'cheeseburger_menu'
+datestamp: 1638956492

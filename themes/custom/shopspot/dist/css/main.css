@@ -37,14 +37,17 @@ body a {
   display: none;
   z-index: 1;
 }
+.menu--mobilenavmenu .menu-level-0 {
+  margin: 0;
+  cursor: pointer;
+}
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 {
-  /* display: none; */
-  position: fixed;
+  position: absolute;
   background: #ffffff;
-  width: 75%;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: -15px;
   margin-left: 0px;
+  width: 78%;
 }
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child {
   display: flex;
@@ -52,11 +55,13 @@ body a {
   background: #2874f0;
   padding: 2px 0;
   height: 50px;
+  padding-left: 23px;
+  padding-right: 20px;
   justify-content: space-between;
 }
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child a span {
   width: 75%;
-  margin-left: 20px;
+  margin-left: 15px;
   font-size: 16px;
   align-self: flex-end;
   color: #fff;
@@ -83,12 +88,14 @@ body a {
   height: 35px;
   font-size: 14px;
   font-weight: 500;
-  padding-left: 15px;
+  padding-left: 35px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: #ffffff;
   color: #212121;
+  font-weight: 500;
 }
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:not(:first-child) a {
   margin-left: 12px;
@@ -105,24 +112,34 @@ body a {
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:not(:first-child) .mobile-menu-after::after {
   display: block;
   content: "";
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   text-decoration: underline;
   width: 450px;
   height: 1px;
   margin-top: 9px;
   margin-left: -50px;
 }
-.menu--mobilenavmenu .menu-level-0 .menu-item--collapsed .hamburger {
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded > .menu-link-contentmobilenavmenu {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.menu--mobilenavmenu .menu-level-0 .menu-item--expanded .hamburger {
   color: #ffffff;
   width: 10px;
 }
-.menu--mobilenavmenu .menu-item--collapsed::marker {
+.menu--mobilenavmenu .menu-item--expanded::marker {
   content: "";
 }
 
 @media only screen and (max-width: 576px) {
   .menu--mobilenavmenu {
     display: inline;
+    z-index: 1;
+    margin: 5px 5px 0 2px;
   }
 }
 .branding {
@@ -149,13 +166,60 @@ body a {
   height: 10px;
 }
 
+@media only screen and (max-width: 576px) {
+  .branding {
+    height: 30px;
+    padding-top: 6px;
+  }
+  .branding a img {
+    width: 65px;
+    height: 18px;
+  }
+  .branding .slogan {
+    line-height: 0px;
+    margin: -4px 0 0 2px;
+  }
+  .branding .slogan a {
+    font-size: 9px;
+    font-weight: 600;
+  }
+  .branding .slogan img {
+    margin-left: 4px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .branding > a::after {
+    content: "Lite";
+    font-size: 10px;
+    font-style: italic;
+    position: absolute;
+    top: 10px;
+    margin-left: 3px;
+  }
+}
 .menu--lite-cart-login-menu {
   display: none;
+  flex-direction: row;
+  position: absolute;
+  right: 2%;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 140px;
 }
 .menu--lite-cart-login-menu .menu {
   display: flex;
   position: relative;
   right: 0px;
+  color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
 }
 
 .header .region-header .form-item:not(:first-child),
@@ -164,7 +228,7 @@ body a {
 }
 .header .region-header form .form-item-keyword {
   height: auto;
-  width: auto;
+  width: 522px;
   margin: 0;
 }
 .header .region-header form .form-item-keyword input {
@@ -180,6 +244,14 @@ body a {
 @media only screen and (max-width: 576px) {
   .header .region-header form .form-item-keyword input {
     width: 100%;
+    border-radius: 2px;
+    height: 38px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header .region-header form .form-item-keyword {
+    width: 100%;
+    margin-top: 10px;
   }
 }
 .header .region-header form .form-item-keyword input:focus {
@@ -205,6 +277,11 @@ body a {
 @media only screen and (max-width: 576px) {
   #block-searchbtn {
     display: none;
+  }
+
+  #block-exposedformfrontpagepage-1-5 {
+    width: 100%;
+    margin: 11px 0px 0px 0px;
   }
 }
 .login-menu {
@@ -458,6 +535,7 @@ body a {
 @media only screen and (max-width: 576px) {
   .header {
     height: 104px;
+    align-content: flex-start;
   }
 
   .login-menu,
@@ -468,6 +546,12 @@ body a {
 
   .menu--lite-cart-login-menu {
     display: flex;
+  }
+
+  .region-header {
+    justify-content: flex-start;
+    padding: 0px 12px;
+    margin: 8px 0px;
   }
 }
 .mega-menu {
@@ -571,6 +655,7 @@ body a {
 }
 .mega-menu .menu--mega-menu .menu-item--expanded:hover .menu-level-1 {
   display: flex;
+  top: 165px;
 }
 
 .menu-level-1 .menu-item .menu-level-2 {
@@ -587,6 +672,7 @@ body a {
 .menu-level-1 > .menu-item--expanded:hover .menu-level-2 {
   display: inline-block;
   position: absolute;
+  top: 0px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -662,6 +748,11 @@ body a {
   box-shadow: inset 25px 0px 25px -32px rgba(0, 0, 0, 0.45), inset -25px 0px 25px -32px rgba(0, 0, 0, 0.45);
 }
 
+@media only screen and (max-width: 576px) {
+  .view-content {
+    flex-direction: column;
+  }
+}
 .form-item-keyword {
   display: inline-flex;
   background-color: white;

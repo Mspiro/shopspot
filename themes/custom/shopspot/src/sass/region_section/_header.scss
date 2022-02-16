@@ -9,6 +9,7 @@
 @media only screen and (max-width: 576px) {
   .header {
     height: 104px;
+    align-content: flex-start;
   }
   .login-menu,
   .menu--header-more,
@@ -17,5 +18,10 @@
   }
   .menu--lite-cart-login-menu {
     display: flex;
+  }
+  .region-header{
+    justify-content: flex-start;
+    padding: 0px 12px;
+    margin: 8px 0px;
   }
 }
