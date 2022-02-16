@@ -61,6 +61,9 @@ body a {
   padding-left: 23px;
   padding-right: 20px;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 .menu-item:first-child a span {
   width: 75%;
