@@ -1,3 +1,18 @@
-.alibaba-mobile {
+.alibaba-mobile{
   display: none;
+  background-color: red;
+}
+
+@media only screen and (max-width: 576px) {
+  .alibaba-mobile{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .menu{
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 }
