@@ -12,7 +12,7 @@ dependencies:
 id: useraccountmenu_2
 theme: shopspot
 region: header
-weight: -4
+weight: -3
 provider: null
 plugin: 'system_menu_block:account'
 settings:

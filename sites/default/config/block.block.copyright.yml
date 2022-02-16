@@ -11,7 +11,7 @@ dependencies:
 id: copyright
 theme: shopspot
 region: footer_second
-weight: -11
+weight: -12
 provider: null
 plugin: 'block_content:e86df330-c760-476b-b009-f8443d902268'
 settings:

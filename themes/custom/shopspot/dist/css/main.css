@@ -119,14 +119,6 @@ body a {
   margin-top: 9px;
   margin-left: -50px;
 }
-.menu--mobilenavmenu .menu-level-0 .menu-item--expanded > .menu-link-contentmobilenavmenu {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .hamburger {
   color: #ffffff;
   width: 10px;
@@ -140,6 +132,15 @@ body a {
     display: inline;
     z-index: 1;
     margin: 5px 5px 0 2px;
+  }
+  .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 25%;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }
 .branding {

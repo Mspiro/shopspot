@@ -11,7 +11,7 @@ dependencies:
 id: subscription
 theme: shopspot
 region: footer_second
-weight: -10
+weight: -11
 provider: null
 plugin: 'block_content:44aff999-1155-4826-8cdf-fec9dcb680e2'
 settings:

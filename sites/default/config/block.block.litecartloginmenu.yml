@@ -11,7 +11,7 @@ dependencies:
 id: litecartloginmenu
 theme: shopspot
 region: header
-weight: -18
+weight: -19
 provider: null
 plugin: 'system_menu_block:lite-cart-login-menu'
 settings:

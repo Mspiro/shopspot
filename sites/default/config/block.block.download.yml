@@ -11,7 +11,7 @@ dependencies:
 id: download
 theme: shopspot
 region: footer_second
-weight: -16
+weight: -17
 provider: null
 plugin: 'block_content:7a694043-4ea3-43e7-852d-321375e2c3d2'
 settings:
