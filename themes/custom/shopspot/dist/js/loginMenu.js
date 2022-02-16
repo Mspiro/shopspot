@@ -32,19 +32,19 @@
   Drupal.behaviors.hamburger = {
     attach: function (context, setting) {
       var hamburger = document.querySelector(".hamburger");
-      console.log(hamburger);
+      // console.log(hamburger);
       var hamMenu = document.getElementsByClassName(
         "menu-link-contentmobilenavmenu"
         )[0];
       var overlay = hamMenu.children[1];
-        console.log(overlay);
-      var list = hamMenu.classList.add("hidden");
+      overlay.style.display = "none";
       hamburger.addEventListener("click", function () {
-        hamMenu.classList.toggle("hidden");
-        hamMenu.children[0].setAttribute('id','hello');
+        hamMenu.children[0].classList.toggle("active");
+        overlay.style.display = "block";
       });
       overlay.addEventListener("click", function () {
-        hamMenu.classList.toggle("hidden");
+        hamMenu.children[0].classList.toggle("active");
+        overlay.style.display = "none";
       });
     },
   };
