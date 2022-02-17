@@ -147,6 +147,13 @@ body a {
     z-index: 1;
     margin: 5px 5px 0 2px;
   }
+  .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1 {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .menu-level-1::-webkit-scrollbar {
+    display: none;
+  }
   .menu--mobilenavmenu .menu-level-0 .menu-item--expanded .overlay {
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
@@ -672,7 +679,41 @@ body a {
   display: flex;
   top: 165px;
 }
+.mega-menu .menu--mega-menu-for-mobile {
+  display: none;
+}
 
+@media only screen and (max-width: 576px) {
+  .mega-menu {
+    height: auto;
+    overflow-x: hidden;
+    box-shadow: none;
+  }
+  .mega-menu .region-menu .menu--mega-menu {
+    display: none;
+  }
+  .mega-menu .region-menu .menu--mega-menu-for-mobile {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .mega-menu .region-menu .menu--mega-menu-for-mobile::-webkit-scrollbar {
+    display: none;
+  }
+  .mega-menu .region-menu .menu--mega-menu-for-mobile .menu-level-0 {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .mega-menu .region-menu .menu--mega-menu-for-mobile .menu-level-0 .menu-item {
+    padding: 0;
+  }
+  .mega-menu .region-menu .menu--mega-menu-for-mobile .menu-level-0 .menu-item span {
+    display: none;
+  }
+}
 .menu-level-1 .menu-item .menu-level-2 {
   display: none;
   flex-direction: column;
@@ -690,11 +731,6 @@ body a {
   top: 0px;
 }
 
-@media only screen and (max-width: 576px) {
-  .mega-menu {
-    display: none;
-  }
-}
 .view-content {
   display: flex;
   flex-direction: row;
