@@ -14,7 +14,7 @@
         width: 78%;
         height: 100%;
         overflow: scroll;
-        transition: .2s;
+        transition: 0.2s;
         .menu-item:first-child {
           display: flex;
           align-items: center;
@@ -103,10 +103,10 @@
     content: "";
   }
 }
-.active{
+.active {
   left: -15px !important;
 }
-.no-scroll{
+.no-scroll {
   overflow: hidden;
 }
 
@@ -117,6 +117,13 @@
     margin: 5px 5px 0 2px;
     .menu-level-0 {
       .menu-item--expanded {
+        .menu-level-1 {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
         .overlay {
           background-color: rgba(0, 0, 0, 0.6);
           position: fixed;
@@ -125,7 +132,6 @@
           right: 0;
           top: 0;
           bottom: 0;
-
         }
       }
     }

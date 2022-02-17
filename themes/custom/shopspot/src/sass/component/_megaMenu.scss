@@ -105,4 +105,42 @@
       top: 165px;
     }
   }
+  .menu--mega-menu-for-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .mega-menu {
+    height: auto;
+    overflow-x: hidden;
+    box-shadow: none;
+    .region-menu {
+      .menu--mega-menu {
+        display: none;
+      }
+      .menu--mega-menu-for-mobile {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .menu-level-0 {
+          display: flex;
+          margin: 0;
+          padding: 0;
+          .menu-item {
+            padding: 0;
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
