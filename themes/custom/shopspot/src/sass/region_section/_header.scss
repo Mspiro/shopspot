@@ -2,9 +2,11 @@
 @import "../component/headerMobileNavMenu";
 @import "../component/headerBranding";
 @import "../component/headerMobileLoginMenu";
+@import "../component/allCategoryHeaderForMobile";
 @import "../component/headerSearchBox";
 @import "../component/headerLoginMenu";
 @import "../component/headerMoreMenu";
+
 
 @media only screen and (max-width: 576px) {
   .header {

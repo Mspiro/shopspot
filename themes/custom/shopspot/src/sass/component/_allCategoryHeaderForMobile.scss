@@ -1,0 +1,29 @@
+.category-header {
+  // background-color: red;
+  .header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    .menu--all-category {
+      display: flex;
+      .menu {
+        display: flex;
+        width: 25vw;
+        min-width: 130px;
+        justify-content: space-between;
+        .menu-item {
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .menu--lite-cart-login-menu {
+      display: flex;
+      position: relative;
+      margin: 0px;
+    }
+  }
+}

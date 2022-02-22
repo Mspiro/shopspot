@@ -188,6 +188,10 @@ body a {
   height: 10px;
 }
 
+.menu--all-category {
+  display: none;
+}
+
 @media only screen and (max-width: 576px) {
   .branding {
     height: 30px;
@@ -242,6 +246,31 @@ body a {
   align-items: center;
   align-content: center;
   width: 100%;
+}
+
+.category-header .header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+.category-header .header .menu--all-category {
+  display: flex;
+}
+.category-header .header .menu--all-category .menu {
+  display: flex;
+  width: 25vw;
+  min-width: 130px;
+  justify-content: space-between;
+}
+.category-header .header .menu--all-category .menu .menu-item a {
+  color: #ffffff;
+}
+.category-header .header .menu--lite-cart-login-menu {
+  display: flex;
+  position: relative;
+  margin: 0px;
 }
 
 .header .region-header .form-item:not(:first-child),
@@ -707,6 +736,19 @@ body a {
     margin: 0;
     padding: 0;
   }
+  .mega-menu .region-menu .menu--mega-menu-for-mobile .menu-level-0 .menu-item:first-child {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .mega-menu .region-menu .menu--mega-menu-for-mobile .menu-level-0 .menu-item:first-child a {
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    background: #fff;
+    font-size: 16px;
+    left: 4px;
+    color: black;
+  }
   .mega-menu .region-menu .menu--mega-menu-for-mobile .menu-level-0 .menu-item {
     padding: 0;
   }
@@ -729,6 +771,46 @@ body a {
   display: inline-block;
   position: absolute;
   top: 0px;
+}
+
+.all-category-list {
+  margin: 0 !important;
+}
+.all-category-list .view-content {
+  flex-direction: row;
+  justify-content: center;
+}
+.all-category-list .view-content .views-row:first-child {
+  display: none;
+}
+.all-category-list .view-content .views-row {
+  background-color: #ffffff;
+  display: inline-flex;
+  border-radius: 0px;
+  width: 31vw;
+  height: 30vh;
+  margin: 0px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  border: 0.1px solid #d4d4d4;
+  overflow: hidden;
+  margin: 5px;
+  border-radius: 5px;
+}
+.all-category-list .view-content .views-row span {
+  display: none;
+}
+.all-category-list .view-content .views-row img {
+  width: 136px;
+  height: 130px;
+  margin: auto;
+  inset: 0px;
+  padding: inherit;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .view-content {
