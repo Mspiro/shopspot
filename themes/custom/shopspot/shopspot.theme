@@ -47,3 +47,8 @@ function shopspot_preprocess_menu__lite_cart_login_menu(&$variables)
     $variables['items']['menu_link_content:9a27f44b-dc93-4bc4-816e-45aa425fbd5d']['title'] = t('<span class="link-text">Login</span>');
   }
 }
+
+// function shopspot_preprocess_field(&$variables)
+// {
+  // dump($variables);
+// }
