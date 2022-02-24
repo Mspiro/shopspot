@@ -1113,7 +1113,7 @@ button {
 
 .alibaba-mobile {
   display: none;
-  background-color: red;
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 576px) {
@@ -1123,9 +1123,33 @@ button {
     justify-content: center;
     align-items: center;
     align-content: center;
+    height: 56px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
   }
-  .alibaba-mobile .menu {
+  .alibaba-mobile .menu--alibabamobilefooter {
+    width: 100%;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu {
     display: flex;
     justify-content: space-evenly;
+    margin-top: -6px;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a svg {
+    font-size: 25px;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a span {
+    font-size: 17px;
+    margin-top: 8px;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a.is-active {
+    color: #ff6600;
   }
 }
