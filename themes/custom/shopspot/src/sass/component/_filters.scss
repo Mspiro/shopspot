@@ -102,12 +102,8 @@ button {
   border-radius: 5px;
 }
 
-#edit-field-price-value-all--2 {
+#edit-field-price-value-all--2, #edit-specify-wrapper--3 {
   display: none;
-  label {
-    color: red;
-    // display: none;
-  }
 }
 
 @media only screen and (max-width: 576px) {

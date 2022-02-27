@@ -18,6 +18,22 @@
     },
   };
 })(Drupal);
+(function (Drupal) {
+  Drupal.behaviors.minmaxField = {
+    attach: function (context, setting) {
+      var minMaxField = document.getElementById("edit-specify-wrapper--3");
+      var priceWrapper = document.querySelectorAll('#edit-field-price-value--3')[0].children[4];
+      priceWrapper.addEventListener('click',function(){
+        if(minMaxField.style.display == 'none'){
+          minMaxField.style.display = 'flex';
+        }
+        else {
+          minMaxField.style.display = 'none';
+        }     
+      });
+    },
+  };
+})(Drupal);
 
 (function (Drupal) {
   Drupal.behaviors.hamburger = {
