@@ -65,12 +65,14 @@
       var mobileNav = document.getElementsByClassName("menu--lite-cart-login-menu")[0];
       var lietCard = mobileNav.getElementsByTagName('ul')[0].children[0];
       var filterForm = document.querySelector('.region-category');
+      var minMaxField = document.getElementById("edit-specify-wrapper--3");
       lietCard.addEventListener('click', function(){
         filterForm.classList.toggle('visible');
       });
       var applayFilterBtn = document.getElementById('edit-submit-frontpage--3');
       applayFilterBtn.addEventListener('click', function(){
         filterForm.classList.remove('visible');
+        minMaxField.style.display = "none";
       });
     },
   };
