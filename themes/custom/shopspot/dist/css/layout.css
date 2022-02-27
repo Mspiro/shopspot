@@ -70,7 +70,7 @@
   justify-content: center;
   align-items: flex-start;
   background-color: #eaedf6;
-  margin: 50px 0 50px 0;
+  margin: 10px 0 70px 0;
 }
 .main-page .main .layout-content {
   box-sizing: border-box;
@@ -94,11 +94,6 @@
   align-items: center;
   margin-left: 10px;
 }
-@media only screen and (max-width: 576px) {
-  .main-page .main .layout-sidebar-sidebar {
-    display: none;
-  }
-}
 
 .footer-second {
   display: flex;
@@ -120,7 +115,7 @@
 }
 
 .visible {
-  display: flex;
+  display: flex !important;
 }
 
 @media only screen and (max-width: 576px) {

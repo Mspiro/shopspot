@@ -133,12 +133,12 @@
           display: flex;
           margin: 0;
           padding: 0;
-          .menu-item:first-child{
+          .menu-item:first-child {
             display: flex;
             flex-direction: column-reverse;
-            a{
-              position: absolute;
-              top: 70px;
+            a {
+              position: relative;
+              top: -25px;
               z-index: 1;
               background: #fff;
               font-size: 16px;

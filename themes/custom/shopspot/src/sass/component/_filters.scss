@@ -18,7 +18,7 @@
   border-radius: 5px;
   padding: 0 0 0 10px;
 }
-.form-text:focus{
+.form-text:focus {
   outline: none;
 }
 .form-item-categories {
@@ -40,8 +40,6 @@
     height: 32px;
     border: 1px solid #eaedf6;
     border-radius: 5px;
-
-   
   }
   .form-select:focus {
     outline: none;
@@ -112,9 +110,36 @@ button {
   }
 }
 
-
-@media only screen and (max-width: 576px){
-  .region-category{
+@media only screen and (max-width: 576px) {
+  .category {
     display: none;
+    position: absolute;
+    width: 100vw !important;
+    background-color: #ffffff;
+    display: flex !important;
+    align-items: center !important;
+    align-content: center !important;
+    margin-left: 0px !important;
+    top: 145px;
+    z-index: 1;
+
+    .region-category {
+      display: none;
+      .views-exposed-form {
+        form {
+          .form--inline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin-top: 10px;
+            .form-item-keyword {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }

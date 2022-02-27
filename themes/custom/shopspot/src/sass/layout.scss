@@ -68,7 +68,7 @@
     justify-content: center;
     align-items: flex-start;
     background-color: #eaedf6;
-    margin: 50px 0 50px 0;
+    margin: 10px 0 70px 0;
     .layout-content {
       box-sizing: border-box;
       width: 900px;
@@ -90,9 +90,9 @@
       justify-content: center;
       align-items: center;
       margin-left: 10px;
-      @media only screen and (max-width: 576px) {
-        display: none;
-      }
+      // @media only screen and (max-width: 576px) {
+      //   display: none;
+      // }
     }
   }
 }
@@ -115,7 +115,7 @@
 }
 
 .visible {
-  display: flex;
+  display: flex !important;
 }
 
 
