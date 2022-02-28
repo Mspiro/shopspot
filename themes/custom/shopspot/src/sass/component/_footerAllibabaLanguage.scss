@@ -1,0 +1,34 @@
+.menu--alibaba-com-site- > .menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 30px 0px 30px 0px;
+}
+.menu--alibaba-com-site- > .menu {
+  li {
+    width: 235px;
+  }
+}
+
+.menu--alibaba-com-site- > .menu > li > span {
+  font-size: 18px;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: $footer-text-color;
+}
+
+.menu--alibaba-com-site- > .menu > li .menu {
+  margin-left: 0px;
+  font-size: 12px;
+  margin-top: 20px;
+  a{    
+    text-decoration: none;
+    color: $footer-text-color;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}

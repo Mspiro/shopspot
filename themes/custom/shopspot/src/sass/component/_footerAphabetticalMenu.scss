@@ -1,6 +1,6 @@
 .browse-alphabetically{
   font-size: 12px;
-  margin-top: -40px;
+  margin-top: 15px;
   nav{
     display: flex;
     align-content: center;
@@ -11,6 +11,7 @@
       font-weight: 100;
     }
     .menu{
+      display: flex;
       li{
         width: auto;
         margin: 0 2px;

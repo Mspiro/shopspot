@@ -813,6 +813,387 @@ body a {
   z-index: 1;
 }
 
+.subscription {
+  margin: 45px 0 45px 0;
+}
+.subscription .text-formatted {
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.subscription .text-formatted p {
+  font-size: 14px;
+}
+.subscription .text-formatted .input {
+  margin-top: 20px;
+}
+.subscription .text-formatted .input .search-text {
+  width: 300px;
+  height: 40px;
+  background-color: #313d51;
+  border-color: #c4c6cf;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 20.5714px;
+  margin: -3px 0px 0px;
+  padding: 10px;
+}
+.subscription .text-formatted .input .btn-search {
+  background-color: transparent;
+  border-color: #c6cad1;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.11111px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 38px;
+  padding: 0px 20px;
+  text-align: center;
+  margin-left: 10px;
+}
+.subscription .text-formatted .email-privacy {
+  color: #999999;
+  font-size: 12px;
+  line-height: 15.4285px;
+  margin: 5px 0px 0px;
+}
+
+.footer-second .region-footer-second {
+  display: flex;
+  flex-direction: row;
+}
+.footer-second .region-footer-second nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  height: 197px;
+}
+
+.menu-item--expanded {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+.menu--footer-menu-vertical > .menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 30px 0px 30px 0px;
+}
+
+.menu--footer-menu-vertical > .menu li {
+  width: 235px;
+}
+
+.menu--footer-menu-vertical > .menu > li > span {
+  font-size: 18px;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu--footer-menu-vertical > .menu > li .menu {
+  margin-left: 0px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.menu--footer-menu-vertical > .menu > li .menu a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.menu--footer-menu-vertical > .menu > li .menu a:hover {
+  text-decoration: underline;
+}
+
+.connect-on {
+  display: flex;
+  width: 92%;
+  height: 67px;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.connect-on div {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin: 0 30px;
+}
+.connect-on .contextual-region {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: row;
+}
+.connect-on .contextual-region h2 {
+  font-size: 14px;
+  font-weight: 100;
+}
+.connect-on .contextual-region span a img {
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 7px;
+}
+.connect-on .download {
+  width: auto;
+  height: 32px;
+}
+.connect-on .our-app {
+  width: auto;
+  height: 32px;
+}
+.connect-on .our-app a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+.connect-on .follow-us {
+  width: auto;
+  height: 32px;
+}
+.connect-on .follow-us p span svg {
+  width: 19px;
+  height: 19px;
+}
+.connect-on .follow-us p a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.all-footer-menu {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.all-footer-menu p {
+  margin-left: 5px;
+}
+.all-footer-menu .languages {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  margin: -20px 0 0 0;
+}
+.all-footer-menu .languages .languages-list .menu .menu-item {
+  width: auto;
+  margin: 0 2px;
+  padding-top: 0px;
+}
+.all-footer-menu .languages .languages-list .menu .menu-item a {
+  text-decoration: none;
+  color: white;
+}
+.all-footer-menu .languages .languages-list .menu .menu-item a:hover {
+  text-decoration: underline;
+}
+
+.alibaba-group-menu {
+  width: 65%;
+  margin-top: -10px;
+  font-size: 12px;
+}
+.alibaba-group-menu .menu {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.alibaba-group-menu .menu li {
+  width: auto;
+  margin-left: 10px;
+}
+.alibaba-group-menu .menu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.alibaba-group-menu .menu li a:hover {
+  text-decoration: underline;
+}
+
+.browse-alphabetically {
+  font-size: 12px;
+  margin-top: 15px;
+}
+.browse-alphabetically nav {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.browse-alphabetically nav h2 {
+  font-size: 12px;
+  font-weight: 100;
+}
+.browse-alphabetically nav .menu {
+  display: flex;
+}
+.browse-alphabetically nav .menu li {
+  width: auto;
+  margin: 0 2px;
+}
+.browse-alphabetically nav .menu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.browse-alphabetically nav .menu li a:hover {
+  text-decoration: underline;
+}
+
+.policy {
+  margin-top: 15px;
+}
+.policy .menu {
+  font-size: 12px;
+  display: flex;
+}
+.policy .menu li {
+  width: auto;
+  margin: 0px 2px;
+}
+.policy .menu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.policy .menu li a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+.copyright p {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.copyright p a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.copyright p a img {
+  width: 26px;
+  height: 28px;
+}
+.copyright p a:hover {
+  text-decoration: underline;
+}
+.copyright p a:nth-child(4), .copyright p a:nth-child(5) {
+  color: #86898c;
+}
+
+.alibaba-mobile {
+  display: none;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 576px) {
+  .alibaba-mobile {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 56px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter {
+    width: 100%;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -6px;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a svg {
+    font-size: 25px;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a span {
+    font-size: 17px;
+    margin-top: 8px;
+  }
+  .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a.is-active {
+    color: #ff6600;
+  }
+}
+.menu--alibaba-com-site- > .menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 30px 0px 30px 0px;
+}
+
+.menu--alibaba-com-site- > .menu li {
+  width: 235px;
+}
+
+.menu--alibaba-com-site- > .menu > li > span {
+  font-size: 18px;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu--alibaba-com-site- > .menu > li .menu {
+  margin-left: 0px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.menu--alibaba-com-site- > .menu > li .menu a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.menu--alibaba-com-site- > .menu > li .menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-second hr.hr {
+  width: 92%;
+  border: 1px solid #313d51;
+}
+
+@media only screen and (max-width: 576px) {
+  .alibaba-mobile {
+    display: flex;
+    background-color: red;
+  }
+}
 .view-content {
   display: flex;
   flex-direction: row;
