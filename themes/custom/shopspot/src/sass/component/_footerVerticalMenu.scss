@@ -18,7 +18,7 @@
   list-style-image: none;
 }
 
-nav > .menu {
+.menu--footer-menu-vertical > .menu {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -26,13 +26,13 @@ nav > .menu {
   align-items: flex-start;
   margin: 30px 0px 30px 0px;
 }
-nav > .menu {
+.menu--footer-menu-vertical > .menu {
   li {
     width: 235px;
   }
 }
 
-nav > .menu > li > span {
+.menu--footer-menu-vertical > .menu > li > span {
   font-size: 18px;
   pointer-events: none;
   cursor: default;
@@ -40,7 +40,7 @@ nav > .menu > li > span {
   color: $footer-text-color;
 }
 
-nav > .menu > li .menu {
+.menu--footer-menu-vertical > .menu > li .menu {
   margin-left: 0px;
   font-size: 12px;
   margin-top: 20px;
