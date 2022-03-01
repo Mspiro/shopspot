@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::marker {
   display: none;
 }
@@ -1553,4 +1557,52 @@ button {
   .alibaba-mobile .menu--alibabamobilefooter .menu .menu-item a.is-active {
     color: #ff6600;
   }
+}
+.feedback-block {
+  position: fixed;
+  bottom: 120px;
+  right: 16px;
+}
+.feedback-block .feedback-top {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.feedback-block .feedback-top p {
+  background-color: #a0a2ad;
+  width: 40px;
+  height: 40px;
+  margin: 12px 0px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback-block .feedback-top p:hover {
+  background-color: #ff6a00;
+}
+.feedback-block .feedback-top .go-top {
+  display: none;
+}
+.feedback-block .feedback-top .leave-feedback-wrapper {
+  display: flex;
+  align-items: center;
+}
+.feedback-block .feedback-top .leave-feedback-wrapper p {
+  margin: 0;
+}
+.feedback-block .feedback-top .leave-feedback-wrapper .leave-feedback {
+  display: none;
+  font-size: 14px;
+  height: 40px;
+  padding: 0 10px;
+  white-space: nowrap;
+  line-height: 40px;
+  color: #fff;
+  background: #ff6a00;
+}
+.feedback-block .feedback-top .leave-feedback-wrapper:hover > .leave-feedback, .feedback-block .feedback-top .leave-feedback-wrapper:hover > p {
+  display: flex;
+  background: #ff6a00;
 }

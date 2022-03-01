@@ -1,3 +1,25 @@
+(function (Drupal) {
+  Drupal.behaviors.goToTop = {
+    attach: function (context, setting) {
+      var topBtn = document.querySelector(".go-top");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 450 ||
+          document.documentElement.scrollTop > 450
+        ) {
+          topBtn.style.display = "flex";
+        } else {
+          topBtn.style.display = "none";
+        }
+      };
+
+      topBtn.addEventListener("click", function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    },
+  };
+})(Drupal);
 
 (function (Drupal) {
   Drupal.behaviors.searchField = {
@@ -22,14 +44,15 @@
   Drupal.behaviors.minmaxField = {
     attach: function (context, setting) {
       var minMaxField = document.getElementById("edit-specify-wrapper--3");
-      var priceWrapper = document.querySelectorAll('#edit-field-price-value--3')[0].children[4];
-      priceWrapper.addEventListener('click',function(){
-        if(minMaxField.style.display == 'none'){
-          minMaxField.style.display = 'flex';
+      var priceWrapper = document.querySelectorAll(
+        "#edit-field-price-value--3"
+      )[0].children[4];
+      priceWrapper.addEventListener("click", function () {
+        if (minMaxField.style.display == "none") {
+          minMaxField.style.display = "flex";
+        } else {
+          minMaxField.style.display = "none";
         }
-        else {
-          minMaxField.style.display = 'none';
-        }     
       });
     },
   };
@@ -62,16 +85,18 @@
 (function (Drupal) {
   Drupal.behaviors.filterForm = {
     attach: function (context, setting) {
-      var mobileNav = document.getElementsByClassName("menu--lite-cart-login-menu")[0];
-      var lietCard = mobileNav.getElementsByTagName('ul')[0].children[0];
-      var filterForm = document.querySelector('.region-category');
+      var mobileNav = document.getElementsByClassName(
+        "menu--lite-cart-login-menu"
+      )[0];
+      var lietCard = mobileNav.getElementsByTagName("ul")[0].children[0];
+      var filterForm = document.querySelector(".region-category");
       var minMaxField = document.getElementById("edit-specify-wrapper--3");
-      lietCard.addEventListener('click', function(){
-        filterForm.classList.toggle('visible');
+      lietCard.addEventListener("click", function () {
+        filterForm.classList.toggle("visible");
       });
-      var applayFilterBtn = document.getElementById('edit-submit-frontpage--3');
-      applayFilterBtn.addEventListener('click', function(){
-        filterForm.classList.remove('visible');
+      var applayFilterBtn = document.getElementById("edit-submit-frontpage--3");
+      applayFilterBtn.addEventListener("click", function () {
+        filterForm.classList.remove("visible");
         minMaxField.style.display = "none";
       });
     },
