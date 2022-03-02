@@ -1,5 +1,5 @@
 .detail-wrapper {
-  width: 1250px;
+  width: 97vw;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -7,8 +7,9 @@
   justify-content: space-between;
   align-items: flex-start;
   background-color: $footer-text-color;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   padding-top: 45px;
+  margin-right: -10px;
 
   .detail-image {
     width: 50%;
@@ -101,5 +102,11 @@
         border-radius: 5px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .detail-wrapper{
+    flex-direction: column;
   }
 }
