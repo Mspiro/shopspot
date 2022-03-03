@@ -6,12 +6,27 @@
     li {
       width: auto;
       margin: 0px 2px;
-      a{
+      a {
         text-decoration: none;
         color: $footer-text-color;
       }
-      a:hover{
+      a:hover {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 576px) {
+  .all-footer-menu {
+    .policy {
+      .menu {
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
       }
     }
   }

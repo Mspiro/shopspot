@@ -285,6 +285,7 @@ body a {
   height: auto;
   width: 522px;
   margin: 0;
+  border-radius: 2px 0px 0px 2px;
 }
 .header .region-header form .form-item-keyword input {
   width: 522px;
@@ -292,7 +293,6 @@ body a {
   border-radius: 0px;
   border: none;
   background-color: #ffffff;
-  border-radius: 2px 0px 0px 2px;
   font-size: 14px;
   padding: 0px 16px;
 }
@@ -337,6 +337,11 @@ body a {
   #block-exposedformfrontpagepage-1-5 {
     width: 100%;
     margin: 11px 0px 0px 0px;
+  }
+}
+@media only screen and (max-width: 1440px) and (min-width: 576px) {
+  .header .region-header form .form-item-keyword {
+    width: 40vw;
   }
 }
 .login-menu {
@@ -866,6 +871,9 @@ body a {
   margin: 5px 0px 0px;
 }
 
+.footer-second {
+  overflow-x: hidden;
+}
 .footer-second .region-footer-second {
   display: flex;
   flex-direction: row;
@@ -919,6 +927,18 @@ body a {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 576px) {
+  .custome-footer-hr-menus .menu--footer-menu-vertical {
+    padding: 0 10px;
+  }
+  .custome-footer-hr-menus .menu--footer-menu-vertical .menu .menu-item--expanded {
+    width: 18vw;
+    margin: 0px 4px;
+  }
+  .custome-footer-hr-menus .menu--footer-menu-vertical .menu .menu-item--expanded span {
+    font-size: 16px;
+  }
+}
 .connect-on {
   display: flex;
   width: 92%;
@@ -947,8 +967,8 @@ body a {
   font-weight: 100;
 }
 .connect-on .contextual-region span a img {
-  width: 130px;
-  height: 30px;
+  max-width: 130px;
+  max-height: 30px;
   border-radius: 5px;
   margin-right: 7px;
 }
@@ -978,6 +998,23 @@ body a {
   color: #ffffff;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 670px) {
+  .connect-on {
+    width: 100%;
+  }
+  .connect-on div {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .connect-on {
+    flex-direction: column;
+    margin: 35px 0px;
+  }
+  .connect-on div {
+    margin: 5px 0px;
+  }
+}
 .all-footer-menu {
   width: 100%;
   display: flex;
@@ -1011,6 +1048,20 @@ body a {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 576px) {
+  .all-footer-menu p {
+    min-width: 100px;
+  }
+  .all-footer-menu .languages {
+    margin: 0px 0px 30px 0px;
+    padding: 0 10px;
+  }
+  .all-footer-menu .languages .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+}
 .alibaba-group-menu {
   width: 65%;
   margin-top: -10px;
@@ -1037,6 +1088,11 @@ body a {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 576px) {
+  .all-footer-menu .alibaba-group-menu {
+    width: 100%;
+  }
+}
 .browse-alphabetically {
   font-size: 12px;
   margin-top: 15px;
@@ -1085,6 +1141,16 @@ body a {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 576px) {
+  .all-footer-menu .policy .menu {
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
 .copyright {
   margin-top: 15px;
   margin-bottom: 45px;
@@ -1516,8 +1582,10 @@ button {
   margin-right: 60px;
 }
 .detail-wrapper .detail-image .main-image img {
-  height: 300px;
-  width: 300px;
+  width: 30vw;
+  height: 30vw;
+  max-height: 300px;
+  max-width: 300px;
 }
 .detail-wrapper .detail-image .small-image-wrapper {
   display: inline-flex;
@@ -1586,9 +1654,59 @@ button {
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 1440px) and (min-width: 576px) {
+  .detail-wrapper .detail-all-fields {
+    padding: 0px 25px;
+    width: 100%;
+  }
+  .detail-wrapper .detail-all-fields .description {
+    text-align: justify;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 576px) {
+  .detail-wrapper .detail-image .main-image {
+    margin: 0;
+  }
+  .detail-wrapper .detail-image .main-image img {
+    width: 30vw;
+    height: 30vw;
+  }
+  .detail-wrapper .detail-all-fields {
+    padding: 0px 25px;
+    width: 100%;
+  }
+  .detail-wrapper .detail-all-fields .description {
+    text-align: justify;
+  }
+}
 @media only screen and (max-width: 576px) {
   .detail-wrapper {
     flex-direction: column;
+    align-items: center;
+  }
+  .detail-wrapper .detail-image {
+    flex-direction: column-reverse;
+  }
+  .detail-wrapper .detail-image .main-image {
+    margin: 0;
+  }
+  .detail-wrapper .detail-image .main-image img {
+    height: 40vw;
+    width: 40vw;
+  }
+  .detail-wrapper .detail-image .small-image-wrapper {
+    flex-direction: row;
+    height: auto;
+    margin: 35px 10px;
+    width: 90vw;
+    justify-content: space-evenly;
+  }
+  .detail-wrapper .detail-all-fields {
+    padding: 0px 25px;
+    width: 100%;
+  }
+  .detail-wrapper .detail-all-fields .description {
+    text-align: justify;
   }
 }
 .alibaba-mobile {
