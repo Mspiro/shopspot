@@ -122,13 +122,9 @@
 				<div class="price">
 					<h2>
 						{% if content.field_discount[0] %}
-
-							{% set price = content.field_price %}
-							{% set dicsount = content.field_discount|number_format %}
-
+							
 							Price:&nbsp;<del>{{ content.field_price }}</del>
-							&nbsp;&nbsp;{{ price }}
-							&nbsp;<span>USD</span>
+							&nbsp;&nbsp;{{ content.price }}&nbsp;<span>USD</span>
 
 						{% else %}
 							Price:&nbsp;&nbsp;{{ content.field_price }}
