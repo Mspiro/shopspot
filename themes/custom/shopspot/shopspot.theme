@@ -48,7 +48,17 @@ function shopspot_preprocess_menu__lite_cart_login_menu(&$variables)
   }
 }
 
-// function shopspot_preprocess_field(&$variables)
-// {
-  // dump($variables);
-// }
+function shopspot_preprocess_node(&$variables)
+{
+  $variables['Price'] = $variables['content']['field_price']['#items']->getValue(['#list'])[0]['value'];
+  $variables['test'] = $variables['content']['field_discount'];
+  // dump(count($variables['test']));
+
+  if(count($variables['test']) > 2 ){
+    // dump('Hello');
+    $variables['Discount'] = $variables['content']['field_discount']['#items']->getValue(['#list'])[0]['value'];
+    $variables['Discount'] = ($variables['Price'] / 100) * $variables['Discount'];
+    $variables['content']['price'] = '$'.round($variables['Price'] - $variables['Discount']);
+  }
+
+}
