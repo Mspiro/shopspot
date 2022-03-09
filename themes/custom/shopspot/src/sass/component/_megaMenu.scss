@@ -104,6 +104,10 @@
       display: flex;
       top: 165px;
     }
+    .menu-item--expanded:last-child:hover .menu-level-1{
+      right: 60px;
+      
+    }
   }
   .menu--mega-menu-for-mobile {
     display: none;
@@ -114,7 +118,7 @@
   .mega-menu {
     height: auto;
     overflow-x: hidden;
-    box-shadow: none;
+    box-shadow: none; 
     .region-menu {
       .menu--mega-menu {
         display: none;

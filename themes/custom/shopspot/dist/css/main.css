@@ -717,6 +717,9 @@ body a {
   display: flex;
   top: 165px;
 }
+.mega-menu .menu--mega-menu .menu-item--expanded:last-child:hover .menu-level-1 {
+  right: 60px;
+}
 .mega-menu .menu--mega-menu-for-mobile {
   display: none;
 }
