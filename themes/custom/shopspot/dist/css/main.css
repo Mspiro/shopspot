@@ -1563,31 +1563,35 @@ button {
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   background-color: #ffffff;
   border-radius: 10px 10px 0px 0px;
   padding-top: 45px;
   margin-right: -10px;
 }
-.detail-wrapper .detail-image {
-  width: 50%;
+.detail-wrapper .left-side {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.detail-wrapper .left-side .detail-image {
+  width: 110%;
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
 }
-.detail-wrapper .detail-image .main-image {
-  margin-right: 60px;
-}
-.detail-wrapper .detail-image .main-image img {
+.detail-wrapper .left-side .detail-image .main-image img {
   width: 30vw;
   height: 30vw;
   max-height: 300px;
   max-width: 300px;
 }
-.detail-wrapper .detail-image .small-image-wrapper {
+.detail-wrapper .left-side .detail-image .small-image-wrapper {
   display: inline-flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -1596,13 +1600,34 @@ button {
   align-items: center;
   height: 260px;
 }
-.detail-wrapper .detail-image .small-image-wrapper .small-image {
+.detail-wrapper .left-side .detail-image .small-image-wrapper .small-image {
   height: 50px;
   width: 50px;
 }
-.detail-wrapper .detail-image .small-image-wrapper .small-image img {
+.detail-wrapper .left-side .detail-image .small-image-wrapper .small-image img {
   height: 50px;
   width: 50px;
+}
+.detail-wrapper .left-side .below-btn {
+  width: 75%;
+  margin-top: 50px;
+}
+.detail-wrapper .left-side .below-btn .below-image-btn {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.detail-wrapper .left-side .below-btn .below-image-btn .btn {
+  padding: 9px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.detail-wrapper .left-side .below-btn .below-image-btn .add-to-cart {
+  background-color: #605dc0;
+}
+.detail-wrapper .left-side .below-btn .below-image-btn .buy-now {
+  background-color: #ef368a;
 }
 .detail-wrapper .detail-all-fields {
   width: 50%;
@@ -1657,7 +1682,7 @@ button {
 @media only screen and (max-width: 1440px) and (min-width: 576px) {
   .detail-wrapper .detail-all-fields {
     padding: 0px 25px;
-    width: 100%;
+    width: 50%;
   }
   .detail-wrapper .detail-all-fields .description {
     text-align: justify;
