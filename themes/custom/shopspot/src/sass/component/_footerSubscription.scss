@@ -1,18 +1,17 @@
 .subscription {
-  margin: 45px 0 45px 0;
-  .text-formatted {
-    display: inline-flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
-    p {
-      font-size: 14px;
+  margin: 45px 0 25px 0;
+  .webform-submission-form {
+    width: 50vw;
+    text-align: center;
+    label{
+      display: block;
+      margin: 10px 0px;
     }
-    .input {
-      margin-top: 20px;
-      .search-text {
+    .form-type-email {
+      display: flex;
+      width: fit-content;
+      display: inline-flex;
+      .form-email {
         width: 300px;
         height: 40px;
         background-color: #313d51;
@@ -25,7 +24,14 @@
         margin: -3px 0px 0px;
         padding: 10px;
       }
-      .btn-search {
+    }
+    .form-wrapper {
+      display: inline-flex;
+      background-color: transparent;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      .form-submit {
         background-color: transparent;
         border-color: #c6cad1;
         border-radius: 3px;
@@ -37,14 +43,19 @@
         padding: 0px 20px;
         text-align: center;
         margin-left: 10px;
+        width: 120px;
       }
     }
-    .email-privacy {
-      color: #999999;
+    .lable-two{
+      text-align: start;
+      padding-left: 17%;
+            color: #999999;
       font-size: 12px;
       line-height: 15.4285px;
       margin: 5px 0px 0px;
-      // text-align: left;
+    }
+    #edit-actions--3{
+      padding: 0;
     }
   }
 }

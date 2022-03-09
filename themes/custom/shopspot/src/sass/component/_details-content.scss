@@ -17,16 +17,14 @@
     align-content: center;
     align-items: center;
     .detail-image {
-      width: 110%;
+      width: 115%;
       display: inline-flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
       align-content: center;
       flex-wrap: nowrap;
 
       .main-image {
-        // margin-right: 60px;
-
         img {
           width: 30vw;
           height: 30vw;

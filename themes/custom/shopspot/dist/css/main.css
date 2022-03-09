@@ -823,22 +823,22 @@ body a {
 }
 
 .subscription {
-  margin: 45px 0 45px 0;
+  margin: 45px 0 25px 0;
 }
-.subscription .text-formatted {
+.subscription .webform-submission-form {
+  width: 50vw;
+  text-align: center;
+}
+.subscription .webform-submission-form label {
+  display: block;
+  margin: 10px 0px;
+}
+.subscription .webform-submission-form .form-type-email {
+  display: flex;
+  width: fit-content;
   display: inline-flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
 }
-.subscription .text-formatted p {
-  font-size: 14px;
-}
-.subscription .text-formatted .input {
-  margin-top: 20px;
-}
-.subscription .text-formatted .input .search-text {
+.subscription .webform-submission-form .form-type-email .form-email {
   width: 300px;
   height: 40px;
   background-color: #313d51;
@@ -851,7 +851,14 @@ body a {
   margin: -3px 0px 0px;
   padding: 10px;
 }
-.subscription .text-formatted .input .btn-search {
+.subscription .webform-submission-form .form-wrapper {
+  display: inline-flex;
+  background-color: transparent;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.subscription .webform-submission-form .form-wrapper .form-submit {
   background-color: transparent;
   border-color: #c6cad1;
   border-radius: 3px;
@@ -863,12 +870,18 @@ body a {
   padding: 0px 20px;
   text-align: center;
   margin-left: 10px;
+  width: 120px;
 }
-.subscription .text-formatted .email-privacy {
+.subscription .webform-submission-form .lable-two {
+  text-align: start;
+  padding-left: 17%;
   color: #999999;
   font-size: 12px;
   line-height: 15.4285px;
   margin: 5px 0px 0px;
+}
+.subscription .webform-submission-form #edit-actions--3 {
+  padding: 0;
 }
 
 .footer-second {
@@ -1578,9 +1591,9 @@ button {
   align-items: center;
 }
 .detail-wrapper .left-side .detail-image {
-  width: 110%;
+  width: 115%;
   display: inline-flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
