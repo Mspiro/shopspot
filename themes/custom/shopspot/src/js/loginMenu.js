@@ -69,13 +69,21 @@
       var overlay = hamMenu.children[1];
       overlay.style.display = "none";
       hamburger.addEventListener("click", function () {
-        hamMenu.children[0].classList.toggle("active");
+        hamMenu.children[0].classList.toggle("active"); 
         allBackground.classList.toggle("no-scroll");
         overlay.style.display = "block";
+        var test = hamMenu.children[0].classList.value;
+        if (!test.includes('active')){
+          hamMenu.children[0].classList.add('active-login');
+        }
       });
       overlay.addEventListener("click", function () {
         hamMenu.children[0].classList.toggle("active");
         allBackground.classList.toggle("no-scroll");
+        var test = hamMenu.children[0].classList.value;
+        if (test.includes('active')){
+          hamMenu.children[0].classList.remove('active-login');
+        }
         overlay.style.display = "none";
       });
     },
