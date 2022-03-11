@@ -1843,7 +1843,7 @@ button {
   color: #fff;
   background: #ff6a00;
 }
-.feedback-block .feedback-top .leave-feedback-wrapper:hover > .leave-feedback, .feedback-block .feedback-top .leave-feedback-wrapper:hover > p {
+.feedback-block .feedback-top .leave-feedback-wrapper:hover > a > .leave-feedback, .feedback-block .feedback-top .leave-feedback-wrapper:hover > p {
   display: flex;
   background: #ff6a00;
 }

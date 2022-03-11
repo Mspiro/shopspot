@@ -4,6 +4,7 @@ global:
     theme:
       dist/css/layout.css: {}
       dist/css/main.css: {}
+      dist/css/feedback.css: {}
       # dist/css/style.css: {}
       # dist/css/region/region.css: {}
       # # dist/css/layout/layout.css: {}
