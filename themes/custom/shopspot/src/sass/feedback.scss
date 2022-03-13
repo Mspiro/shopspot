@@ -1,0 +1,219 @@
+.feedback-form {
+  // margin: 0px 34px;
+  .feedback-form-wrapper {
+    .feedback-header {
+      h2 {
+        color: #f97862;
+        font-size: 20px;
+        background: #fff;
+        padding: 100px 35px 35px 35px;
+      }
+      p {
+        background-color: #ffff;
+        padding: 0px 34px 35px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #5c5c5c;
+      }
+    }
+    .region-content {
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        background-color: #fff;
+
+        .form-item-e-mail,
+        .form-item-phone-number,
+        .form-item-your-company-name,
+        .form-item-what-product-categories-do-you-source-,
+        .form-item-what-is-your-minimum-order-quantity-on-an-average-,
+        .form-item-is-there-any-other-specific-reason-to-choose-alibaba-com-the-opt,
+        .form-item-what-is-your-average-annual-procurement-value-in-terms-of-indian,
+        .form-item-which-city-in-india-are-you-based-out-of-,
+        .form-item-is-there-any-other-pain-point-you-face-when-using-alibaba-com-ot {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          box-sizing: border-box;
+          background: #eaeaea;
+          label {
+            background: #f5f5f5;
+            padding: 20px 31px;
+            width: 100vw;
+            border-bottom: 1px solid #e6e6e6;
+            border-top: 1px solid #e6e6e6;
+          }
+          input {
+            height: 40px;
+            border: none;
+            color: white;
+            width: 94%;
+            margin: 10px -10px 10px -20px;
+            padding: 0 20px;
+            border-radius: 0px;
+          }
+          .form-textarea-wrapper {
+            height: auto;
+            padding: 10px 40px 10px 10px;
+            .form-textarea {
+              width: 100%;
+              height: 400px;
+              font-size: 17px;
+              line-height: 30px;
+              display: block;
+              border: 0 none;
+              resize: none;
+              -webkit-overflow-scrolling: touch;
+            }
+          }
+        }
+        .form-wrapper {
+          background: none;
+          width: 100vw;
+          margin: 0px;
+          padding: 0px;
+        }
+        fieldset {
+          legend {
+            background: #f5f5f5;
+            font-weight: bold;
+            padding: 20px 1.8rem;
+            border-bottom: 1px solid #e6e6e6;
+            border-top: 1px solid #e6e6e6;
+            width: 100%;
+            .fieldset-legend {
+              color: black;
+              top: 0;
+            }
+          }
+          .fieldset-wrapper {
+            .form-radios {
+              width: 100%;
+              margin: 0;
+              .form-item {
+                font-size: 14px;
+                padding: 0.5rem 0.5rem 0.5rem 1rem;
+                border-bottom: 1px dashed #e6e6e6;
+                padding: 20px 40px;
+                width: 100%;
+                color: #666;
+                background: #fff;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                .form-radio {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 5px;
+                }
+              }
+            }
+            .form-checkboxes {
+              background-color: #fff;
+              .form-item {
+                background: #fff;
+                border-bottom: 1px dashed #e6e6e6;
+                color: #666;
+                font-size: 14px;
+                padding: 20px 40px;
+                display: flex;
+                align-items: center;
+                margin: 0;
+                .form-checkbox {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+        .form-actions {
+          margin-top: 50px;
+          border-top: 1px dashed #e6e6e6;
+          input {
+            width: 100%;
+            background: transparent;
+            color: #f97862;
+            border: none;
+            margin: 9px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .feedback-form {
+    .feedback-form-wrapper {
+      .region-content {
+        form {
+          .form-item-is-there-any-other-pain-point-you-face-when-using-alibaba-com-ot {
+            .form-textarea-wrapper {
+              width: 95%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .webform-options-display-two-columns{
+    max-width: none;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feedback-page {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    .feedback-form {
+      width: 80%;
+      .feedback-form-wrapper {
+        .region-content {
+          form {
+            width: 100%;
+            background: transparent;
+            align-items: center;
+            .form-wrapper {
+              width: 100%;
+            }
+            .fieldset{
+              .fieldset-wrapper{
+                .form-radios{
+                  width: 100%;
+                  max-width: none !important;
+                }
+              }
+            }
+            .form-item-e-mail,
+            .form-item-phone-number,
+            .form-item-your-company-name,
+            .form-item-what-product-categories-do-you-source-,
+            .form-item-what-is-your-minimum-order-quantity-on-an-average-,
+            .form-item-is-there-any-other-specific-reason-to-choose-alibaba-com-the-opt,
+            .form-item-what-is-your-average-annual-procurement-value-in-terms-of-indian,
+            .form-item-which-city-in-india-are-you-based-out-of-,
+            .form-item-is-there-any-other-pain-point-you-face-when-using-alibaba-com-ot {
+              width: 100%;
+              label {
+                width: 100%;
+              }
+              .form-textarea-wrapper {
+                width: 95%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
