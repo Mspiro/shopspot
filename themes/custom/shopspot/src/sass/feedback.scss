@@ -2,7 +2,6 @@
   // margin: 0px 34px;
   .feedback-form-wrapper {
     .feedback-header {
-      // padding: 0px 35px;
       h2 {
         color: #f97862;
         font-size: 20px;
@@ -156,7 +155,7 @@
       .region-content {
         form {
           .form-item-is-there-any-other-pain-point-you-face-when-using-alibaba-com-ot {
-            .form-textarea-wrapper {            
+            .form-textarea-wrapper {
               width: 95%;
             }
           }
@@ -167,13 +166,50 @@
 }
 
 @media only screen and (min-width: 1040px) {
-  .feedback-form {
-    .feedback-form-wrapper {
-      .region-content {
-        form {
-          .form-item-is-there-any-other-pain-point-you-face-when-using-alibaba-com-ot {
-            .form-textarea-wrapper {            
-              width: 95%;
+  .webform-options-display-two-columns{
+    max-width: none;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feedback-page {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    .feedback-form {
+      width: 80%;
+      .feedback-form-wrapper {
+        .region-content {
+          form {
+            width: 100%;
+            background: transparent;
+            align-items: center;
+            .form-wrapper {
+              width: 100%;
+            }
+            .fieldset{
+              .fieldset-wrapper{
+                .form-radios{
+                  width: 100%;
+                  max-width: none !important;
+                }
+              }
+            }
+            .form-item-e-mail,
+            .form-item-phone-number,
+            .form-item-your-company-name,
+            .form-item-what-product-categories-do-you-source-,
+            .form-item-what-is-your-minimum-order-quantity-on-an-average-,
+            .form-item-is-there-any-other-specific-reason-to-choose-alibaba-com-the-opt,
+            .form-item-what-is-your-average-annual-procurement-value-in-terms-of-indian,
+            .form-item-which-city-in-india-are-you-based-out-of-,
+            .form-item-is-there-any-other-pain-point-you-face-when-using-alibaba-com-ot {
+              width: 100%;
+              label {
+                width: 100%;
+              }
+              .form-textarea-wrapper {
+                width: 95%;
+              }
             }
           }
         }
