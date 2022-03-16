@@ -113,7 +113,7 @@ settings:
     - webform_submission_delete_action
 assets:
   css: ''
-  javascript: ''
+  javascript: "// Prevent crtl+r from resubmitting this form.\r\n// https://stackoverflow.com/questions/6320113/how-to-prevent-form-resubmission-when-page-is-refreshed-f5-ctrlr\r\nif ( window.history.replaceState ) {\r\n   window.history.replaceState( null, null, window.location.href );\r\n}"
 handler:
   excluded_handlers: {  }
 variant:

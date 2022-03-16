@@ -12,7 +12,7 @@ dependencies:
 id: mainnavigation
 theme: shopspot
 region: header
-weight: -7
+weight: -11
 provider: null
 plugin: 'system_menu_block:main'
 settings:

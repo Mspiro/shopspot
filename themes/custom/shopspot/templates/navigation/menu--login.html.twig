@@ -47,6 +47,7 @@
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {{ drupal_block('register_form_popup') }}
         {% endif %}
       </li>
     {% endfor %}

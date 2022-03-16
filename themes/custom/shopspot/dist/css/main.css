@@ -371,7 +371,11 @@ body a {
   height: 50px;
   margin-top: 10px;
 }
+.login-menu .menu .menu-item--expanded .Register-popup-link {
+  display: none;
+}
 .login-menu .menu .menu-item--expanded .login-account {
+  display: none;
   background: white;
   padding: 5px 40px;
   line-height: 20px;
@@ -481,9 +485,10 @@ body a {
 }
 
 .login-menu > .menu > .menu-item > .menu {
+  display: none;
   position: absolute;
   top: 48px;
-  display: none;
+  left: -52px;
 }
 
 .login-menu > .menu > .menu-item:hover .menu {
@@ -503,6 +508,30 @@ body a {
     transform: rotate(-180deg);
   }
 }
+.login-menu > .menu > .menu-item > .menu > .menu-item > div > .Register-popup-link {
+  display: flex !important;
+}
+.login-menu > .menu > .menu-item > .menu > .menu-item > div > .Register-popup-link a {
+  color: #2874f0;
+  cursor: pointer;
+}
+
+.login-menu > .menu > .menu-item > .menu > .menu-item > .menu {
+  display: none !important;
+}
+
+#block-loginformpopup-2 {
+  background: white;
+  padding: 5px 40px;
+  line-height: 20px;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  font-size: 18px;
+}
+#block-loginformpopup-2 .Login-popup-link .login-popup-form {
+  color: #2874f0;
+}
+
 .more-menu {
   display: flex;
   justify-content: flex-start;
@@ -721,7 +750,7 @@ body a {
   font-weight: 500;
 }
 .mega-menu .menu--mega-menu .menu-item--expanded:hover .menu-level-1 {
-  display: flex;
+  display: none;
   top: 165px;
 }
 .mega-menu .menu--mega-menu .menu-item--expanded:last-child:hover .menu-level-1 {

@@ -69,20 +69,20 @@
       var overlay = hamMenu.children[1];
       overlay.style.display = "none";
       hamburger.addEventListener("click", function () {
-        hamMenu.children[0].classList.toggle("active"); 
+        hamMenu.children[0].classList.toggle("active");
         allBackground.classList.toggle("no-scroll");
         overlay.style.display = "block";
         var test = hamMenu.children[0].classList.value;
-        if (!test.includes('active')){
-          hamMenu.children[0].classList.add('active-login');
+        if (!test.includes("active")) {
+          hamMenu.children[0].classList.add("active-login");
         }
       });
       overlay.addEventListener("click", function () {
         hamMenu.children[0].classList.toggle("active");
         allBackground.classList.toggle("no-scroll");
         var test = hamMenu.children[0].classList.value;
-        if (test.includes('active')){
-          hamMenu.children[0].classList.remove('active-login');
+        if (test.includes("active")) {
+          hamMenu.children[0].classList.remove("active-login");
         }
         overlay.style.display = "none";
       });
@@ -110,3 +110,25 @@
     },
   };
 })(Drupal);
+
+(function ($, Drupal) {
+  Drupal.behaviors.loginBtn = {
+    attach: function (context, setting) {
+      var loginbtn =
+        document.getElementsByClassName("Login-popup-link")[0].children[0];
+      var loginMenu =
+        document.getElementsByClassName("menu--login")[0].children[1]
+          .childNodes[1].childNodes[3];
+      $(document).ready(function () {
+        $(loginbtn).hover(
+          function () {
+            $(loginMenu).css("display", "flex");
+          },
+          function () {
+            $(loginMenu).css("display", "none");
+          }
+        );
+      });
+    },
+  };
+})(jQuery, Drupal);

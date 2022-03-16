@@ -8,6 +8,7 @@ dependencies:
     - taxonomy.vocabulary.baby_kids
     - taxonomy.vocabulary.category
     - taxonomy.vocabulary.electronics
+    - taxonomy.vocabulary.mega_menus
     - taxonomy.vocabulary.sports_books_and_more
     - taxonomy.vocabulary.women
   content:
@@ -30,6 +31,7 @@ settings:
     target_bundles:
       baby_kids: baby_kids
       electronics: electronics
+      mega_menus: mega_menus
       category: category
       sports_books_and_more: sports_books_and_more
       women: women

@@ -16,7 +16,11 @@
       flex-direction: column;
       height: 50px;
       margin-top: 10px;
+      .Register-popup-link{
+        display: none;
+      }
       .login-account {
+        display: none;
         background: white;
         padding: 5px 40px;
         line-height: 20px;
@@ -89,6 +93,7 @@
         top: -2px;
         right: 43%;
       }
+      
     }
 
     .menu-item--expanded:nth-child(1) {
@@ -117,7 +122,7 @@
             border-top: none;
             a {
               color: #2874f0;
-            }
+            }            
           }
         }
         .menu::before {
@@ -128,8 +133,6 @@
 
     .menu-item--expanded:nth-child(2) {
       padding: 0;
-      // position: relative;
-      // top: 45px;
     }
 
     .menu-item::marker {
@@ -139,9 +142,10 @@
 }
 
 .login-menu > .menu > .menu-item > .menu{
+  display: none;
   position: absolute;
   top: 48px;
-  display: none;
+  left: -52px;
 }
 
 .login-menu > .menu > .menu-item:hover .menu{
@@ -162,3 +166,42 @@
    }
  }
  
+ .login-menu > .menu > .menu-item > .menu > .menu-item > div > .Register-popup-link{
+   display: flex !important;
+   a{
+     color: #2874f0;
+     cursor: pointer;
+   }
+ }
+ .login-menu > .menu > .menu-item > .menu > .menu-item > .menu{
+  display: none !important;
+}
+
+
+ #block-loginformpopup-2{
+  background: white;
+  padding: 5px 40px;
+  line-height: 20px;
+  // font-weight: 400;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  font-size: 18px;
+  .Login-popup-link{
+    .login-popup-form{
+      
+      color: #2874f0;
+    }
+
+  }
+}
+ 
+// .region-header > #block-loginformpopup-2:hover .region-header > .login-menu > .menu > .menu-item--expanded > .menu {
+//   display: flex;
+// }
+
+// .region-header > #block-loginformpopup-2:hover .login-menu > .menu > .menu-item--expanded > .menu{
+
+//   // background-color: red;
+//   display: flex;
+
+// }

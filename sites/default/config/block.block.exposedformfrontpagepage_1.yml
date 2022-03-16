@@ -12,7 +12,7 @@ dependencies:
 id: exposedformfrontpagepage_1
 theme: shopspot
 region: header
-weight: 1
+weight: -3
 provider: null
 plugin: 'views_exposed_filter_block:frontpage-page_1'
 settings:
