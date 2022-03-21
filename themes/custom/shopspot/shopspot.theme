@@ -27,8 +27,7 @@ function shopspot_preprocess_block(&$variables)
   if ($variables['plugin_id'] == 'login_form_popup') {
     if ($variables['logged_in'] == true) {
       $variables['attributes']['class'][] = 'hidden';
-    }
-    else{
+    } else {
       $variables['content']['login_popup_block']['#markup'] = "<div class='Login-popup-link'><a href='/user/login' class='use-ajax login-popup-form' data-dialog-type='modal'>Login</a></div>";
     }
   }
@@ -53,5 +52,92 @@ function shopspot_preprocess_node(&$variables)
     $variables['Discount'] = $variables['content']['field_discount']['#items']->getValue(['#list'])[0]['value'];
     $variables['Discount'] = ($variables['Price'] / 100) * $variables['Discount'];
     $variables['content']['price'] = '$' . round($variables['Price'] - $variables['Discount']);
+  }
+}
+
+
+function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form['#form_id'] == 'user_login_form') {
+
+    unset($form['name']['#attributes']['placeholder']);
+    unset($form['pass']['#attributes']['placeholder']);
+    unset($form['name']['#description']);
+    $form['name']['#title'] = 'Enter Email/Mobile number';
+    $form['pass']['#title'] = 'Enter Password';
+    unset($form['pass']['#description']);
+    $form['forgot-password'] = array(
+      '#type' => 'text',
+      '#title' => (' forgot-password'),
+      '#markup' => (' <a class="forgot-pass" href="/user/password">Forgot? <a> '),
+    );
+    $form['actions']['submit']['#value'] = 'Login';
+
+    $form['actions']['or'] = array(
+      '#type' =>   'text',
+      '#title' => (' or'),
+      '#markup' => (' <div class="or">OR </div> '),
+    );
+
+    $form['actions']['requestotp'] = array(
+      '#type' =>   'button',
+      '#value' => 'Request OTP',
+    );
+    $form['policy'] = array(
+      '#type' => 'text',
+      '#title' => (' register'),
+      '#markup' => (' <p class="policy"> By continuing, you agree to Flipkarts <a href="#" class="policy-link">Terms of Use </a> and <a href="#" class="policy-link"> Privacy Policy. </a></p> '),
+    );
+    $form['registerhere'] = array(
+      '#type' =>   'text',
+      '#title' => (' register'),
+      '#markup' => (' <a href="/user/register" data-drupal-link-system-path="user/register" class="register-cls use-ajax" data-dialog-type="modal"
+      >New to ShopSpot? Create an account</a> '),
+    );
+  }
+  if ($form['#form_id'] == 'user_pass') {
+    unset($form['name']['#title']);
+    unset($form['mail']['#markup']);
+    $form['name']['#attributes']['placeholder'] = ('Email');
+    $form['cancel'] = [
+      '#markup' => ('<div class="can-btn">
+            <button class="can-btn-cls"><a href="/user/login">CANCEL</a></button>
+            </div>'),
+      '#weight' => '10',
+    ];
+    // dump($form);
+
+  }
+
+  if ($form['#form_id'] == 'user_register_form') {
+    $form['account']['mail']['#attributes']['placeholder'] = ('Email');
+    unset($form['account']['mail']['#description']);
+    unset($form['account']['mail']['#title']);
+    unset($form['account']['name']['#description']);
+    unset($form['account']['name']['#title']);
+    unset($form['account']['pass']['#description']);
+    unset($form['account']['name']);
+
+    $form['policy'] = array(
+      '#type' => 'text',
+      '#title' => (' register'),
+      '#markup' => (' <p class="policy"> By continuing, you agree to Flipkarts <a href="#" class="policy-link">Terms of Use </a> and <a href="#" class="policy-link"> Privacy Policy. </a></p> '),
+    );
+    $form['actions']['submit']['#value'] = ('CONTINUE');
+    // $form['actions']['submit']['#attributes'] = array(
+    //   // '#type' => 'text',
+    //   // '#title' => ('class'),
+    //   // '#markup' => ('continue'),
+    //   'class' => array(
+    //     'continues',
+    //   ),
+    // );
+    
+    $form['login'] = array(
+      '#type' => 'text',
+      '#title' => (' login'),
+      '#weight' => '10',
+      '#markup' => (' <p class="login-btn"><a class =" login-link use-ajax" data-dialog-type="modal" href="/user/login">Existing User? Log in</a></p> '),
+    );
   }
 }
