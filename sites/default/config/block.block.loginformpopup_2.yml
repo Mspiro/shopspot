@@ -1,0 +1,20 @@
+uuid: a9948a0f-365d-4b9f-8ba3-d71b14179f7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - login_popup
+  theme:
+    - shopspot
+id: loginformpopup_2
+theme: shopspot
+region: header
+weight: -18
+provider: null
+plugin: login_form_popup
+settings:
+  id: login_form_popup
+  label: 'Login Form Popup'
+  provider: login_popup
+  label_display: '0'
+visibility: {  }

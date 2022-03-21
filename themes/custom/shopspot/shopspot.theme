@@ -4,25 +4,9 @@ function shopspot_preprocess_select(&$variables)
   $variables['options'][0]['label'] = t('All Categories');
 }
 
-
-// function shopspot_preprocess_views_exposed_form(&$variables)
-// {
-//   // $form_id = 'form-FaBwQ0HrswATyea6LnuKAs2K8kUQOjRFh8F0wLBfZ6Y';
-//   // $build_id = $variables['form']['#build_id'];
-//   // echo $build_id;
-//   // if ($form_id == $build_id) {
-//     $variables['form'][0]['keyword']['#attributes']['placeholder'] = 'Hello';
-//     dump($variables['form']['keyword']['#attributes']['placeholder']);
-//   // }
-//   // dump($variables['form']['#build_id']);
-// }
-
-
-//Hide login button after login
 function shopspot_preprocess_menu__login(&$variables)
 {
-  // dump($variables);
-  if($variables['logged_in']){
+  if ($variables['logged_in']) {
     $variables['items']['menu_link_content:70b843bc-08e8-4bdf-aa28-7aa845152a0b']['is_expanded'] = false;
     $variables['items']['menu_link_content:70b843bc-08e8-4bdf-aa28-7aa845152a0b']['below'] = false;
     $variables['items']['menu_link_content:70b843bc-08e8-4bdf-aa28-7aa845152a0b']['title'] = false;
@@ -30,20 +14,27 @@ function shopspot_preprocess_menu__login(&$variables)
     $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
     $name = $user->getAccountName();
     $variables['items']['menu_link_content:a481fb29-4738-4807-abc2-53612935820e']['title'] = t('<span class="link-text">@title</span> <i class="fa fa-angle-down" aria-hidden="true"></i>', ['@title' => $name]);
-  }
-  else{
+  } else {
     $variables['items']['menu_link_content:a481fb29-4738-4807-abc2-53612935820e']['is_expanded'] = false;
     $variables['items']['menu_link_content:a481fb29-4738-4807-abc2-53612935820e']['below'] = false;
     $variables['items']['menu_link_content:a481fb29-4738-4807-abc2-53612935820e']['title'] = false;
   }
 }
-
+function shopspot_preprocess_block(&$variables)
+{
+  if ($variables['plugin_id'] == 'login_form_popup') {
+    if ($variables['logged_in'] == true) {
+      $variables['attributes']['class'][] = 'hidden';
+    } else {
+      $variables['content']['login_popup_block']['#markup'] = "<div class='Login-popup-link'><a href='/user/login' class='use-ajax login-popup-form' data-dialog-type='modal'>Login</a></div>";
+    }
+  }
+}
 function shopspot_preprocess_menu__lite_cart_login_menu(&$variables)
 {
-  if($variables['logged_in']==true){
+  if ($variables['logged_in'] == true) {
     $variables['items']['menu_link_content:9a27f44b-dc93-4bc4-816e-45aa425fbd5d']['title'] = t('<i class="fa fa-user" aria-hidden="true"></i>');
-  }
-  else{
+  } else {
     $variables['items']['menu_link_content:9a27f44b-dc93-4bc4-816e-45aa425fbd5d']['title'] = t('<span class="link-text">Login</span>');
   }
 }
@@ -52,13 +43,77 @@ function shopspot_preprocess_node(&$variables)
 {
   $variables['Price'] = $variables['content']['field_price']['#items']->getValue(['#list'])[0]['value'];
   $variables['test'] = $variables['content']['field_discount'];
-  // dump(count($variables['test']));
 
-  if(count($variables['test']) > 2 ){
-    // dump('Hello');
+  if (count($variables['test']) > 2) {
     $variables['Discount'] = $variables['content']['field_discount']['#items']->getValue(['#list'])[0]['value'];
     $variables['Discount'] = ($variables['Price'] / 100) * $variables['Discount'];
-    $variables['content']['price'] = '$'.round($variables['Price'] - $variables['Discount']);
+    $variables['content']['price'] = '$' . round($variables['Price'] - $variables['Discount']);
+  }
+}
+
+
+function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form['#form_id'] == 'user_login_form') {
+
+    unset($form['name']['#attributes']['placeholder']);
+    unset($form['pass']['#attributes']['placeholder']);
+    unset($form['name']['#description']);
+    $form['name']['#title'] = 'Enter Email/Mobile number';
+    $form['pass']['#title'] = 'Enter Password';
+    unset($form['pass']['#description']);
+    $form['forgot-password'] = array(
+      '#type' => 'text',
+      '#title' => (' forgot-password'),
+      '#markup' => (' <a class="forgot-pass">Forgot? <a> '),
+      // '#markup' => (' <a class="forgot-pass" href="/user/password">Forgot? <a> '),
+    );
+    $form['actions']['submit']['#value'] = 'Login';
+
+    $form['actions']['or'] = array(
+      '#type' =>   'text',
+      '#title' => (' or'),
+      '#markup' => (' <div class="or">OR </div> '),
+    );
+
+    $form['actions']['requestotp'] = array(
+      '#type' =>   'button',
+      '#value' => 'Request OTP',
+    );
+    $form['policy'] = array(
+      '#type' => 'text',
+      '#title' => (' register'),
+      '#markup' => (' <p class="policy"> By continuing, you agree to Flipkarts <a href="#" class="policy-link">Terms of Use </a> and <a href="#" class="policy-link"> Privacy Policy. </a></p> '),
+    );
+    $form['registerhere'] = array(
+      '#type' =>   'text',
+      '#title' => (' register'),
+      '#markup' => (' <a href="/user/register" data-drupal-link-system-path="user/register" class="register-cls use-ajax" data-dialog-type="modal"
+      >New to ShopSpot? Create an account</a> '),
+    );
   }
 
+  if ($form['#form_id'] == 'user_register_form') {
+    $form['account']['mail']['#attributes']['placeholder'] = ('Email');
+    unset($form['account']['mail']['#description']);
+    unset($form['account']['mail']['#title']);
+    unset($form['account']['name']['#description']);
+    unset($form['account']['name']['#title']);
+    unset($form['account']['pass']['#description']);
+    unset($form['account']['name']);
+
+    $form['policy'] = array(
+      '#type' => 'text',
+      '#title' => (' register'),
+      '#markup' => (' <p class="policy"> By continuing, you agree to Flipkarts <a href="#" class="policy-link">Terms of Use </a> and <a href="#" class="policy-link"> Privacy Policy. </a></p> '),
+    );
+    $form['actions']['submit']['#value'] = ('CONTINUE');
+
+    $form['login'] = array(
+      '#type' => 'text',
+      '#title' => (' login'),
+      '#weight' => '10',
+      '#markup' => (' <p class="login-btn"><a class =" login-link use-ajax" data-dialog-type="modal" href="/user/login">Existing User? Log in</a></p> '),
+    );
+  }
 }

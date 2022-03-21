@@ -1,4 +1,5 @@
 .menu-level-1 {
+  // display: none;
   .menu-item {
     .menu-level-2 {
       display: none;
@@ -13,8 +14,9 @@
     }
   }
 }
-.menu-level-1 > .menu-item--expanded:hover .menu-level-2{
+.menu-level-1 > .menu-item--expanded:hover .menu-level-2  {
   display: inline-block;
+  // display: none;
   position: absolute;
   top: 0px;
 }

@@ -11,7 +11,7 @@ dependencies:
 id: mobilenavmenu
 theme: shopspot
 region: header
-weight: -21
+weight: -24
 provider: null
 plugin: 'system_menu_block:mobilenavmenu'
 settings:

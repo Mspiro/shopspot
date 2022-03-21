@@ -371,7 +371,11 @@ body a {
   height: 50px;
   margin-top: 10px;
 }
+.login-menu .menu .menu-item--expanded .Register-popup-link {
+  display: none;
+}
 .login-menu .menu .menu-item--expanded .login-account {
+  display: none;
   background: white;
   padding: 5px 40px;
   line-height: 20px;
@@ -481,9 +485,10 @@ body a {
 }
 
 .login-menu > .menu > .menu-item > .menu {
+  display: none;
   position: absolute;
   top: 48px;
-  display: none;
+  left: -52px;
 }
 
 .login-menu > .menu > .menu-item:hover .menu {
@@ -503,6 +508,32 @@ body a {
     transform: rotate(-180deg);
   }
 }
+.login-menu > .menu > .menu-item > .menu > .menu-item > div > .Register-popup-link {
+  display: flex !important;
+}
+.login-menu > .menu > .menu-item > .menu > .menu-item > div > .Register-popup-link a {
+  color: #2874f0;
+  cursor: pointer;
+}
+
+.login-menu > .menu > .menu-item > .menu > .menu-item > .menu {
+  display: none !important;
+}
+
+#block-loginformpopup-2 {
+  background: white;
+  padding: 5px 40px;
+  line-height: 20px;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  font-size: 18px;
+  height: 30px;
+  width: 125px;
+}
+#block-loginformpopup-2 .Login-popup-link .login-popup-form {
+  color: #2874f0;
+}
+
 .more-menu {
   display: flex;
   justify-content: flex-start;
@@ -621,6 +652,226 @@ body a {
     margin: 8px 0px;
   }
 }
+.ui-dialog {
+  width: 675px !important;
+  height: 530px !important;
+  left: 25% !important;
+}
+.ui-dialog .ui-dialog-titlebar {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px;
+  background: none;
+  border-style: none;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  display: none;
+}
+.ui-dialog .ui-dialog-titlebar .ui-button {
+  position: absolute;
+  right: -24px;
+  top: 6px;
+}
+.ui-dialog .ui-dialog-titlebar .ui-button span {
+  background: url(../../images/close_icon.png);
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+}
+.ui-dialog .ui-front {
+  max-height: none !important;
+  height: 100% !important;
+}
+.ui-dialog .ui-dialog-buttonpane {
+  position: absolute;
+  top: 49%;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  border: 0px;
+  background: none;
+  z-index: 100;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset .button:first-child {
+  background: #fb641b !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+  border: none !important;
+  color: #fff !important;
+  width: 340px !important;
+  border-radius: 0px !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset .button:nth-child(2) {
+  border: none;
+  line-height: 180%;
+  text-align: center;
+  color: #2874f0;
+  background-color: #fff;
+  margin-top: 40px;
+  width: 340px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+}
+.ui-dialog #drupal-modal {
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.ui-dialog #drupal-modal .login-para,
+.ui-dialog #drupal-modal .register-para {
+  background-color: #2874f0;
+  color: #ffffff;
+  min-width: 270px;
+  padding: 40px 35px;
+  max-height: 530px;
+}
+.ui-dialog #drupal-modal .login-para h2,
+.ui-dialog #drupal-modal .register-para h2 {
+  font-size: 28px;
+}
+.ui-dialog #drupal-modal .login-para h5,
+.ui-dialog #drupal-modal .register-para h5 {
+  font-size: 18px;
+  margin-top: 16px;
+  line-height: 150%;
+  color: #dbdbdb;
+  font-weight: 100;
+}
+.ui-dialog #drupal-modal .login-para .bottom-img,
+.ui-dialog #drupal-modal .register-para .bottom-img {
+  background-image: url(../..//images/login_img.png);
+  background-repeat: no-repeat;
+  height: 150px;
+  position: relative;
+  bottom: -40%;
+  left: -10px;
+}
+.ui-dialog #drupal-modal .register-para h2 {
+  font-size: 24px;
+}
+.ui-dialog #drupal-modal .user-login-form,
+.ui-dialog #drupal-modal .user-register-form {
+  padding: 56px 35px 16px;
+  position: relative;
+  background-color: #fff;
+  height: fit-content;
+}
+.ui-dialog #drupal-modal .user-login-form .policy,
+.ui-dialog #drupal-modal .user-register-form .policy {
+  color: #878787;
+  font-size: 11px;
+  position: relative;
+  top: -35px;
+}
+.ui-dialog #drupal-modal .user-login-form .policy .policy-link,
+.ui-dialog #drupal-modal .user-register-form .policy .policy-link {
+  color: #2874f0;
+}
+.ui-dialog #drupal-modal .user-login-form .form-item,
+.ui-dialog #drupal-modal .user-register-form .form-item {
+  position: relative;
+  margin-bottom: 34px;
+  font-size: 16px;
+}
+.ui-dialog #drupal-modal .user-login-form .form-item label,
+.ui-dialog #drupal-modal .user-register-form .form-item label {
+  transition-property: top, font-size, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.ui-dialog #drupal-modal .user-login-form .form-item label::after,
+.ui-dialog #drupal-modal .user-register-form .form-item label::after {
+  display: none !important;
+}
+.ui-dialog #drupal-modal .user-login-form .form-item input,
+.ui-dialog #drupal-modal .user-register-form .form-item input {
+  padding: 8px 10px 10px 0;
+  width: 100%;
+  color: #000;
+  font-size: inherit;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0px;
+}
+.ui-dialog #drupal-modal .user-login-form .forgot-pass {
+  position: relative;
+  left: 84%;
+  top: -60px;
+  color: #2874f0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.ui-dialog #drupal-modal .user-login-form .or {
+  top: 330px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: #878787;
+  font-size: 14px;
+  left: 188px;
+}
+.ui-dialog #drupal-modal .user-login-form .register-cls {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  bottom: -70%;
+  text-align: center;
+  color: #2874f0;
+  font-weight: 600;
+  font-size: 14px;
+}
+.ui-dialog #drupal-modal .user-register-form .form-wrapper {
+  padding: 0px;
+}
+.ui-dialog #drupal-modal .user-register-form .field--type-image,
+.ui-dialog #drupal-modal .user-register-form .form-item-policy,
+.ui-dialog #drupal-modal .user-register-form details {
+  display: none;
+}
+.ui-dialog #drupal-modal .user-register-form .policy {
+  top: 10%;
+}
+.ui-dialog #drupal-modal .user-register-form :focus-visible {
+  outline: none;
+}
+.ui-dialog #drupal-modal .user-register-form .login-btn {
+  display: flex;
+  position: absolute;
+  width: 340px;
+  margin-left: -15px;
+  justify-content: center;
+  top: 220%;
+}
+.ui-dialog #drupal-modal .user-register-form .login-btn .login-link {
+  text-align: center;
+  color: #2874f0;
+  margin-top: 16px;
+  padding: 10px 0px;
+  width: 340px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ui-widget-overlay {
+  background: #000000 !important;
+  opacity: 0.7;
+}
+
 .mega-menu {
   font-family: "Roboto";
 }
@@ -721,7 +972,7 @@ body a {
   font-weight: 500;
 }
 .mega-menu .menu--mega-menu .menu-item--expanded:hover .menu-level-1 {
-  display: flex;
+  display: none;
   top: 165px;
 }
 .mega-menu .menu--mega-menu .menu-item--expanded:last-child:hover .menu-level-1 {
@@ -1004,13 +1255,13 @@ body a {
   height: 32px;
 }
 .connect-on .our-app a img {
-  width: 30px;
-  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
   border-radius: 5px;
 }
 .connect-on .follow-us {
   width: auto;
-  height: 32px;
+  max-height: 32px;
 }
 .connect-on .follow-us p span svg {
   width: 19px;

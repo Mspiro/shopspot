@@ -1,0 +1,218 @@
+.ui-dialog {
+  width: 675px !important;
+  height: 530px !important;
+  left: 25% !important;
+  .ui-dialog-titlebar {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px;
+    background: none;
+    border-style: none;
+    .ui-dialog-title {
+      display: none;
+    }
+    .ui-button {
+      position: absolute;
+      right: -24px;
+      top: 6px;
+      span {
+        background: url(../../images/close_icon.png);
+        background-repeat: no-repeat;
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+  .ui-front {
+    max-height: none !important;
+    height: 100% !important;
+  }
+  .ui-dialog-buttonpane {
+    position: absolute;
+    top: 49%;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    border: 0px;
+    background: none;
+    z-index: 100;
+    .ui-dialog-buttonset {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 100;
+      .button:first-child {
+        background: #fb641b !important;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+        border: none !important;
+        color: #fff !important;
+        width: 340px !important;
+        border-radius: 0px !important;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .button:nth-child(2) {
+        border: none;
+        line-height: 180%;
+        text-align: center;
+        color: #2874f0;
+        background-color: #fff;
+        margin-top: 40px;
+        width: 340px;
+        font-size: 15px;
+        font-weight: 600;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 0px;
+      }
+    }
+  }
+
+  #drupal-modal {
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    .login-para,
+    .register-para {
+      background-color: #2874f0;
+      color: #ffffff;
+      min-width: 270px;
+      padding: 40px 35px;
+      max-height: 530px;
+      h2 {
+        font-size: 28px;
+      }
+      h5 {
+        font-size: 18px;
+        margin-top: 16px;
+        line-height: 150%;
+        color: #dbdbdb;
+        font-weight: 100;
+      }
+      .bottom-img {
+        background-image: url(../..//images/login_img.png);
+        background-repeat: no-repeat;
+        height: 150px;
+        position: relative;
+        bottom: -40%;
+        left: -10px;
+      }
+    }
+    .register-para {
+      h2 {
+        font-size: 24px;
+      }
+    }
+    .user-login-form,
+    .user-register-form {
+      padding: 56px 35px 16px;
+      position: relative;
+      background-color: #fff;
+      height: fit-content;
+      .policy {
+        color: #878787;
+        font-size: 11px;
+        position: relative;
+        top: -35px;
+        .policy-link {
+          color: #2874f0;
+        }
+      }
+
+      .form-item {
+        position: relative;
+        margin-bottom: 34px;
+        font-size: 16px;
+        label {
+          transition-property: top, font-size, color;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in-out;
+          &::after {
+            display: none !important;
+          }
+        }
+
+        input {
+          padding: 8px 10px 10px 0;
+          width: 100%;
+          color: #000;
+          font-size: inherit;
+          background: #fff;
+          border: none;
+          border-bottom: 1px solid #e0e0e0;
+          border-radius: 0px;
+        }
+      }
+    }
+    .user-login-form {
+      .forgot-pass {
+        position: relative;
+        left: 84%;
+        top: -60px;
+        color: #2874f0;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .or {
+        top: 330px;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        color: #878787;
+        font-size: 14px;
+        left: 188px;
+      }
+      .register-cls {
+        position: absolute;
+        bottom: 32px;
+        left: 0;
+        right: 0;
+        bottom: -70%;
+        text-align: center;
+        color: #2874f0;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+    .user-register-form {
+      .form-wrapper {
+        padding: 0px;
+      }
+      .field--type-image,
+      .form-item-policy,
+      details {
+        display: none;
+      }
+      .policy {
+        top: 10%;
+      }
+      :focus-visible {
+        outline: none;
+      }
+      .login-btn {
+        display: flex;
+        position: absolute;
+        width: 340px;
+        margin-left: -15px;
+        justify-content: center;
+        top: 220%;
+        .login-link {
+          text-align: center;
+          color: #2874f0;
+          margin-top: 16px;
+          padding: 10px 0px;
+          width: 340px;
+          font-size: 15px;
+          font-weight: 600;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}
+.ui-widget-overlay {
+  background: #000000 !important;
+  opacity: 0.7;
+}

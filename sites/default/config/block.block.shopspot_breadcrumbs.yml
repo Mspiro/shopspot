@@ -11,7 +11,7 @@ _core:
 id: shopspot_breadcrumbs
 theme: shopspot
 region: header
-weight: -10
+weight: -14
 provider: null
 plugin: system_breadcrumb_block
 settings:

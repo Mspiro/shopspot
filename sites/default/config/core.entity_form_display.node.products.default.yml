@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.products.body
+    - field.field.node.products.comment
     - field.field.node.products.field_category
     - field.field.node.products.field_discount
     - field.field.node.products.field_price
@@ -11,6 +12,7 @@ dependencies:
     - field.field.node.products.field_rating
     - node.type.products
   module:
+    - comment
     - media_library
     - path
     - text
@@ -28,6 +30,12 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+    region: content
+  comment:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   created:
     type: datetime_timestamp

@@ -1,0 +1,11 @@
+name: Login Popup
+type: module
+description: This module gives the provision to get the login form in a popup.
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Login
+
+# Information added by Drupal.org packaging script on 2020-07-18
+version: '2.0.0'
+project: 'login_popup'
+datestamp: 1595059354
