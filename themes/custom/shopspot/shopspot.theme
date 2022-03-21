@@ -4,10 +4,8 @@ function shopspot_preprocess_select(&$variables)
   $variables['options'][0]['label'] = t('All Categories');
 }
 
-//Hide login button after login
 function shopspot_preprocess_menu__login(&$variables)
 {
-  // dump($variables);
   if ($variables['logged_in']) {
     $variables['items']['menu_link_content:70b843bc-08e8-4bdf-aa28-7aa845152a0b']['is_expanded'] = false;
     $variables['items']['menu_link_content:70b843bc-08e8-4bdf-aa28-7aa845152a0b']['below'] = false;
@@ -45,10 +43,8 @@ function shopspot_preprocess_node(&$variables)
 {
   $variables['Price'] = $variables['content']['field_price']['#items']->getValue(['#list'])[0]['value'];
   $variables['test'] = $variables['content']['field_discount'];
-  // dump(count($variables['test']));
 
   if (count($variables['test']) > 2) {
-    // dump('Hello');
     $variables['Discount'] = $variables['content']['field_discount']['#items']->getValue(['#list'])[0]['value'];
     $variables['Discount'] = ($variables['Price'] / 100) * $variables['Discount'];
     $variables['content']['price'] = '$' . round($variables['Price'] - $variables['Discount']);
@@ -69,7 +65,8 @@ function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_s
     $form['forgot-password'] = array(
       '#type' => 'text',
       '#title' => (' forgot-password'),
-      '#markup' => (' <a class="forgot-pass" href="/user/password">Forgot? <a> '),
+      '#markup' => (' <a class="forgot-pass">Forgot? <a> '),
+      // '#markup' => (' <a class="forgot-pass" href="/user/password">Forgot? <a> '),
     );
     $form['actions']['submit']['#value'] = 'Login';
 
@@ -95,19 +92,6 @@ function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_s
       >New to ShopSpot? Create an account</a> '),
     );
   }
-  if ($form['#form_id'] == 'user_pass') {
-    unset($form['name']['#title']);
-    unset($form['mail']['#markup']);
-    $form['name']['#attributes']['placeholder'] = ('Email');
-    $form['cancel'] = [
-      '#markup' => ('<div class="can-btn">
-            <button class="can-btn-cls"><a href="/user/login">CANCEL</a></button>
-            </div>'),
-      '#weight' => '10',
-    ];
-    // dump($form);
-
-  }
 
   if ($form['#form_id'] == 'user_register_form') {
     $form['account']['mail']['#attributes']['placeholder'] = ('Email');
@@ -124,15 +108,7 @@ function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_s
       '#markup' => (' <p class="policy"> By continuing, you agree to Flipkarts <a href="#" class="policy-link">Terms of Use </a> and <a href="#" class="policy-link"> Privacy Policy. </a></p> '),
     );
     $form['actions']['submit']['#value'] = ('CONTINUE');
-    // $form['actions']['submit']['#attributes'] = array(
-    //   // '#type' => 'text',
-    //   // '#title' => ('class'),
-    //   // '#markup' => ('continue'),
-    //   'class' => array(
-    //     'continues',
-    //   ),
-    // );
-    
+
     $form['login'] = array(
       '#type' => 'text',
       '#title' => (' login'),
