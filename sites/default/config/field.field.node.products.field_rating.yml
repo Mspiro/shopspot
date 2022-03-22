@@ -1,25 +1,21 @@
-uuid: fbac271b-fd62-4c5a-8886-ff89b7f654b7
+uuid: ab8c2f72-7138-4ba7-a027-1e01e6cb31cb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_rating
     - node.type.products
+  module:
+    - options
 id: node.products.field_rating
 field_name: field_rating
 entity_type: node
 bundle: products
 label: Rating
 description: ''
-required: true
+required: false
 translatable: false
-default_value:
-  -
-    value: 4
+default_value: {  }
 default_value_callback: ''
-settings:
-  min: 4
-  max: null
-  prefix: ''
-  suffix: ''
-field_type: integer
+settings: {  }
+field_type: list_integer

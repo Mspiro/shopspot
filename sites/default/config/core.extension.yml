@@ -50,7 +50,6 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
-  redirect_after_login: 0
   responsive_image: 0
   search: 0
   shortcut: 0

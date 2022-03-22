@@ -1,19 +1,20 @@
-uuid: f11db6a3-44d1-4ee2-a8fc-9d2a03d5fad3
+uuid: 907416b9-7301-4e46-b87a-b5a7c4305ca9
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - options
 id: node.field_rating
 field_name: field_rating
 entity_type: node
-type: integer
+type: list_integer
 settings:
-  unsigned: false
-  size: normal
-module: core
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
 locked: false
-cardinality: 1
+cardinality: 5
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
