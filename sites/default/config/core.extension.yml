@@ -25,6 +25,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  fivestar: 0
   fontawesome: 0
   fontawesome_iconpicker_widget: 0
   fontawesome_media: 0
@@ -49,7 +50,6 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
-  redirect_after_login: 0
   responsive_image: 0
   search: 0
   shortcut: 0
@@ -68,6 +68,7 @@ module:
   views_infinite_scroll: 0
   views_show_more: 0
   views_ui: 0
+  votingapi: 0
   webform: 0
   webform_access: 0
   webform_attachment: 0

@@ -1,0 +1,8 @@
+uuid: d60c0cd9-ccb9-4d1e-b048-ac802dc41f57
+langcode: en
+status: true
+dependencies: {  }
+id: mega-menu-for-mobile
+label: 'Mega Menu for Mobile'
+description: ''
+locked: false

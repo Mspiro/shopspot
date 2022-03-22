@@ -1,0 +1,8 @@
+uuid: baaf1afe-3c97-47d7-8735-59de6716ea88
+langcode: en
+status: true
+dependencies: {  }
+id: lite-cart-login-menu
+label: 'Lite, Cart & Login Menu'
+description: 'Menu for mobile view contians Lite, Cart and Login'
+locked: false

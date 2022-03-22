@@ -1,0 +1,32 @@
+uuid: daee432d-9aae-4607-8321-8f0a342fd1a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating_
+    - node.type.products
+  module:
+    - fivestar
+id: node.products.field_rating_
+field_name: field_rating_
+entity_type: node
+bundle: products
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    rating: 80
+    target: null
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: editing
+  enable_voting_target: false
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

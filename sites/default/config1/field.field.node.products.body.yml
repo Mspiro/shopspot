@@ -1,0 +1,27 @@
+uuid: eed07d44-7f54-4a69-b357-af2312b25a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.products
+  module:
+    - text
+id: node.products.body
+field_name: body
+entity_type: node
+bundle: products
+label: Discription
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure asperiores quasi vero voluptates esse quas, excepturi, non deleniti exercitationem eum eligendi expedita aut repudiandae ipsam obcaecati in possimus! Voluptates eos nostrum ad nesciunt, sapiente debitis, quos mollitia quisquam perferendis dolore numquam minus placeat assumenda voluptatum porro esse similique asperiores quo accusantium. Repellendus maiores totam quas et. Sunt necessitatibus optio id maxime nam perspiciatis</p>\r\n\r\n<p>aspernatur saepe culpa ea, quibusdam officiis distinctio doloremque ratione voluptatem ab dignissimos, modi quo tempore autem amet fugiat! Fuga quidem atque harum quaerat blanditiis nihil esse cupiditate sed perferendis totam beatae consequatur quas, odit delectus quam temporibus a officiis sunt ipsam, tempore laudantium obcaecati provident reprehenderit deleniti. Eos beatae, repellendus voluptatibus alias commodi nobis inventore optio nihil labore odit provident consectetur perspiciatis incidunt,</p>\r\n\r\n<p>reiciendis dolore. Quam laboriosam repellendus quas debitis et impedit fugiat alias? Tempore at fugit maxime, officia ab exercitationem quibusdam laboriosam sunt a nulla veritatis dolorum fugiat animi, laudantium iste molestiae ad harum magnam provident perspiciatis distinctio. Eum sed asperiores fugiat nam eligendi accusamus nemo libero, rerum ipsa maiores ab expedita soluta? Reprehenderit harum eum veniam fuga quis at enim atque? Odit consequuntur soluta nesciunt enim molestiae fugiat minus vel</p>\r\n\r\n<p>maxime laudantium accusamus laborum atque molestias asperiores facere natus rerum a hic iusto tempore nobis autem, ipsam eveniet. Amet omnis officiis nostrum voluptate accusantium repudiandae laborum at nulla dolor tempora fugiat officia consectetur totam impedit saepe nobis aperiam, rem suscipit incidunt quas aliquam velit? Molestiae unde quia neque iusto. Eos vero architecto suscipit iure. Tenetur reiciendis officiis tempora maiores veritatis voluptatibus accusamus rerum odio ullam recusandae</p>\r\n\r\n<p>delectus deserunt, libero cumque architecto assumenda, sequi quas quisquam laborum repellat esse illum. Hic maxime rem, officiis culpa iste cum distinctio ea error sequi quod natus dolores, illo laboriosam similique consequuntur tenetur unde. Nihil ipsum voluptates obcaecati possimus accusantium!</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

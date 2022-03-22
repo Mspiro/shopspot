@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.products.field_price
     - field.field.node.products.field_product_image
     - field.field.node.products.field_rating
+    - field.field.node.products.field_rating_
     - node.type.products
   module:
     - text
@@ -40,4 +41,5 @@ hidden:
   field_price: true
   field_product_image: true
   field_rating: true
+  field_rating_: true
   langcode: true

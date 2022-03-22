@@ -1,0 +1,25 @@
+uuid: bdc0f694-bda9-44c3-a32e-220661c70217
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.mega-menu
+  module:
+    - system
+  theme:
+    - shopspot
+id: megamenu
+theme: shopspot
+region: menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:mega-menu'
+settings:
+  id: 'system_menu_block:mega-menu'
+  label: 'Mega Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

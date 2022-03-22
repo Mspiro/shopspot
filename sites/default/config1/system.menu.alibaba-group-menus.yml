@@ -1,0 +1,8 @@
+uuid: 167bde82-b030-42ed-9d59-ab5a514a8ae0
+langcode: en
+status: true
+dependencies: {  }
+id: alibaba-group-menus
+label: 'Alibaba Group menus'
+description: ''
+locked: false

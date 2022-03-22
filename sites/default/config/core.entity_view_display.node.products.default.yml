@@ -11,9 +11,11 @@ dependencies:
     - field.field.node.products.field_price
     - field.field.node.products.field_product_image
     - field.field.node.products.field_rating
+    - field.field.node.products.field_rating_
     - node.type.products
   module:
     - comment
+    - fivestar
     - text
     - user
 id: node.products.default
@@ -24,13 +26,13 @@ content:
   body:
     label: hidden
     type: text_trimmed
-    weight: 4
+    weight: 3
     settings:
       trim_length: 1200
     third_party_settings: {  }
     region: content
   comment:
-    weight: 7
+    weight: 5
     label: above
     settings:
       view_mode: default
@@ -39,7 +41,7 @@ content:
     type: comment_default
     region: content
   field_category:
-    weight: 6
+    weight: 4
     label: hidden
     settings:
       link: true
@@ -47,7 +49,7 @@ content:
     type: entity_reference_label
     region: content
   field_discount:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       thousand_separator: ''
@@ -56,7 +58,7 @@ content:
     type: number_integer
     region: content
   field_price:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       thousand_separator: ''
@@ -75,15 +77,17 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_rating:
-    weight: 1
+  field_rating_:
+    weight: 6
     label: hidden
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      text_format: average
+      display_format: average
+      fivestar_widget: basic
     third_party_settings: {  }
-    type: number_integer
+    type: fivestar_stars
     region: content
 hidden:
+  field_rating: true
   langcode: true
   links: true

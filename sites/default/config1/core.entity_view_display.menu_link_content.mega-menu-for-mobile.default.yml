@@ -1,0 +1,35 @@
+uuid: 1cc8d1f6-6934-4975-8f2c-4d3311f56b7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.mega-menu-for-mobile.field_mega_menu_for_mobile_image
+    - image.style.thumbnail
+    - system.menu.mega-menu-for-mobile
+  module:
+    - svg_image
+id: menu_link_content.mega-menu-for-mobile.default
+targetEntityType: menu_link_content
+bundle: mega-menu-for-mobile
+mode: default
+content:
+  children:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_mega_menu_for_mobile_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

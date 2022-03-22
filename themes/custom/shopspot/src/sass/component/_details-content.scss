@@ -52,23 +52,23 @@
         }
       }
     }
-    .below-btn{
+    .below-btn {
       width: 75%;
       margin-top: 50px;
-      .below-image-btn{
+      .below-image-btn {
         display: flex;
         align-content: center;
         align-items: center;
         justify-content: space-evenly;
-        .btn{
+        .btn {
           padding: 9px;
           border-radius: 5px;
           color: #ffffff;
         }
-        .add-to-cart{
+        .add-to-cart {
           background-color: #605dc0;
         }
-        .buy-now{
+        .buy-now {
           background-color: #ef368a;
         }
       }
@@ -81,8 +81,17 @@
 
     .rating {
       margin-top: 15px;
-      svg {
-        color: orange;
+      .fivestar-form-1 {
+        .fivestar-static-form-item{
+          .form-type-item{
+            display: flex;
+            align-items: center;
+            .description{
+              font-size: 18px;
+              margin-left: 10px;
+            }
+          }
+        }
       }
     }
     .discount {

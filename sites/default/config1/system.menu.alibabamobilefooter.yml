@@ -1,0 +1,8 @@
+uuid: 6ed5a560-2dd6-4c6f-b700-8ef7b1a7b428
+langcode: en
+status: true
+dependencies: {  }
+id: alibabamobilefooter
+label: AlibabaMobileFooter
+description: ''
+locked: false

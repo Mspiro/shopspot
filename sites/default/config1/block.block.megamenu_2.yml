@@ -1,0 +1,20 @@
+uuid: 8a0f5b45-4ef6-4602-a8bf-1dab3b52ab28
+langcode: en
+status: false
+dependencies:
+  module:
+    - tb_megamenu
+  theme:
+    - shopspot
+id: megamenu_2
+theme: shopspot
+region: menu
+weight: 0
+provider: null
+plugin: 'tb_megamenu_menu_block:mega-menu'
+settings:
+  id: 'tb_megamenu_menu_block:mega-menu'
+  label: 'Mega Menu'
+  provider: tb_megamenu
+  label_display: '0'
+visibility: {  }

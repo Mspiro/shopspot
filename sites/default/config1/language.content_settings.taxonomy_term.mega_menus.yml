@@ -1,0 +1,11 @@
+uuid: 6271dfc8-be1d-4e17-a640-85e2c173b9d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mega_menus
+id: taxonomy_term.mega_menus
+target_entity_type_id: taxonomy_term
+target_bundle: mega_menus
+default_langcode: site_default
+language_alterable: false

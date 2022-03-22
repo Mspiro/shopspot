@@ -1564,6 +1564,15 @@ body a {
   color: black;
 }
 
+.card:hover {
+  position: relative;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(38, 71, 218, 0.747) 0px 0px 20px;
+}
+
+.views-field {
+  margin-bottom: 10px;
+}
 .views-field a {
   text-decoration: none;
   color: black;
@@ -1585,8 +1594,12 @@ body a {
   color: red;
 }
 
-.views-field-field-rating .checked {
-  color: orange;
+.fivestar-default {
+  display: flex;
+  justify-content: center;
+}
+.fivestar-default .description {
+  display: none;
 }
 
 .views-field-field-discount {
@@ -1897,6 +1910,9 @@ button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  border: 1px solid #2874f0;
+  box-shadow: 0px 0px 5px #2874f0;
+  margin-right: 10px;
 }
 .comment-section .field--label-above .by-node-author .content h3 {
   display: none;
@@ -1915,6 +1931,14 @@ button {
   border-radius: 5px;
 }
 .comment-section .field--label-above .by-node-author .content .links .comment-forbidden {
+  display: none;
+}
+.comment-section .field--label-above .by-node-author .content form .form-type-item {
+  display: flex;
+  margin-left: 130px;
+  margin-top: -19px;
+}
+.comment-section .field--label-above .by-node-author .content form .form-type-item .description {
   display: none;
 }
 
@@ -1997,8 +2021,13 @@ button {
 .detail-wrapper .detail-all-fields .rating {
   margin-top: 15px;
 }
-.detail-wrapper .detail-all-fields .rating svg {
-  color: orange;
+.detail-wrapper .detail-all-fields .rating .fivestar-form-1 .fivestar-static-form-item .form-type-item {
+  display: flex;
+  align-items: center;
+}
+.detail-wrapper .detail-all-fields .rating .fivestar-form-1 .fivestar-static-form-item .form-type-item .description {
+  font-size: 18px;
+  margin-left: 10px;
 }
 .detail-wrapper .detail-all-fields .discount {
   display: flex;
