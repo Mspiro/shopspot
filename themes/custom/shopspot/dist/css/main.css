@@ -1762,7 +1762,17 @@ button {
   padding: 10px;
 }
 
+.specification-comment {
+  position: relative;
+  width: 97vw;
+  left: -43vw;
+}
+
 #block-views-block-specifications-block-1-2 {
+  display: none;
+}
+
+.specification .views-element-container {
   background-color: #ffffff;
   width: 97vw;
   display: flex;
@@ -1771,22 +1781,22 @@ button {
   padding: 15px 40px;
   margin-right: -10px;
 }
-#block-views-block-specifications-block-1-2 h2 {
+.specification .views-element-container h2 {
   font-size: 20px;
 }
-#block-views-block-specifications-block-1-2 h2::after {
+.specification .views-element-container h2::after {
   content: " :";
 }
-#block-views-block-specifications-block-1-2 .view-content {
+.specification .views-element-container .view-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 10px 0px;
 }
-#block-views-block-specifications-block-1-2 .view-content .views-view-grid {
+.specification .views-element-container .view-content .views-view-grid {
   width: 100%;
 }
-#block-views-block-specifications-block-1-2 .view-content .views-view-grid .row-1 {
+.specification .views-element-container .view-content .views-view-grid .row-1 {
   width: 100%;
   display: flex;
   align-content: flex-start;
@@ -1799,23 +1809,23 @@ button {
   height: auto;
   margin: 0;
 }
-#block-views-block-specifications-block-1-2 .view-content .views-view-grid .row-1 .views-field-field-discount {
+.specification .views-element-container .view-content .views-view-grid .row-1 .views-field-field-discount {
   top: 0;
   left: 0;
 }
-#block-views-block-specifications-block-1-2 .view-content .views-view-grid .row-1 .views-field {
+.specification .views-element-container .view-content .views-view-grid .row-1 .views-field {
   display: flex;
   margin: 0px;
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid #b2b4b5;
 }
-#block-views-block-specifications-block-1-2 .view-content .views-view-grid .row-1 .views-field .views-label {
+.specification .views-element-container .view-content .views-view-grid .row-1 .views-field .views-label {
   width: 50%;
   border-right: 1px solid #b2b4b5;
   padding: 10px 20px;
 }
-#block-views-block-specifications-block-1-2 .view-content .views-view-grid .row-1 .views-field .field-content {
+.specification .views-element-container .view-content .views-view-grid .row-1 .views-field .field-content {
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -1823,12 +1833,89 @@ button {
   color: black;
   padding: 10px 20px;
 }
-#block-views-block-specifications-block-1-2 .view-content .views-view-grid .row-1 .views-field .field-content span {
+.specification .views-element-container .view-content .views-view-grid .row-1 .views-field .field-content span {
   background-color: #ffffff;
   padding: 0px;
   box-shadow: none;
   width: auto;
   display: block;
+}
+
+.comment-section {
+  background: #ffffff;
+  width: 97vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  padding: 12px 40px;
+}
+.comment-section .field--label-above {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #b2b4b5;
+}
+.comment-section .field--label-above .comment-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b2b4b5;
+  align-items: center;
+  align-content: center;
+  padding: 12px 20px;
+}
+.comment-section .field--label-above .comment-header .title {
+  font-size: 15px;
+  letter-spacing: -0.5px;
+}
+.comment-section .field--label-above .comment-header .top-rated {
+  width: 90px;
+  height: 30px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #0000008c;
+}
+.comment-section .field--label-above .by-node-author {
+  padding: 12px 20px;
+}
+.comment-section .field--label-above .by-node-author .comment__meta {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.comment-section .field--label-above .by-node-author .comment__meta .comment__submitted span a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+.comment-section .field--label-above .by-node-author .comment__meta .profile {
+  display: flex;
+}
+.comment-section .field--label-above .by-node-author .comment__meta .profile img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.comment-section .field--label-above .by-node-author .content h3 {
+  display: none;
+}
+.comment-section .field--label-above .by-node-author .content .text-formatted {
+  margin-left: 40px;
+}
+.comment-section .field--label-above .by-node-author .content .links {
+  position: relative;
+  right: -80%;
+}
+.comment-section .field--label-above .by-node-author .content .links li a {
+  color: #000000;
+  border: 1px solid gray;
+  padding: 2px;
+  border-radius: 5px;
+}
+.comment-section .field--label-above .by-node-author .content .links .comment-forbidden {
+  display: none;
 }
 
 .detail-wrapper {
@@ -1951,6 +2038,7 @@ button {
   width: 100px;
   border: 1px solid;
   border-radius: 5px;
+  padding: 10px 0px 10px 40px;
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 576px) {
