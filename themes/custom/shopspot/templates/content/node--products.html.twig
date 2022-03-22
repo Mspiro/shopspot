@@ -77,28 +77,28 @@
 	<div{{attributes}}>
 		<div class="detail-wrapper">
 			<div class="left-side">
-			<div class="detail-image">
-				<div class="small-image-wrapper">
-					<div class="small-image">
-						{{ content.field_product_image }}
+				<div class="detail-image">
+					<div class="small-image-wrapper">
+						<div class="small-image">
+							{{ content.field_product_image }}
+						</div>
+						<div class="small-image">
+							{{ content.field_product_image }}
+						</div>
+						<div class="small-image">
+							{{ content.field_product_image }}
+						</div>
+						<div class="small-image">
+							{{ content.field_product_image }}
+						</div>
 					</div>
-					<div class="small-image">
-						{{ content.field_product_image }}
-					</div>
-					<div class="small-image">
-						{{ content.field_product_image }}
-					</div>
-					<div class="small-image">
+					<div class="main-image">
 						{{ content.field_product_image }}
 					</div>
 				</div>
-				<div class="main-image">
-					{{ content.field_product_image }}
+				<div class="below-btn">
+					{{ drupal_block('block_content:21d4caea-dcbe-451e-b5f9-e6bc6a6c6cd5') }}
 				</div>
-			</div>
-			<div class="below-btn">
-				{{ drupal_block('block_content:21d4caea-dcbe-451e-b5f9-e6bc6a6c6cd5') }}
-			</div>
 			</div>
 			<div class="detail-all-fields">
 
@@ -126,7 +126,7 @@
 				<div class="price">
 					<h2>
 						{% if content.field_discount[0] %}
-							
+
 							Price:&nbsp;<del>{{ content.field_price }}</del>
 							&nbsp;&nbsp;{{ content.price }}&nbsp;<span>USD</span>
 
@@ -154,8 +154,15 @@
 					</form>
 				</div>
 
-				<div class="color">
-					<p>Color:</p>
+				<div class="specification-comment">
+					<div class="specification">
+						{{ drupal_block('views_block:specifications_-block_1') }}
+					</div>
+					{% if content.comment %}
+						<div class="comment-section">
+							{{ content.comment }}
+						</div>
+					{% endif %}
 				</div>
 
 			</div>
