@@ -1,0 +1,48 @@
+uuid: a131a868-47cd-4aa6-b5a1-dd6510d4617d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.mobilenavmenu.field_mobile_menu_link_image
+    - field.field.menu_link_content.mobilenavmenu.field_mobilenavmenu_image
+    - system.menu.mobilenavmenu
+  module:
+    - svg_image
+id: menu_link_content.mobilenavmenu.default
+targetEntityType: menu_link_content
+bundle: mobilenavmenu
+mode: default
+content:
+  children:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_mobile_menu_link_image:
+    weight: 0
+    label: hidden
+    settings:
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_mobilenavmenu_image:
+    weight: 2
+    label: hidden
+    settings:
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

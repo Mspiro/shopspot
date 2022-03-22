@@ -1,0 +1,12 @@
+uuid: 97819e1c-b6e5-49b4-983a-11e8bc8f2b01
+langcode: en
+status: true
+dependencies: {  }
+id: feedback_form
+label: 'Feedback Form'
+recipients:
+  - example@test.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

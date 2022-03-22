@@ -1,0 +1,25 @@
+uuid: c11fb958-5909-4d79-a26b-ea46682070e7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:53b9438c-c212-4e91-9b63-8305ff226e5c'
+  module:
+    - block_content
+  theme:
+    - shopspot
+id: gototopandleavefeedbackbutton
+theme: shopspot
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:53b9438c-c212-4e91-9b63-8305ff226e5c'
+settings:
+  id: 'block_content:53b9438c-c212-4e91-9b63-8305ff226e5c'
+  label: 'Go to top and Leave Feedback button'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

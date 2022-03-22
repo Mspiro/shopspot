@@ -1,0 +1,25 @@
+uuid: c9f3fe82-1181-408f-9153-25f9326e188c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.mega-menu-for-mobile
+  module:
+    - system
+  theme:
+    - shopspot
+id: megamenuformobile
+theme: shopspot
+region: menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:mega-menu-for-mobile'
+settings:
+  id: 'system_menu_block:mega-menu-for-mobile'
+  label: 'Mega Menu for Mobile'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

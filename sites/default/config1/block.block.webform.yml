@@ -1,0 +1,25 @@
+uuid: 0e74854c-075a-4a97-98bc-1b476b0420ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.subscriber
+  module:
+    - webform
+  theme:
+    - shopspot
+id: webform
+theme: shopspot
+region: footer_second
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  provider: webform
+  label_display: '0'
+  webform_id: subscriber
+  default_data: ''
+  redirect: false
+visibility: {  }

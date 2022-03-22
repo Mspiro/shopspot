@@ -10,9 +10,11 @@ dependencies:
     - field.field.node.products.field_price
     - field.field.node.products.field_product_image
     - field.field.node.products.field_rating
+    - field.field.node.products.field_rating_
     - node.type.products
   module:
     - comment
+    - fivestar
     - media_library
     - path
     - text
@@ -80,6 +82,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_rating_:
+    weight: 27
+    settings:
+      display_format: average
+      text_format: none
+      fivestar_widget: basic
+    third_party_settings: {  }
+    type: fivestar_stars
     region: content
   langcode:
     type: language_select

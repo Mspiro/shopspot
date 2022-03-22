@@ -1,0 +1,33 @@
+uuid: 228c872e-7b95-4466-bac8-ec737d885d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.demo.body
+    - field.field.node.demo.field_email_here
+    - node.type.demo
+  module:
+    - text
+    - user
+id: node.demo.teaser
+targetEntityType: node
+bundle: demo
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_email_here: true
+  langcode: true

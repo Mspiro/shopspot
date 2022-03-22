@@ -1,0 +1,8 @@
+uuid: 54efc737-7398-4d3b-bf68-92dfa1d10bbe
+langcode: en
+status: true
+dependencies: {  }
+name: Women
+vid: women
+description: 'Womens products'
+weight: 0

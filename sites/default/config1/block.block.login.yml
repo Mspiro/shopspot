@@ -1,0 +1,25 @@
+uuid: 0171bda7-8ab5-4143-866b-dfa13ccf3818
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.login
+  module:
+    - system
+  theme:
+    - shopspot
+id: login
+theme: shopspot
+region: header
+weight: -19
+provider: null
+plugin: 'system_menu_block:login'
+settings:
+  id: 'system_menu_block:login'
+  label: Login
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 3
+  expand_all_items: true
+visibility: {  }

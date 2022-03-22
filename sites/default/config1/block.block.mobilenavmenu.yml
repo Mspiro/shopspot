@@ -1,0 +1,25 @@
+uuid: 28ba652c-69e8-4436-9142-a1cdc529e043
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.mobilenavmenu
+  module:
+    - system
+  theme:
+    - shopspot
+id: mobilenavmenu
+theme: shopspot
+region: header
+weight: -24
+provider: null
+plugin: 'system_menu_block:mobilenavmenu'
+settings:
+  id: 'system_menu_block:mobilenavmenu'
+  label: MobileNavMenu
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 9186f562-4d4f-4f56-bc10-bd1c2e9866d2
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - shopspot
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: shopspot_breadcrumbs
+theme: shopspot
+region: header
+weight: -14
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,395 @@
+uuid: 6488ea9a-0905-4d52-b19f-d05d51212f8d
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: feedback_form
+title: 'Feedback Form'
+description: 'Feedback Form for User'
+category: ''
+elements: |-
+  by_agreeing_to_this_question_you_authorise_alibaba_com_and_or_it:
+    '#type': radios
+    '#title': 'By agreeing to this question, you authorise Alibaba.com and/or its affiliates to share your contact details to third party service providers and you agree that Alibaba.com and/or any appointed third party service provider may contact you solely for the purposes of conducting any satisfaction survey or market research.. Do you want to share your contact details?(Choose only one answer)'
+    '#options':
+      'Yes': 'Yes'
+      'No( I would like to finish the survey now)': 'No( I would like to finish the survey now)'
+  e_mail:
+    '#type': email
+    '#title': E-Mail
+    '#placeholder': 'Please input your answer here'
+  phone_number:
+    '#type': tel
+    '#title': 'Phone Number'
+    '#placeholder': 'Please input your answer here'
+  your_company_name:
+    '#type': textfield
+    '#title': 'Your Company Name'
+    '#placeholder': 'Please input your answer here'
+  industry:
+    '#type': webform_checkboxes_other
+    '#title': 'Industry(Choose all answers that apply)'
+    '#options':
+      Electronics: Electronics
+      'Home & Garden': 'Home & Garden'
+      'Fashion and Apparel': 'Fashion and Apparel'
+      Construction: Construction
+      Machinery: Machinery
+      'Auto and Vehicle parts': 'Auto and Vehicle parts'
+    '#other__option_label': 'Others(Please Specify)'
+    '#other__placeholder': 'Please input your answer here'
+  what_product_categories_do_you_source_:
+    '#type': textfield
+    '#title': 'What product categories do you source?'
+    '#placeholder': 'Please input your answer here'
+  how_do_you_define_your_business_type_choose_all_answers_that_app:
+    '#type': webform_checkboxes_other
+    '#title': 'How do you define your business type?(Choose all answers that apply)'
+    '#options':
+      Manufacturer: Manufacturer
+      Wholesaler/Reseller(offline): Wholesaler/Reseller(offline)
+      'Trading company': 'Trading company'
+      'E-commerce seller': 'E-commerce seller'
+    '#other__option_label': 'Others(Please Specify)'
+    '#other__placeholder': 'Please input your answer here'
+  how_long_have_you_been_in_business_choose_only_one_answer_:
+    '#type': radios
+    '#title': 'How long have you been in business?(Choose only one answer)'
+    '#options':
+      '< 3 years': '< 3 years'
+      '3-5 years': '3-5 years'
+      '6-10 years': '6-10 years'
+      '11-15 years': '11-15 years'
+      '15+ years': '15+ years'
+  approx_number_of_employees_choose_only_one_answer_:
+    '#type': radios
+    '#title': 'Approx. number of employees(Choose only one answer)'
+    '#options':
+      '< 5': '< 5'
+      5-10: 5-10
+      11-20: 11-20
+      51-100: 51-100
+      21-50: 21-50
+      101-300: 101-300
+      300+: 300+
+    '#options_display': two_columns
+  geographic_coverage_where_you_sell_choose_only_one_answer_:
+    '#type': radios
+    '#title': 'Geographic coverage(where you sell)(Choose only one answer)'
+    '#options':
+      'Within India mostly': 'Within India mostly'
+      'A good mix of within India and outside India': 'A good mix of within India and outside India'
+      'Mostly within India with less than 20% outside India': 'Mostly within India with less than 20% outside India'
+  what_are_the_different_products_you_procure_in_your_business_cho:
+    '#type': webform_checkboxes_other
+    '#title': 'What are the different products you procure in your business?(Choose all answers that apply)'
+    '#options':
+      'Raw materials': 'Raw materials'
+      'Finished good (Ready to sell/use products)': 'Finished good (Ready to sell/use products)'
+      'Parts & Components': 'Parts & Components'
+    '#other__option_label': 'Others(Please Specify)'
+    '#other__placeholder': 'Please input your answer here'
+  for_what_purpose_do_you_use_these_products_choose_all_answers_th:
+    '#type': webform_checkboxes_other
+    '#title': 'For what purpose, do you use these products?(Choose all answers that apply)'
+    '#options':
+      'Manufacturing new product': 'Manufacturing new product'
+      'Assembling to make a new product': 'Assembling to make a new product'
+      'Trading (Offline channel)': 'Trading (Offline channel)'
+      'Trading (Online channel)': 'Trading (Online channel)'
+      'Job Work (working on goods supplied by others to complete a part or whole of the process)': 'Job Work (working on goods supplied by others to complete a part or whole of the process)'
+      'Internal Consumption': 'Internal Consumption'
+      'Drop shipping': 'Drop shipping'
+    '#other__option_label': 'Others(Please Specify)'
+    '#other__placeholder': 'Please input your answer here'
+  do_you_always_procure_the_product_in_the_same_form_format_or_do_:
+    '#type': checkboxes
+    '#title': 'Do you always procure the product in the same form/format or, do you require customization also?(Choose all answers that apply)'
+    '#options':
+      'Standard products': 'Standard products'
+      'Customization needed': 'Customization needed'
+  what_kind_of_customization_do_you_use_choose_all_answers_that_ap:
+    '#type': webform_checkboxes_other
+    '#title': 'What kind of customization do you use?(Choose all answers that apply)'
+    '#options':
+      'Colour related': 'Colour related'
+      'Dimensions and other specifications related': 'Dimensions and other specifications related'
+      'Raw material used in the product': 'Raw material used in the product'
+      'Packaging and logo etc.': 'Packaging and logo etc.'
+    '#other__option_label': 'Others(Please Specify)'
+    '#other__placeholder': 'Please input your answer here'
+  how_frequently_do_you_procure_these_products_as_a_whole_choose_o:
+    '#type': radios
+    '#title': 'How frequently do you procure these products as a whole?(Choose only one answer)'
+    '#options':
+      'Once a month': 'Once a month'
+      'Four times in a year': 'Four times in a year'
+      'Twice in a year': 'Twice in a year'
+      'Once in a year': 'Once in a year'
+      'Once in two years': 'Once in two years'
+      'There is not fixed frequency': 'There is not fixed frequency'
+  what_is_your_minimum_order_quantity_on_an_average_:
+    '#type': textfield
+    '#title': 'What is your minimum order quantity on an average?'
+    '#placeholder': 'Please input your answer here'
+  how_long_have_you_been_sourcing_procuring_from_alibaba_com_platf:
+    '#type': radios
+    '#title': 'How long have you been sourcing/procuring from Alibaba.com platform?(Choose only one answer)'
+    '#options':
+      '<1 year': '<1 year'
+      '2 years': '2 years'
+      '3 years': '3 years'
+      '4 years': '4 years'
+      '5 years': '5 years'
+      '>5 years': '>5 years'
+    '#options_display': two_columns
+  which_alibaba_platform_alibaba_com_or_aliexpress_do_you_use_for_:
+    '#type': checkboxes
+    '#title': 'Which Alibaba platform: Alibaba.com or AliExpress, do you use for sourcing your products?(Choose all answers that apply)'
+    '#options':
+      Alibaba.com: Alibaba.com
+      Aliexpress: Aliexpress
+      'Not Sure': 'Not Sure'
+  is_there_any_other_specific_reason_to_choose_alibaba_com_the_opt:
+    '#type': textfield
+    '#title': 'Is there any other specific reason to choose Alibaba.com?( the option not mentioned above)'
+    '#placeholder': 'Please input your answer here'
+  have_you_ever_made_a_transaction_through_alibaba_com_choose_all_:
+    '#type': checkboxes
+    '#title': 'Have you ever made a transaction through Alibaba.com?(Choose all answers that apply)'
+    '#options': yes_no
+  is_there_any_other_pain_point_you_face_when_using_alibaba_com_ot:
+    '#type': textarea
+    '#title': 'Is there any other pain point you face when using Alibaba.com?( other than the ones mentioned in the above options)'
+    '#placeholder': 'Please input your answer here'
+  which_of_the_following_services_provided_by_alibaba_are_you_awar:
+    '#type': webform_checkboxes_other
+    '#title': 'Which of the following services provided by Alibaba are you aware of?(Choose all answers that apply)'
+    '#options':
+      RFQ: RFQ
+      'Trade Assurance': 'Trade Assurance'
+      'Shipping Service': 'Shipping Service'
+      'Product Inspection Service': 'Product Inspection Service'
+    '#other__option_label': 'Others(Please Specify)'
+    '#other__placeholder': 'Please input your answer here'
+  which_channels_do_you_mainly_use_for_online_procurement_choose_a:
+    '#type': checkboxes
+    '#title': 'Which channels do you mainly use for online procurement?(Choose all answers that apply)'
+    '#options':
+      'Desktop/Laptop Browser': 'Desktop/Laptop Browser'
+      'Mobile Browser': 'Mobile Browser'
+      'Mobile App': 'Mobile App'
+  do_you_procure_from_a_single_supplier_or_multiple_suppliers_for_:
+    '#type': checkboxes
+    '#title': 'Do you procure from a single supplier or multiple suppliers for a product?(Choose all answers that apply)'
+    '#options':
+      'Single Supplier': 'Single Supplier'
+      'Multiple suppliers': 'Multiple suppliers'
+  do_you_use_alibaba_com_to_source_products_for_personal_use_or_fo:
+    '#type': radios
+    '#title': 'Do you use Alibaba.com to source products for personal use or for your business?(Choose only one answer)'
+    '#options':
+      'Personal use': 'Personal use'
+      'For my business': 'For my business'
+      'Mostly for business and <20% personal use': 'Mostly for business and <20% personal use'
+      'Mostly for personal use with <20% for business': 'Mostly for personal use with <20% for business'
+  what_is_your_average_annual_procurement_value_in_terms_of_indian:
+    '#type': textfield
+    '#title': 'What is your average annual procurement value?( in terms of Indian Rupees)'
+    '#placeholder': 'Please input your answer here'
+  which_city_in_india_are_you_based_out_of_:
+    '#type': textfield
+    '#title': 'Which city in India are you based out of?'
+    '#placeholder': 'Please input your answer here'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Submit
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_method: ''
+  form_action: ''
+  form_attributes: {  }
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

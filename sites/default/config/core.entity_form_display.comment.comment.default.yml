@@ -5,7 +5,9 @@ dependencies:
   config:
     - comment.type.comment
     - field.field.comment.comment.comment_body
+    - field.field.comment.comment.field_rate_the_product_
   module:
+    - fivestar
     - text
 _core:
   default_config_hash: I0Pa0aQvT_jawlPo9oz4FE3h_ickc55dYKTPl6gILes
@@ -25,6 +27,15 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_rate_the_product_:
+    weight: 12
+    settings:
+      display_format: average
+      text_format: none
+      fivestar_widget: basic
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
   langcode:
     type: language_select
     weight: 2

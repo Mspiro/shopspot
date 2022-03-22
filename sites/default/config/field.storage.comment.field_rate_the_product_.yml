@@ -1,0 +1,20 @@
+uuid: 095892aa-c5f5-439e-a68f-09e2d10c5929
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - fivestar
+id: comment.field_rate_the_product_
+field_name: field_rate_the_product_
+entity_type: comment
+type: fivestar
+settings:
+  vote_type: vote
+module: fivestar
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
