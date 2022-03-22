@@ -1910,6 +1910,9 @@ button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  border: 1px solid #2874f0;
+  box-shadow: 0px 0px 5px #2874f0;
+  margin-right: 10px;
 }
 .comment-section .field--label-above .by-node-author .content h3 {
   display: none;
@@ -1928,6 +1931,14 @@ button {
   border-radius: 5px;
 }
 .comment-section .field--label-above .by-node-author .content .links .comment-forbidden {
+  display: none;
+}
+.comment-section .field--label-above .by-node-author .content form .form-type-item {
+  display: flex;
+  margin-left: 130px;
+  margin-top: -19px;
+}
+.comment-section .field--label-above .by-node-author .content form .form-type-item .description {
   display: none;
 }
 

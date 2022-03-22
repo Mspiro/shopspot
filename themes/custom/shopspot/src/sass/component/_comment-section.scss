@@ -7,7 +7,7 @@
   justify-content: center;
   border-radius: 2px;
   padding: 12px 40px;
-  
+
   .field--label-above {
     width: 100%;
     display: flex;
@@ -56,6 +56,9 @@
             height: 40px;
             width: 40px;
             border-radius: 50%;
+            border: 1px solid #2874f0;
+            box-shadow: 0px 0px 5px #2874f0;
+            margin-right: 10px;
           }
         }
       }
@@ -63,25 +66,36 @@
         h3 {
           display: none;
         }
-        .text-formatted{
+        .text-formatted {
           margin-left: 40px;
         }
-        .links{
+        .links {
           // margin-left: 32px;
           // margin-left: 32px;
           position: relative;
           right: -80%;
-          li{
-          a{
-            color: #000000;
-            border: 1px solid gray;
-            padding: 2px;
-            border-radius: 5px;
+          li {
+            a {
+              color: #000000;
+              border: 1px solid gray;
+              padding: 2px;
+              border-radius: 5px;
+            }
+          }
 
+          .comment-forbidden {
+            display: none;
           }
         }
-          .comment-forbidden{
-            display: none;
+        form{
+          .form-type-item{
+            display: flex;
+            margin-left: 130px;
+            margin-top: -19px;
+
+            .description{
+              display: none;
+            }
           }
         }
       }
