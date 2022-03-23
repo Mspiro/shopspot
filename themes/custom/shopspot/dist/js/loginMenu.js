@@ -187,12 +187,12 @@
       $(document).ready(function(){
         var smallImg = document.querySelectorAll('.small-image-wrapper img');
         var largerimage = document.querySelectorAll('.media--view-mode-default img')[1];   
-        // console.log(largerimage);
-        smallImg.forEach(item => {
-          item.addEventListener('click', ()=>{
+        smallImg.forEach(function(item) {
+          item.addEventListener('click', function(){
             largerimage.src = item.src;
-          })
-        })
+            console.log(largerimage);
+          });
+        });
       });
     },
   };
