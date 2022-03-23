@@ -195,7 +195,8 @@ function theme_fivestar_static($variables)
   //    $path = drupal_get_path('module', 'fivestar');
   //    drupal_add_css($path . '/css/fivestar.css');
   //    drupal_add_css($widget['css']);
-  //  }  
+  //  }
+
   // $output = '<div class="fivestar-' . $widget['name'] . '">';
   if (isset($widget['name'])) {
     $output = '<div class="fivestar-' . $widget['name'] . '">';
@@ -283,6 +284,11 @@ function theme_fivestar_summary($variables)
     if (!empty($microdata['average_rating']['#attributes'])) {
       $average_rating_microdata = ($microdata['average_rating']['#attributes']);
     }
+    $output .= '<span class="average-rating">';
+    $output .= t("<span {$average_rating_microdata}>@stars</span>/5", [
+      '@stars' => $average_stars,
+    ]);
+    $output .= '</span>';
   }
 
   if (isset($votes)) {
@@ -290,7 +296,7 @@ function theme_fivestar_summary($variables)
       $div_class = 'count';
     }
     if ($votes === 0) {
-      // $output = '<span class="empty">' . t('No votes yet') . '</span>';
+      $output = '<span class="empty">' . t('No customer Review') . '</span>';
     } else {
       if (!empty($microdata['rating_count']['#attributes'])) {
         $rating_count_microdata = new Attribute($microdata['rating_count']['#attributes']);
@@ -298,7 +304,7 @@ function theme_fivestar_summary($variables)
       // We don't directly substitute $votes (i.e. use '@count') in
       // formatPlural() because it has a span around it which is not
       // translatable.
-      $votes_str = \Drupal::translation()->formatPlural($votes, '<span ' . $rating_count_microdata . '>@cnt</span> Customers Review', '@cnt Customers Review', [
+      $votes_str = \Drupal::translation()->formatPlural($votes, '<span ' . $rating_count_microdata . '>@cnt</span> vote', '@cnt Customers Review', [
         '@cnt' => intval($votes),
       ]);
       if (isset($user_rating) || isset($average_rating)) {

@@ -1900,6 +1900,7 @@ button {
 }
 
 .comment-section {
+  margin-top: 10px;
   background: #ffffff;
   width: 97vw;
   display: flex;
@@ -1914,6 +1915,7 @@ button {
   flex-direction: column;
   border-radius: 10px;
   border: 1px solid #b2b4b5;
+  padding: 10px;
 }
 .comment-section .field--label-above .comment-header {
   display: flex;
@@ -1963,7 +1965,7 @@ button {
   display: none;
 }
 .comment-section .field--label-above .by-node-author .content .text-formatted {
-  margin-left: 40px;
+  margin-left: 50px;
 }
 .comment-section .field--label-above .by-node-author .content .links {
   position: relative;
@@ -1982,9 +1984,62 @@ button {
   display: flex;
   margin-left: 130px;
   margin-top: -19px;
+  margin-right: 245px;
+  justify-content: flex-end;
 }
 .comment-section .field--label-above .by-node-author .content form .form-type-item .description {
   display: none;
+}
+
+.field--type-comment .comment-form__title {
+  margin: 10px;
+}
+.field--type-comment .comment-comment-form {
+  display: flex;
+}
+.field--type-comment .comment-comment-form .field--name-subject,
+.field--type-comment .comment-comment-form #edit-comment-body-0-format-help,
+.field--type-comment .comment-comment-form #edit-comment-body-0-format {
+  display: none;
+}
+.field--type-comment .comment-comment-form .field--name-comment-body {
+  width: 100%;
+  padding: 0px;
+  padding: 20px 10px;
+}
+.field--type-comment .comment-comment-form .field--name-comment-body label {
+  display: none;
+}
+.field--type-comment .comment-comment-form .field--name-comment-body .form-textarea-wrapper .cke_reset_all {
+  display: none;
+}
+.field--type-comment .comment-comment-form .field--name-comment-body .form-textarea-wrapper .cke_editor_edit-comment-body-0-value {
+  border: 0px;
+  border-bottom: 1px solid #b2b4b5;
+}
+.field--type-comment .comment-comment-form .field--name-comment-body .form-textarea-wrapper .cke_editor_edit-comment-body-0-value .cke_contents {
+  height: 35px !important;
+  padding: 10px 0 5px 0;
+}
+.field--type-comment .comment-comment-form .field--type-fivestar {
+  width: 140px;
+  height: auto;
+  padding: 35px 0px 0px 0px;
+  border-radius: 10px;
+}
+.field--type-comment .comment-comment-form .field--type-fivestar .form-item {
+  width: 140px;
+}
+.field--type-comment .comment-comment-form .form-actions {
+  display: flex;
+  border-radius: 10px;
+  padding: 30px 8px 0px 0px;
+}
+.field--type-comment .comment-comment-form .form-actions .button {
+  max-width: 115px !important;
+  margin: 0px 5px;
+  background: #eaedf6;
+  color: #2874f0;
 }
 
 .detail-wrapper {

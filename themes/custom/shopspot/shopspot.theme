@@ -117,8 +117,3 @@ function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_s
     );
   }
 }
-
-function shopspot_preprocess_comment__comment__products(&$variables){
-  // $variables['content']['#string']=t('@username @datetime');
-  // dump($variables['comment']->getValues(created));
-}

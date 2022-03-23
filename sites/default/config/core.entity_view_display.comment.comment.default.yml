@@ -5,6 +5,7 @@ dependencies:
   config:
     - comment.type.comment
     - field.field.comment.comment.comment_body
+    - field.field.comment.comment.field_body_
     - field.field.comment.comment.field_rate_the_product_
   module:
     - fivestar
@@ -23,6 +24,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_body_:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_rate_the_product_:
     weight: 101
     label: hidden
