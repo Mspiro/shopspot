@@ -104,9 +104,8 @@
       display: none;
       top: 165px;
     }
-    .menu-item--expanded:last-child:hover .menu-level-1{
+    .menu-item--expanded:last-child:hover .menu-level-1 {
       right: 60px;
-      
     }
   }
   .menu--mega-menu-for-mobile {
@@ -118,7 +117,7 @@
   .mega-menu {
     height: auto;
     overflow-x: hidden;
-    box-shadow: none; 
+    box-shadow: none;
     .region-menu {
       .menu--mega-menu {
         display: none;
@@ -160,4 +159,24 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .mega-menu {
+    overflow-x: scroll;
+    overflow-y: clip;
+    .region-menu {
+      .menu--mega-menu {
+        .menu-level-0 {
+          overflow-x: scroll;
+          overflow-y: clip;          
+          padding-left: 260px;
+          .menu-item{
+            min-width: fit-content;
+            margin: 0px 20px;
+          }
+        }
+      }
+    }
+  } 
 }

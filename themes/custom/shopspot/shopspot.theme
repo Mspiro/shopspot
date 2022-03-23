@@ -59,7 +59,7 @@ function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_s
     unset($form['name']['#attributes']['placeholder']);
     unset($form['pass']['#attributes']['placeholder']);
     unset($form['name']['#description']);
-    $form['name']['#title'] = 'Enter Email/Mobile number';
+    $form['name']['#title'] = 'Enter Your Username here';
     $form['pass']['#title'] = 'Enter Password';
     unset($form['pass']['#description']);
     $form['forgot-password'] = array(

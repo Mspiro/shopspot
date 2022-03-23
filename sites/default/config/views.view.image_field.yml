@@ -1,18 +1,19 @@
-uuid: 4a02aec5-e85d-4013-a8bf-b83510248218
+uuid: a056d4ea-05bf-4270-9a68-416b66e08620
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.products
   module:
-    - comment
     - node
     - user
-id: comments
-label: Comments
+id: image_field
+label: 'Image Field'
 module: views
 description: ''
 tag: ''
-base_table: comment_field_data
-base_field: cid
+base_table: node_field_data
+base_field: nid
 display:
   default:
     display_plugin: default
@@ -23,7 +24,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access comments'
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -51,27 +52,16 @@ display:
           items_per_page: 5
           offset: 0
       style:
-        type: default
+        type: grid
       row:
-        type: 'entity:comment'
-      relationships:
-        node:
-          id: node
-          table: comment_field_data
-          field: node
-          entity_type: comment_field_data
-          required: true
-          plugin_id: standard
-          relationship: none
-          group_type: group
-          admin_label: Content
+        type: fields
       fields:
-        subject:
-          id: subject
-          table: comment_field_data
-          field: subject
-          entity_type: comment
-          entity_field: subject
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
           label: ''
           alter:
             alter_text: false
@@ -84,10 +74,9 @@ display:
             html: false
           hide_empty: false
           empty_zero: false
-          plugin_id: field
-          type: string
           settings:
             link_to_entity: true
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -103,6 +92,7 @@ display:
           empty: ''
           hide_alter_empty: true
           click_sort_column: value
+          type: string
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -116,10 +106,10 @@ display:
       filters:
         status:
           value: '1'
-          table: comment_field_data
+          table: node_field_data
           field: status
           plugin_id: boolean
-          entity_type: comment
+          entity_type: node
           entity_field: status
           id: status
           expose:
@@ -127,32 +117,46 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        status_node:
-          value: '1'
+        type:
+          id: type
           table: node_field_data
-          field: status
-          plugin_id: boolean
-          relationship: node
+          field: type
+          value:
+            products: products
           entity_type: node
-          entity_field: status
-          id: status_node
+          entity_field: type
+          plugin_id: bundle
           expose:
-            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
-      sorts: {  }
-      title: Comments
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Image Field'
       header: {  }
       footer: {  }
       empty: {  }
+      relationships: {  }
       arguments: {  }
-      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
   block_1:
@@ -167,5 +171,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }

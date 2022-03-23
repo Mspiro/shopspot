@@ -81,16 +81,9 @@
 					<div class="small-image-wrapper">
 						<div class="small-image">
 							{{ content.field_product_image }}
+							{{ content.field_image_field }}
 						</div>
-						<div class="small-image">
-							{{ content.field_product_image }}
-						</div>
-						<div class="small-image">
-							{{ content.field_product_image }}
-						</div>
-						<div class="small-image">
-							{{ content.field_product_image }}
-						</div>
+						
 					</div>
 					<div class="main-image">
 						{{ content.field_product_image }}
@@ -100,6 +93,7 @@
 					{{ drupal_block('block_content:21d4caea-dcbe-451e-b5f9-e6bc6a6c6cd5') }}
 				</div>
 			</div>
+			{# {{ kint(content.field_image_field|keys) }} #}
 			<div class="detail-all-fields">
 
 				<div class="main-lable">

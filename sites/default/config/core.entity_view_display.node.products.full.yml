@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.products.comment
     - field.field.node.products.field_category
     - field.field.node.products.field_discount
+    - field.field.node.products.field_image_field
     - field.field.node.products.field_price
     - field.field.node.products.field_product_image
     - field.field.node.products.field_rating
@@ -72,6 +73,7 @@ content:
     third_party_settings: {  }
 hidden:
   comment: true
+  field_image_field: true
   field_rating: true
   field_rating_: true
   langcode: true

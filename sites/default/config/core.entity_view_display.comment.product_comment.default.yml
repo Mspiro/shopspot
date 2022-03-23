@@ -1,31 +1,29 @@
-uuid: b2c89a9c-f018-421c-b18a-b73b0a3c3dc8
+uuid: e7f485cf-960a-4bcd-8338-c0cae07e7431
 langcode: en
 status: true
 dependencies:
   config:
-    - comment.type.comment
-    - field.field.comment.comment.comment_body
-    - field.field.comment.comment.field_rate_the_product_
+    - comment.type.product_comment
+    - field.field.comment.product_comment.comment_body
+    - field.field.comment.product_comment.field_rate
   module:
     - fivestar
     - text
-_core:
-  default_config_hash: 77Ye1kR-P6AaiGfEO8mnXNSr7nqtnP3PiiVBwJeGGMI
-id: comment.comment.default
+id: comment.product_comment.default
 targetEntityType: comment
-bundle: comment
+bundle: product_comment
 mode: default
 content:
   comment_body:
     label: hidden
     type: text_default
     weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_rate_the_product_:
+    region: content
+  field_rate:
     weight: 101
-    label: hidden
+    label: above
     settings:
       text_format: average
       display_format: average

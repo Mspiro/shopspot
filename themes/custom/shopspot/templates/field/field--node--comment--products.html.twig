@@ -44,17 +44,20 @@
 	{% if comments and not label_hidden %}
 		{{ title_prefix }}
 		<div class="comment-header">
-			<h2{{title_attributes.addClass(title_classes)}}> ALL RATINGS AND REVIEWS</h2>
+			<h2{{title_attributes.addClass(title_classes)}}>
+				ALL RATINGS AND REVIEWS</h2>
+			{# <a class="top-rated add-commnet use-ajax" data-dialog-type="modal" href="	/comment/reply/node/179/comment/1">Comment</a> #}
 			<button class="top-rated">Top Rated</button>
 		</div>
 		{{ title_suffix }}
 	{% endif %}
 
+
 	{{ comments }}
 
 	{# {% if comment_form %}
-	    <h2 class="title comment-form__title">{{ 'Add new comment'|t }}</h2>
-	    {{ comment_form }}
-	  {% endif %} #}
+		<h2 class="title comment-form__title">{{ 'Add new comment'|t }}</h2>
+		{{ comment_form }}
+	{% endif %} #}
 
 </section>
