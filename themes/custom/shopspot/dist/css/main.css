@@ -638,18 +638,48 @@ body a {
 
   .login-menu,
 .menu--header-more,
-.cart, #block-searchbtn {
+.cart,
+#block-searchbtn {
     display: none;
   }
 
   .menu--lite-cart-login-menu {
     display: flex;
+    top: 96px;
   }
 
   .region-header {
     justify-content: flex-start;
     padding: 0px 12px;
     margin: 8px 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 56px;
+    align-content: flex-start;
+  }
+
+  .menu--lite-cart-login-menu {
+    display: none;
+  }
+
+  .region-header {
+    justify-content: flex-start;
+    padding: 0px 12px;
+    margin: 8px 0px;
+    height: 45px;
+  }
+  .region-header form .form-item-keyword input {
+    width: 307px !important;
+  }
+  .region-header .login-menu {
+    margin: 0px 15px !important;
+  }
+  .region-header .more-menu {
+    margin: 0;
+    margin-top: 50px;
+    margin-right: 20px;
   }
 }
 .ui-dialog {
@@ -1024,6 +1054,21 @@ body a {
   }
   .mega-menu .region-menu .menu--mega-menu-for-mobile .menu-level-0 .menu-item span {
     display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mega-menu {
+    overflow-x: scroll;
+    overflow-y: clip;
+  }
+  .mega-menu .region-menu .menu--mega-menu .menu-level-0 {
+    overflow-x: scroll;
+    overflow-y: clip;
+    padding-left: 260px;
+  }
+  .mega-menu .region-menu .menu--mega-menu .menu-level-0 .menu-item {
+    min-width: fit-content;
+    margin: 0px 20px;
   }
 }
 .menu-level-1 .menu-item .menu-level-2 {

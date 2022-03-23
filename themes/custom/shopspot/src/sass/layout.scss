@@ -79,6 +79,12 @@
       justify-content: flex-start;
       align-items: flex-start;
       margin-right: 10px;
+      @media only screen and (max-width: 768px) {
+        .view-content{
+          justify-content: center;
+        }
+      }
+
     }
     .layout-sidebar-sidebar {
       width: 310px;
