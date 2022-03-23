@@ -1,0 +1,59 @@
+.field--type-comment {
+  // margin-top: 10px;  
+  .comment-form__title{
+    margin: 10px;
+  }
+  .comment-comment-form {
+    // background-color: red;
+    display: flex;
+    .field--name-subject,
+    #edit-comment-body-0-format-help,
+    #edit-comment-body-0-format 
+    {
+      display: none;
+    }
+    .field--name-comment-body {
+      width: 100%;
+      padding: 0px;
+      padding: 20px 10px;
+      label {
+        display: none;
+      }
+      .form-textarea-wrapper {
+        .cke_reset_all {
+          display: none;
+        }
+        .cke_editor_edit-comment-body-0-value {
+          // background-color: yellow;
+          border: 0px;
+          border-bottom: 1px solid #b2b4b5;
+          .cke_contents {
+            height: 35px !important;
+            padding: 10px 0 5px 0;
+          }
+        }
+      }
+    }
+    .field--type-fivestar {
+      width: 140px;
+      height: auto;
+      padding: 35px 0px 0px 0px;
+      border-radius: 10px;
+      .form-item{
+        width: 140px;
+
+      }
+    }
+    .form-actions {
+      display: flex;
+      border-radius: 10px;
+      padding: 30px 8px 0px 0px;
+      .button {
+        max-width: 115px !important;
+        margin: 0px 5px;
+        background: #eaedf6;
+        color: #2874f0;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+uuid: ff74158d-b6c1-4933-a45e-08c3a2dde853
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+id: comment.field_body_
+field_name: field_body_
+entity_type: comment
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
