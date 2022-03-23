@@ -12,7 +12,7 @@ module: views
 description: ''
 tag: ''
 base_table: comment_field_data
-base_field: nid
+base_field: cid
 display:
   default:
     display_plugin: default
@@ -147,6 +147,7 @@ display:
       footer: {  }
       empty: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

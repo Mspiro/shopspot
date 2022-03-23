@@ -1,0 +1,8 @@
+uuid: 650a9f0a-54cf-4f37-aba4-8a38784f8ae2
+langcode: en
+status: true
+dependencies: {  }
+id: product_comment
+label: 'Product Comment'
+target_entity_type_id: menu_link_content
+description: ''

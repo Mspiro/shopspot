@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
   field_rate_the_product_:
     weight: 101
-    label: above
+    label: hidden
     settings:
       text_format: average
       display_format: average
@@ -36,5 +36,7 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

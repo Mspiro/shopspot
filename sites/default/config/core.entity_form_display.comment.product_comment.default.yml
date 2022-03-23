@@ -1,0 +1,41 @@
+uuid: b927e31f-264b-4bb6-8cca-37533349c887
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.product_comment
+    - field.field.comment.product_comment.comment_body
+    - field.field.comment.product_comment.field_rate
+  module:
+    - fivestar
+    - text
+id: comment.product_comment.default
+targetEntityType: comment
+bundle: product_comment
+mode: default
+content:
+  author:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_rate:
+    weight: 2
+    settings:
+      display_format: average
+      text_format: none
+      fivestar_widget: basic
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+hidden:
+  langcode: true
+  subject: true
