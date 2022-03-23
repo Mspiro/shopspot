@@ -7,7 +7,6 @@
 @import "../component/headerLoginMenu";
 @import "../component/headerMoreMenu";
 
-
 @media only screen and (max-width: 576px) {
   .header {
     height: 104px;
@@ -15,15 +14,48 @@
   }
   .login-menu,
   .menu--header-more,
-  .cart, #block-searchbtn {
+  .cart,
+  #block-searchbtn {
     display: none;
   }
   .menu--lite-cart-login-menu {
     display: flex;
+    top: 96px;
   }
-  .region-header{
+  .region-header {
     justify-content: flex-start;
     padding: 0px 12px;
     margin: 8px 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 56px;
+    align-content: flex-start;
+  }
+  .menu--lite-cart-login-menu {
+    display: none;
+  }
+  .region-header {
+    justify-content: flex-start;
+    padding: 0px 12px;
+    margin: 8px 0px;
+    height: 45px;
+    form{
+      .form-item-keyword{
+        input{
+          width: 307px !important;
+        }
+      }
+    }
+    .login-menu{
+      margin: 0px 15px !important;
+    }
+    .more-menu{
+      margin: 0;
+      margin-top: 50px;
+      margin-right: 20px;
+    }
   }
 }

@@ -83,6 +83,11 @@
   align-items: flex-start;
   margin-right: 10px;
 }
+@media only screen and (max-width: 768px) {
+  .main-page .main .layout-content .view-content {
+    justify-content: center;
+  }
+}
 .main-page .main .layout-sidebar-sidebar {
   width: 310px;
   box-sizing: border-box;
