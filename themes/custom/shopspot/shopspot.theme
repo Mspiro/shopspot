@@ -117,3 +117,15 @@ function shopspot_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_s
     );
   }
 }
+
+
+function shopspot_preprocess_menu_levels  (&$variables)
+{
+  // dump($variables);
+}
+
+function mymodule_page_attachments(array &$page) {
+  $page['#attached']['drupalSettings']['myname'] = 'meeni';
+  echo "test";
+  dump($page);
+}

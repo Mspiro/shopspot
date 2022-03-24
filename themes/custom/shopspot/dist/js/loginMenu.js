@@ -197,3 +197,12 @@
     },
   };
 })(jQuery, Drupal);
+
+(function ($, Drupal) {
+  Drupal.behaviors.mymoduleAccessData = {
+    attach: function (context, setting) {
+      var data = drupalSettings.myname;
+      console.log(data);
+    }
+  };
+})(jQuery, Drupal, drupalSettings);
